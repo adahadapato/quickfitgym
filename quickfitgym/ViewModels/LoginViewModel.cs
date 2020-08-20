@@ -1,7 +1,9 @@
-﻿using quickfitgym.Views;
+﻿using quickfitgym.Services;
+using quickfitgym.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -9,8 +11,7 @@ namespace quickfitgym.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        public Command LoginCommand { get; }
-
+        
         public LoginViewModel()
         {
             if (IsChecked)
@@ -65,7 +66,48 @@ namespace quickfitgym.ViewModels
             }
         }
 
+        public ICommand LoginCommand
+        {
+            get
+            {
+                return new Command(async() =>
+                {
+                    if (string.IsNullOrWhiteSpace(Email) && string.IsNullOrWhiteSpace(Phone))
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Please provide Email or Phone Number", "Ok");
+                        return;
+                    }
 
+                    if (string.IsNullOrWhiteSpace(Password))
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Please provide Password", "Ok");
+                        return;
+                    }
+
+                    var result = await ApiService.Login(Email, Password);
+                    if (result)
+                    {
+                        Preferences.Set("Email", Email);
+                        Preferences.Set("Password", Password);
+                        await Shell.Current.Navigation.PopModalAsync();
+                        //Application.Current.MainPage = new AppShell();
+                    }
+                    else
+                        return;
+                });
+            }
+        }
+
+        public ICommand RegisterCommand
+        {
+            get
+            {
+                return new Command(async() =>
+                {
+                    await Shell.Current.Navigation.PushModalAsync(new RegisterPage());
+                });
+            }
+        }
         private async void OnLoginClicked(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
