@@ -14,10 +14,14 @@ namespace quickfitgym.ViewModels
         
         public LoginViewModel()
         {
-            if (IsChecked)
+
+
+            IsChecked = !string.IsNullOrWhiteSpace(Preferences.Get("Email", string.Empty)) &&
+                !string.IsNullOrWhiteSpace(Preferences.Get("Password", string.Empty));
+            if(IsChecked)
             {
-                Preferences.Get("Email", string.Empty);
-                Preferences.Get("Password", string.Empty);
+                Email = Preferences.Get("Email", string.Empty);
+                Password = Preferences.Get("Password", string.Empty);
             }
             //LoginCommand = new Command(OnLoginClicked);
         }
@@ -90,7 +94,7 @@ namespace quickfitgym.ViewModels
                         Preferences.Set("Email", Email);
                         Preferences.Set("Password", Password);
                         await Shell.Current.Navigation.PopModalAsync();
-                        //Application.Current.MainPage = new AppShell();
+                        
                     }
                     else
                         return;

@@ -6,7 +6,8 @@
              x:Class="quickfitgym.Views.ProgramesPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
-                     Command="{Binding AddCommand}" />
+                     Command="{Binding AddCommand}"
+                     IsEnabled="{Binding IsAdmin}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.BindingContext>
         <vm:ProgramViewModel/>
@@ -23,6 +24,7 @@
            <ListView ItemsSource="{Binding ProgramCollection}"
                      IsPullToRefreshEnabled="True"
                      HasUnevenRows="True"
+                     SeparatorColor="HotPink"
                      SeparatorVisibility="Default">
                <ListView.ItemTemplate>
                    <DataTemplate>
@@ -37,10 +39,11 @@
                                    <Label Text="{Binding Description}"
                                           TextColor="Gray"/>
                                </StackLayout>
-                               <Button Text="Follow Me"
+                               <Button Text="Join"
                                        BorderColor="Silver"
                                        Background="HotPink"
                                        TextColor="White"
+                                       CornerRadius="30"
                                        VerticalOptions="Center"/>
                            </StackLayout>
                        </ViewCell>

@@ -14,7 +14,7 @@ namespace quickfitgym.ViewModels
 
         private async void CheckRegistration()
         {
-            var token = Preferences.Get("token", string.Empty);
+            var token =  Preferences.Get("token", string.Empty);
             if (string.IsNullOrWhiteSpace(token))
             {
                await Shell.Current.Navigation.PushModalAsync(new RegisterPage());

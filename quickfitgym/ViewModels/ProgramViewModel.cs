@@ -5,6 +5,8 @@ using System.Linq;
 using System.Windows.Input;
 using quickfitgym.Models;
 using quickfitgym.Services;
+using quickfitgym.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace quickfitgym.ViewModels
@@ -16,6 +18,7 @@ namespace quickfitgym.ViewModels
         public ProgramViewModel()
         {
             Title = "Programs";
+            IsAdmin = false;// Preferences.Get("IsAdmin", false);
             ProgramCollection = new ObservableCollection<Program>();
             GetProgrames();
         }
@@ -44,6 +47,17 @@ namespace quickfitgym.ViewModels
             }
         }
 
+        private bool _IsAdmin;
+        public bool IsAdmin
+        {
+            get { return _IsAdmin; }
+            set
+            {
+                SetProperty(ref _IsAdmin, value);
+                OnPropertyChanged(nameof(IsAdmin));
+            }
+        }
+
         public ICommand SearchCommand => new Command<string>((string query) =>
         {
             if (!string.IsNullOrWhiteSpace(query))
@@ -51,6 +65,18 @@ namespace quickfitgym.ViewModels
                 ProgramCollection.Where(x => x.Name.Contains(query));
             }
         });
+
+        public ICommand AddCommand
+        {
+            get
+            {
+                return new Command(async() =>
+                {
+                    await Shell.Current.Navigation.PushAsync(new AddProgramPage());
+                });
+            }
+           
+        }
 
     }
 }
