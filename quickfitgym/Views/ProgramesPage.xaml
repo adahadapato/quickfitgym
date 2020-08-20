@@ -5,7 +5,8 @@
              Title="{Binding Title}"
              x:Class="quickfitgym.Views.ProgramesPage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Command="{Binding AddCommand}" />
+        <ToolbarItem Text="Add"
+                     Command="{Binding AddCommand}" />
     </ContentPage.ToolbarItems>
     <ContentPage.BindingContext>
         <vm:ProgramViewModel/>

@@ -13,8 +13,8 @@ namespace quickfitgym
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            //Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
+            //Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             RegistrRoutes();
             BindingContext = this;
         }
@@ -38,7 +38,7 @@ namespace quickfitgym
 
         void RegistrRoutes()
         {
-            //routes.Add("articles", typeof(ArticlesPage));
+            //routes.Add("contactus", typeof(ContactUsPage));
             //routes.Add("photos", typeof(PhotosPage));
             //routes.Add("classes", typeof(ClassesPage));
             routes.Add("about", typeof(AboutPage));

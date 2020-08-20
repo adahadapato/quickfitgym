@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using quickfitgym.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -14,5 +15,16 @@ namespace quickfitgym.ViewModels
         }
 
         public ICommand OpenWebCommand { get; }
+
+        public ICommand ContactCommand
+        {
+            get
+            {
+                return new Command(async() =>
+                {
+                    await Shell.Current.Navigation.PushAsync(new ContactUsPage());
+                });
+            }
+        }
     }
 }

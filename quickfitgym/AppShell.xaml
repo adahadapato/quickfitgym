@@ -28,25 +28,22 @@
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="{StaticResource GreyColor}" />
                 <Setter Property="Shell.UnselectedColor" Value="{StaticResource GreyColor}" />
-                
             </Style>
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}"/>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
-           
             <DataTemplate x:Key="MenuTemplate">
-            <StackLayout Orientation="Horizontal">
-                <Image Margin="30,10,20,10"
-                       Source="{Binding Icon}"
-                       WidthRequest="22"
-                       HeightRequest="22"
-                       HorizontalOptions="Start"
-                       VerticalOptions="Center"/>
-                <Label Text="{Binding Title}"
-                       TextColor="#686868"
-                       FontSize="16"
-                       VerticalOptions="Center"/>
-            </StackLayout>
-                         
+                <StackLayout Orientation="Horizontal">
+                    <Image Margin="30,10,20,10"
+                           Source="{Binding Icon}"
+                           WidthRequest="22"
+                           HeightRequest="22"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding Title}"
+                           TextColor="#686868"
+                           FontSize="16"
+                           VerticalOptions="Center"/>
+                </StackLayout>
         </DataTemplate>
             <DataTemplate x:Key="FlyoutHeaderTemplate">
             <ContentView BackgroundColor="{StaticResource ThemeColor}"
@@ -92,13 +89,13 @@
             <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}"/>
         </Tab>
         <!--<Tab Title="Favourites" Icon="heart.png">
-            <ShellContent ContentTemplate="{DataTemplate local:FavouritesPage}"/>
+            <ShellContent Title="Favourites" ContentTemplate="{DataTemplate local:AboutPage}"/>
         </Tab>
         <Tab Title="Profile" Icon="profile.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
         </Tab>
         <Tab Title="Options" Icon="settings.png">
-            <ShellContent ContentTemplate="{DataTemplate local:OptionsPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
         </Tab>-->
     </FlyoutItem>
     <MenuItem Text="About Us" Command="{Binding NavigateCommand}" CommandParameter="about" IconImageSource="about.png"/>

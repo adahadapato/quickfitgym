@@ -1,26 +1,20 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{C8939C5D-D44F-46B3-9155-9FDD360CB1B3}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="quickfitgym/AppShell.xaml" Line="92" Column="38" />
-      <File FileName="quickfitgym/AppShell.xaml.cs" Line="46" Column="13" />
-      <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="8" Column="66" />
-      <File FileName="quickfitgym/Views/ProgramesPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="quickfitgym/ViewModels/ProgramViewModel.cs" Line="18" Column="32" />
-      <File FileName="quickfitgym/ViewModels/AboutViewModel.cs" Line="1" Column="1" />
-      <File FileName="quickfitgym/ViewModels/ItemsViewModel.cs" Line="1" Column="1" />
-      <File FileName="quickfitgym/ViewModels/LoginViewModel.cs" Line="1" Column="1" />
-      <File FileName="quickfitgym/Views/RegisterPage.xaml" Line="237" Column="1" />
-      <File FileName="quickfitgym/ViewModels/RegisterViewModel.cs" Line="1" Column="1" />
+      <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="7" Column="31" />
+      <File FileName="quickfitgym/Views/AddProgramPage.xaml" Line="4" Column="14" />
+      <File FileName="quickfitgym/Views/AddProgramPage.xaml.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="quickfitgym" expanded="True" selected="True">
             <Node name="quickfitgym" expanded="True">
-              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True" />
-              <Node name="AppShell.xaml" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="AddProgramPage.xaml" expanded="True" />
+              </Node>
             </Node>
             <Node name="quickfitgym.Android" expanded="True" />
           </Node>

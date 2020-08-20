@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="quickfitgym.Views.ContactUsPage">
+    <ContentPage.BindingContext>
+        <vm:ContactUsViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand">
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image VerticalOptions="StartAndExpand"
+                   Aspect="Fill"
+                   HeightRequest="270"
+			       Source = "logo.png"/>
+            <ImageButton Source="menu.png"
+                         WidthRequest="23"
+                         HeightRequest="15"
+                         Margin="20,50"
+                         HorizontalOptions="Start"
+                         VerticalOptions="Start"
+                         Command="{Binding BackCommand}" >
+            </ImageButton>
+            <Frame Grid.Row="1"
+                   HasShadow="True"
+                   CornerRadius="10"
+                   Margin="20,-50,20,0"
+                   Padding="18"
+                   HeightRequest="220"
+                   VerticalOptions="StartAndExpand">
+                <Grid HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Orientation="Vertical"
+                                 Spacing="6"
+                                 HorizontalOptions="CenterAndExpand">
+                        <Label Text="Operation Days and Time"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="Black"
+                               HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="Mon - Sat: 9.00Am - 9.00PM, Sun: 2.00PM - 9.00PM"
+                                   FontSize="12"
+                                   TextColor="#2C3E50"
+                                   HorizontalOptions="CenterAndExpand"/>
+                        <StackLayout Orientation="Horizontal"
+                                     Spacing="10"
+                                     HorizontalOptions="CenterAndExpand">
+                            
+                            <Image Source="location.png"
+                                   WidthRequest="10"
+                                   HeightRequest="15"
+                                   VerticalOptions="Center"/>
+                            <Label Text="D21/D17 Bahago Plaza, Opposite Total Filling Station, Tunga, Minna, Niger State, Nigeria."
+                                   TextColor="#34495E"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="CenterAndExpand"/>
+                             
+                        </StackLayout>
+                    </StackLayout>
+                    <Grid Grid.Row="1"
+                          HorizontalOptions="FillAndExpand"
+                          VerticalOptions="CenterAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Orientation="Vertical"
+                                     Spacing="10"
+                                     HorizontalOptions="CenterAndExpand">
+                            <ffimageloading:CachedImage Source="phone.png"
+                                   WidthRequest="45"
+                                   HeightRequest="45"
+                                   BackgroundColor="Transparent"
+                                   DownsampleToViewSize="True"
+                                                        
+                                   HorizontalOptions="Center">
+                                <ffimageloading:CachedImage.Transformations>
+                                    <fftransformations:TintTransformation
+                                        HexColor="#FF69B4"
+                                        EnableSolidColor="true"/>
+                                </ffimageloading:CachedImage.Transformations>
+                                <ffimageloading:CachedImage.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                          Command="{Binding CallNumber1Command}"
+                                                          CommandParameter="08035899115"/>
+                                </ffimageloading:CachedImage.GestureRecognizers>
+                            </ffimageloading:CachedImage>
+                            <Label Text="{Binding Number1}"
+                                   TextColor="#2C3E50"
+                                   FontSize="12"
+                                   HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1"
+                                     Orientation="Vertical"
+                                     Spacing="10"
+                                     HorizontalOptions="CenterAndExpand">
+                            <ffimageloading:CachedImage Source="phone.png"
+                                   WidthRequest="45"
+                                   HeightRequest="45"
+                                   BackgroundColor="Transparent"
+                                   DownsampleToViewSize="True"
+                                                        
+                                   HorizontalOptions="Center">
+                                <ffimageloading:CachedImage.Transformations>
+                                    <fftransformations:TintTransformation
+                                        HexColor="#FF69B4"
+                                        EnableSolidColor="true"/>
+                                </ffimageloading:CachedImage.Transformations>
+                                <ffimageloading:CachedImage.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                          Command="{Binding CallNumber2Command}"
+                                                          CommandParameter="09039046272"/>
+                                </ffimageloading:CachedImage.GestureRecognizers>
+                            </ffimageloading:CachedImage>
+                            <Label Text="{Binding Number2}"
+                                   TextColor="#2C3E50"
+                                   FontSize="12"
+                                   HorizontalOptions="Center"/>
+                        </StackLayout>
+                         <StackLayout Grid.Column="2"
+                                     Orientation="Vertical"
+                                     Spacing="10"
+                                     HorizontalOptions="CenterAndExpand">
+                            <ffimageloading:CachedImage Source="email.png"
+                                   WidthRequest="45"
+                                   HeightRequest="45"
+                                   BackgroundColor="Transparent"
+                                   DownsampleToViewSize="True"
+                                                        
+                                   HorizontalOptions="Center">
+                                <ffimageloading:CachedImage.Transformations>
+                                    <fftransformations:TintTransformation
+                                        HexColor="#FF69B4"
+                                        EnableSolidColor="true"/>
+                                </ffimageloading:CachedImage.Transformations>
+                                <ffimageloading:CachedImage.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                          Command="{Binding SendEmailCommand}"
+                                                          CommandParameter="healthylevel@gmail.com"/>
+                                </ffimageloading:CachedImage.GestureRecognizers>
+                            </ffimageloading:CachedImage>
+                            <Label Text="{Binding EmailAddress}"
+                                   TextColor="#2C3E50"
+                                   FontSize="12"
+                                   HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="2"
+                   HasShadow="True"
+                   HeightRequest="275"
+                   CornerRadius="10"
+                   Margin="20"
+                   Padding="18"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="FillAndExpand">
+                <Grid RowSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Leave a Comment"
+                           FontSize="17"
+                           TextColor="#2C3E50"/>
+
+                    <Editor Placeholder="Comment"
+                            Grid.Row="1"
+                            HeightRequest="100"
+                            PlaceholderColor="#80574D"
+                            TextColor="#80574D"
+                            Text="{Binding Message, Mode=TwoWay}"
+                            Keyboard="Default" />
+
+                    <Button Text="Send"
+                            Grid.Row="2"
+                            BackgroundColor="HotPink"
+                            CornerRadius="80"
+                            Command="{Binding SendCommand}"
+                            CommandParameter="{Binding Message}"
+                            TextColor="White" />
+                </Grid>
+            </Frame>
+        </Grid>
+    </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="quickfitgym.Views.LoginPage"
-             xmlns:vm="clr-namespace:quickfitgym.ViewModels" xmlns:local="clr-namespace:quickfitgym.Renderers"
+             xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             xmlns:local="clr-namespace:quickfitgym.Renderers"
+             Shell.PresentationMode="ModalAnimated"
              Shell.NavBarIsVisible="False">
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>

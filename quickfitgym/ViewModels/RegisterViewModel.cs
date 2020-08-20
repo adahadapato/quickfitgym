@@ -109,7 +109,11 @@ namespace quickfitgym.ViewModels
                     };
                     var result = await ApiService.Register(model);
                     if (result)
-                       await Shell.Current.Navigation.PushModalAsync(new LoginPage());
+                    {
+                        await Shell.Current.Navigation.PopModalAsync();
+                        await Shell.Current.Navigation.PushModalAsync(new LoginPage());
+                    }
+                       
                     else
                     {
                         await Application.Current.MainPage.DisplayAlert("Error", "Unable to complete the registration", "Ok");
@@ -125,6 +129,7 @@ namespace quickfitgym.ViewModels
             {
                 return new Command(async() =>
                 {
+                    await Shell.Current.Navigation.PopModalAsync();
                     await Shell.Current.Navigation.PushModalAsync(new LoginPage());
                 });
             }
