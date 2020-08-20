@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:quickfitgym.Views" Title="quickfitgym" x:Class="quickfitgym.AppShell">
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:quickfitgym.Views"
+       Title="quickfitgym"
+       Shell.ItemTemplate="{StaticResource MenuTemplate}"
+       Shell.MenuItemTemplate="{StaticResource MenuTemplate}"
+       Shell.FlyoutHeaderTemplate="{StaticResource FlyoutHeaderTemplate}"
+       x:Class="quickfitgym.AppShell">
     <!--
         The overall app visual hierarchy is defined here, along with navigation.
     
@@ -7,25 +14,107 @@
     -->
     <Shell.Resources>
         <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#FF4081</Color>
+            <Color x:Key="ThemeColor">HotPink</Color>
+            <Color x:Key="GreyColor">Gray</Color>
+            <Color x:Key="BGColor">#F0F0F0</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource BGColor}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource ThemeColor}" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource GreyColor}" />
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource ThemeColor}" />
+                <Setter Property="Shell.TitleColor" Value="{StaticResource ThemeColor}" />
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource ThemeColor}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
-                <Setter Property="Shell.TitleColor" Value="White" />
-                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="White" />
-                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarTitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="{StaticResource GreyColor}" />
+                <Setter Property="Shell.UnselectedColor" Value="{StaticResource GreyColor}" />
+                
             </Style>
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}"/>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
-            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+           
+            <DataTemplate x:Key="MenuTemplate">
+            <StackLayout Orientation="Horizontal">
+                <Image Margin="30,10,20,10"
+                       Source="{Binding Icon}"
+                       WidthRequest="22"
+                       HeightRequest="22"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+                <Label Text="{Binding Title}"
+                       TextColor="#686868"
+                       FontSize="16"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+                         
+        </DataTemplate>
+            <DataTemplate x:Key="FlyoutHeaderTemplate">
+            <ContentView BackgroundColor="{StaticResource ThemeColor}"
+                         HeightRequest="245">
+                 <Grid BackgroundColor="Black">
+                     <Image Aspect="AspectFill" 
+                            Source="logo.png" 
+                            Opacity="0.6" />
+                     <Label Text="Animals" 
+                            TextColor="White" 
+                            FontAttributes="Bold" 
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center" />
+                 </Grid>
+                <!--<Grid>
+                    <Frame BackgroundColor="BlueViolet"
+                       WidthRequest="240"
+                       HeightRequest="220"
+                       IsClippedToBounds="True"
+                       HorizontalOptions="Center"
+                       Padding="0"
+                       CornerRadius="210">
+                     <Image Source="logo.png"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Aspect="AspectFill"/>
+                    
+                </Frame>
+                     <Label Text="My Name"
+                            Margin="0,10,0,0"
+                           TextColor="DarkRed"/>
+                </Grid>-->
+                
+              
+            </ContentView>
+        </DataTemplate>
+
         </ResourceDictionary>
     </Shell.Resources>
-    <TabBar>
+
+     <FlyoutItem Title="Home" Icon="dashboard.png">
+        <Tab Title="Home" Icon="dashboard.png">
+            <ShellContent ContentTemplate="{DataTemplate local:HomePage}"/>
+        </Tab>
+        <!--<Tab Title="Favourites" Icon="heart.png">
+            <ShellContent ContentTemplate="{DataTemplate local:FavouritesPage}"/>
+        </Tab>
+        <Tab Title="Profile" Icon="profile.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}"/>
+        </Tab>
+        <Tab Title="Options" Icon="settings.png">
+            <ShellContent ContentTemplate="{DataTemplate local:OptionsPage}"/>
+        </Tab>-->
+    </FlyoutItem>
+    <MenuItem Text="About Us" Command="{Binding NavigateCommand}" CommandParameter="about" IconImageSource="about.png"/>
+    <MenuItem Text="Classes" Command="{Binding NavigateCommand}" CommandParameter="classes" IconImageSource="briefcase.png"/>
+    <MenuItem Text="Articles" Command="{Binding NavigateCommand}" CommandParameter="articles" IconImageSource="article.png"/>
+    <MenuItem Text="Photos" Command="{Binding NavigateCommand}" CommandParameter="photos" IconImageSource="photo.png"/>
+    <MenuItem Text="Videos" Command="{Binding NavigateCommand}" CommandParameter="videos" IconImageSource="video.png"/>
+    <MenuItem Text="Programmes" Command="{Binding NavigateCommand}" CommandParameter="programmes" IconImageSource="video.png"/>
+    <MenuItem Text="Admin" Command="{Binding NavigateCommand}" CommandParameter="admin" IconImageSource="admin.png"/>
+    <MenuItem Text="Logout" Command="{Binding NavigateCommand}" CommandParameter="logout" IconImageSource="admin.png"/>
+
+
+    <!--<TabBar>
         <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
         <ShellContent Title="Browse" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
-    </TabBar>
+    </TabBar>-->
     <!--
         If you would like to navigate to this content you can do so by calling
         await Shell.Current.GoToAsync("//LoginPage");
