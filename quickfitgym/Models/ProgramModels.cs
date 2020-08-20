@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace quickfitgym.Models
 {
-    public class ProgramScedule
+    public class ProgramSchedule
     {
         public int Id { get; set; }
         public int ProgramId { get; set; }
@@ -17,6 +17,6 @@ namespace quickfitgym.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public List<ProgramScedule> ProgramSchedules { get; set; }
+        public List<ProgramSchedule> ProgramSchedules { get; set; }
     }
 }

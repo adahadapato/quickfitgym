@@ -2,7 +2,240 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Shell.PresentationMode="ModalAnimated"
+             xmlns:local="clr-namespace:quickfitgym.Renderers"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              x:Class="quickfitgym.Views.RegisterPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel />
+    </ContentPage.BindingContext>
+<ContentPage.Content>
+    <StackLayout BackgroundColor="#e6e6e6">
+         <Grid>
+             <StackLayout Padding="0"
+                          Margin="0"
+                          HorizontalOptions="FillAndExpand">
+                <Frame HeightRequest="150"
+                       BackgroundColor="HotPink"
+                       Padding="0" Margin="0">
+                    <Image Source="logo.png"
+                           Aspect="AspectFill"
+                           Margin="0"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Padding="0"
+                         Margin="10,100,10,0"
+                         HorizontalOptions="FillAndExpand">
+                <Frame  BackgroundColor="White"
+                        HeightRequest="500"
+                        HasShadow="True"
+                        Padding="0"
+                        Margin="0">
+                    <StackLayout>
+                        <StackLayout Margin="10">
+                            <Label Text="SIGN UP"
+                                   TextColor="HotPink"
+                                   HorizontalOptions="CenterAndExpand"
+                                   FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Padding="0" Margin="15,10">
+                            <Frame BackgroundColor="Transparent"
+                                   BorderColor="DarkGray"
+                                   Padding="0"
+                                   HorizontalOptions="FillAndExpand"
+                                   CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="DeepSkyBlue"
+                                           HeightRequest="40"
+                                           WidthRequest="40"
+                                           CornerRadius="30"
+                                           Padding="0"
+                                           Margin="5">
+                                        <Image Source="email.png"
+                                               Aspect="AspectFill"
+                                               BackgroundColor="DeepSkyBlue"
+                                               Margin="0"/>
+                                    </Frame>
+                                    <local:CustomEntry Placeholder="Email"
+                                                       TextColor="HotPink"
+                                                       FontAttributes="None"
+                                                       Text="{Binding Email, Mode=TwoWay}"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       Margin="0,0,20,0"/>
+                                </StackLayout>
+                                 
+                            </Frame>
+                            <Frame BackgroundColor="Transparent"
+                                   BorderColor="DarkGray"
+                                   Margin="0,10,0,0"
+                                   Padding="0"
+                                   HorizontalOptions="FillAndExpand"
+                                   CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                     <Frame BackgroundColor="DeepSkyBlue"
+                                           HeightRequest="40"
+                                           WidthRequest="40"
+                                           CornerRadius="30"
+                                           Padding="0"
+                                           Margin="5">
+                                        <Image Source="phone.png"
+                                               Aspect="AspectFill"
+                                               BackgroundColor="DeepSkyBlue"
+                                               Margin="0"/>
+                                    </Frame>
+                                    <local:CustomEntry Placeholder="Phone"
+                                                       IsPassword="False"
+                                                       Keyboard="Telephone"
+                                                       Text="{Binding Phone}"
+                                                       TextColor="HotPink"
+                                                       FontAttributes="None"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+                             <Frame BackgroundColor="Transparent"
+                                   BorderColor="DarkGray"
+                                   Margin="0,10,0,0"
+                                   Padding="0"
+                                   HorizontalOptions="FillAndExpand"
+                                   CornerRadius="30">
+                                 <StackLayout Orientation="Horizontal">
+                                     <Frame BackgroundColor="DeepSkyBlue"
+                                           HeightRequest="40"
+                                           WidthRequest="40"
+                                           CornerRadius="30"
+                                           Padding="0"
+                                           Margin="5">
+                                         <Image Source="name.png"
+                                               Aspect="AspectFill"
+                                               BackgroundColor="DeepSkyBlue"
+                                               Margin="0"/>
+                                     </Frame>
+                                     <local:CustomEntry Placeholder="Name"
+                                                       IsPassword="False"
+                                                       Keyboard="Text"
+                                                        Text="{Binding Name, Mode=TwoWay}"
+                                                       TextColor="HotPink"
+                                                       FontAttributes="None"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       Margin="0,0,20,0"/>
+                                 </StackLayout>
+                             </Frame>
+                            <Frame BackgroundColor="Transparent"
+                                   BorderColor="DarkGray"
+                                   Margin="0,10,0,0"
+                                   Padding="0"
+                                   HorizontalOptions="FillAndExpand"
+                                   CornerRadius="30">
+                                 <StackLayout Orientation="Horizontal">
+                                     <Frame BackgroundColor="DeepSkyBlue"
+                                           HeightRequest="40"
+                                           WidthRequest="40"
+                                           CornerRadius="30"
+                                           Padding="0"
+                                           Margin="5">
+                                         <Image Source="password.png"
+                                               Aspect="AspectFill"
+                                               BackgroundColor="DeepSkyBlue"
+                                               Margin="0"/>
+                                     </Frame>
+                                     <local:CustomEntry Placeholder="Password"
+                                                       IsPassword="True"
+                                                        Text="{Binding Password, Mode=TwoWay}"
+                                                       Keyboard="Text"
+                                                       TextColor="HotPink"
+                                                       FontAttributes="None"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       Margin="0,0,20,0"/>
+                                 </StackLayout>
+                             </Frame>
+                            <Frame BackgroundColor="Transparent"
+                                   BorderColor="DarkGray"
+                                   Margin="0,10,0,0"
+                                   Padding="0"
+                                   HorizontalOptions="FillAndExpand"
+                                   CornerRadius="30">
+                                 <StackLayout Orientation="Horizontal">
+                                     <Frame BackgroundColor="DeepSkyBlue"
+                                           HeightRequest="40"
+                                           WidthRequest="40"
+                                           CornerRadius="30"
+                                           Padding="0"
+                                           Margin="5">
+                                         <Image Source="password.png"
+                                               Aspect="AspectFill"
+                                               BackgroundColor="DeepSkyBlue"
+                                               Margin="0"/>
+                                     </Frame>
+                                     <local:CustomEntry Placeholder="Confirm Password"
+                                                       IsPassword="True"
+                                                        Text="{Binding ConfirmPasword, Mode=TwoWay}"
+                                                       Keyboard="Text"
+                                                       TextColor="HotPink"
+                                                       FontAttributes="None"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       Margin="0,0,20,0"/>
+                                 </StackLayout>
+                             </Frame>
+                            <StackLayout  Orientation="Horizontal">
+                                
+                                <Label Text="By clicking register, you agree with our"
+                                       TextColor="DarkGray"
+                                       FontSize="Small"
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="End" />
+
+                                <Label Text="Terms of use."
+                                       TextColor="HotPink"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="CenterAndExpand"
+                                       FontSize="Small"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Start" />
+
+
+                            </StackLayout>
+                            <Button Text="REGISTER"
+                                    BackgroundColor="HotPink"
+                                    TextColor="White"
+                                    Command="{Binding RegisterCommand}"
+                                    CornerRadius="30" />
+                            <StackLayout  Orientation="Horizontal">
+                                
+                                <Label Text="Alredy have an account "
+                                       TextColor="DarkGray"
+                                       FontSize="Small"
+                                       HorizontalOptions="CenterAndExpand"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="End" >
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                              Command="{Binding LoginCommand}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+                                <Label Text="Log in."
+                                       TextColor="HotPink"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="CenterAndExpand"
+                                       FontSize="Small"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Start" >
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                              Command="{Binding LoginCommand}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+         </Grid>
+    </StackLayout>
+</ContentPage.Content>
 </ContentPage>

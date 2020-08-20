@@ -15,6 +15,8 @@ namespace quickfitgym
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            RegistrRoutes();
+            BindingContext = this;
         }
 
         Dictionary<string, Type> routes = new Dictionary<string, Type>();
@@ -41,8 +43,8 @@ namespace quickfitgym
             //routes.Add("classes", typeof(ClassesPage));
             routes.Add("about", typeof(AboutPage));
             //routes.Add("videos", typeof(VideosPage));
-            //routes.Add("admin", typeof(AdminPage));
-            //routes.Add("programmes", typeof(ProgramesPage));
+            routes.Add("admin", typeof(AdminPage));
+            routes.Add("programmes", typeof(ProgramesPage));
             routes.Add("logout", typeof(LoginPage));
             foreach (var i in routes)
             {

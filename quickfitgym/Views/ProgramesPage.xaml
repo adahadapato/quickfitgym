@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             Title="{Binding Title}"
+             x:Class="quickfitgym.Views.ProgramesPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <vm:ProgramViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0">
+            <SearchBar x:Name="SearchBar"
+                       CancelButtonColor="HotPink"
+                       Placeholder="Search..."
+                       PlaceholderColor="Gray"
+                       SearchCommand="{Binding SearchCommand}"
+                       SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
+                       TextColor="HotPink"/>
+           <ListView ItemsSource="{Binding ProgramCollection}"
+                     IsPullToRefreshEnabled="True"
+                     HasUnevenRows="True"
+                     SeparatorVisibility="Default">
+               <ListView.ItemTemplate>
+                   <DataTemplate>
+                       <ViewCell>
+                           <StackLayout Orientation="Horizontal">
+                               <Image Source="{Binding Imageurl}"
+                                      HeightRequest="50"
+                                      WidthRequest="50"/>
+                               <StackLayout HorizontalOptions="StartAndExpand">
+                                   <Label Text="{Binding Name}"
+                                          FontAttributes="Bold"/>
+                                   <Label Text="{Binding Description}"
+                                          TextColor="Gray"/>
+                               </StackLayout>
+                               <Button Text="Follow Me"
+                                       BorderColor="Silver"
+                                       Background="HotPink"
+                                       TextColor="White"
+                                       VerticalOptions="Center"/>
+                           </StackLayout>
+                       </ViewCell>
+                   </DataTemplate>
+               </ListView.ItemTemplate>
+           </ListView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
