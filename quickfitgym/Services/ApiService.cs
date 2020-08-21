@@ -8,6 +8,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using UnixTimeStamp;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 
 namespace quickfitgym.Services
 {
@@ -107,6 +108,29 @@ namespace quickfitgym.Services
                 return json;
             }
             catch(Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return null;
+        }
+
+        public static async Task<AddProgramResult> AddProgram(Program program)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+                var json = JsonConvert.SerializeObject(program);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/create"), content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    var jsonresult = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<AddProgramResult>(jsonresult);
+                    return result;
+                }
+            }
+            catch (Exception ex)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
             }

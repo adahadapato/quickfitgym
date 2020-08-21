@@ -19,4 +19,10 @@ namespace quickfitgym.Models
         public string Description { get; set; }
         public List<ProgramSchedule> ProgramSchedules { get; set; }
     }
+
+    public class AddProgramResult
+    {
+        public string Message { get; set; }
+        public int ProgramId { get; set; }
+    }
 }
