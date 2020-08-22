@@ -74,6 +74,7 @@
                         TextColor="White"
                         BackgroundColor="HotPink"
                         Margin="18,2,18,10"
+                        Command="{Binding SubmitCommand}"
                         CornerRadius="30"/>
             </StackLayout>
         </Grid>

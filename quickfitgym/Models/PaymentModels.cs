@@ -5,6 +5,7 @@ namespace quickfitgym.Models
     {
         public string Username { get; set; }
         public int Planid { get; set; }
+        public string Status { get; set; }
     }
 
     public class PayementPlan

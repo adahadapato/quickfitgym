@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 using quickfitgym.Models;
+using Xamarin.Forms;
 
 namespace quickfitgym.ViewModels
 {
@@ -38,6 +40,17 @@ namespace quickfitgym.ViewModels
             {
                 SetProperty(ref _selectedSchedule, value);
                 OnPropertyChanged(nameof(SelectedSchedule));
+            }
+        }
+
+        public ICommand SubmitCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    var k = SelectedSchedule.Count;
+                });
             }
         }
     }

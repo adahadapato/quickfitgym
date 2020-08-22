@@ -5,11 +5,12 @@
       <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="41" Column="58" />
       <File FileName="quickfitgym/Views/ProgramSchedulePage.xaml" Line="1" Column="1" />
       <File FileName="quickfitgym/ViewModels/ProgramViewModel.cs" Line="81" Column="36" />
-      <File FileName="quickfitgym/Views/JoinProgramPage.xaml" Line="71" Column="40" />
-      <File FileName="quickfitgym/ViewModels/JoinProgramViewModel.cs" Line="14" Column="30" />
+      <File FileName="quickfitgym/Views/JoinProgramPage.xaml" Line="77" Column="56" />
+      <File FileName="quickfitgym/ViewModels/JoinProgramViewModel.cs" Line="28" Column="16" />
       <File FileName="quickfitgym/AppShell.xaml" Line="102" Column="28" />
       <File FileName="quickfitgym/Views/PaymentPage.xaml" Line="4" Column="14" />
-      <File FileName="quickfitgym/Models/PaymentModels.cs" Line="6" Column="43" />
+      <File FileName="quickfitgym/Models/PaymentModels.cs" Line="8" Column="22" />
+      <File FileName="quickfitgym/Views/HomePage.xaml" Line="76" Column="86" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
