@@ -6,37 +6,75 @@
     <ContentPage.BindingContext>
         <vm:JoinProgramViewModel/>
     </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="LightSkyBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <Grid>
             <StackLayout>
-                 <Label Margin="15,170,15,0"
-                        Text="Our Menu"
-                        TextColor="Black"
+                 <Label Margin="15,50,15,0"
+                        Text="{Binding FTitle, Mode=TwoWay}"
+                        TextColor="HotPink"
+                        HorizontalOptions="CenterAndExpand"
                         FontSize="Medium" />
-                <CollectionView  x:Name="CvCategories"
-                                 HeightRequest="130"
-                                 SelectionMode="Single">
+                <CollectionView  x:Name="CvSchedules"
+                                 SelectedItems="{Binding SelectedSchedule }"
+                                 ItemsSource="{Binding ScheduleCollection}"
+                                 SelectionMode="Multiple">
                     <CollectionView.ItemsLayout>
                            <LinearItemsLayout Orientation="Vertical" />
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout Spacing="5"
+                            <Grid Padding="10">
+                                 <StackLayout Spacing="5"
                                          Padding="10"
-                                         Margin="15,0,15,0"
+                                         Margin="25,5,25,5"
                                          Orientation="Vertical">
-                                <Label TextColor="#000000"
+                                <Label TextColor="Gray"
+                                       FontAttributes="Bold"
+                                       FontSize="Medium"
                                        Text="{Binding DayOfWeek}"/>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label TextColor="#000000"
-                                       Text="{Binding StartTime}"/>
-                                    <Label TextColor="#000000"
+                                    <Label TextColor="Gray"
+                                           HorizontalOptions="StartAndExpand"
+                                           Text="{Binding StartTime}"/>
+                                    <Label Text=" to "
+                                           HorizontalTextAlignment="Center"
+                                           TextColor="Gray"
+                                           HorizontalOptions="CenterAndExpand"/>
+                                    <Label TextColor="Gray"
+                                           HorizontalOptions="EndAndExpand"
                                        Text="{Binding StopTime}"/>
                                 </StackLayout>
                             </StackLayout>
+                            </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
+                <Label TextColor="Gray"
+                       BackgroundColor="Gray"
+                       HeightRequest="2"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Button Text="SUBMIT"
+                        TextColor="White"
+                        BackgroundColor="HotPink"
+                        Margin="18,2,18,10"
+                        CornerRadius="30"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

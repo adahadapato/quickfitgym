@@ -2,11 +2,13 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="quickfitgym/ViewModels/ProgramScheduleViewModel.cs" Line="22" Column="26" />
-      <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="48" Column="96" />
+      <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="41" Column="58" />
       <File FileName="quickfitgym/Views/ProgramSchedulePage.xaml" Line="1" Column="1" />
       <File FileName="quickfitgym/ViewModels/ProgramViewModel.cs" Line="81" Column="36" />
-      <File FileName="quickfitgym/Views/JoinProgramPage.xaml" Line="29" Column="68" />
-      <File FileName="quickfitgym/ViewModels/JoinProgramViewModel.cs" Line="1" Column="1" />
+      <File FileName="quickfitgym/Views/JoinProgramPage.xaml" Line="71" Column="40" />
+      <File FileName="quickfitgym/ViewModels/JoinProgramViewModel.cs" Line="14" Column="30" />
+      <File FileName="quickfitgym/AppShell.xaml" Line="102" Column="28" />
+      <File FileName="quickfitgym/Views/PaymentPage.xaml" Line="4" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +18,9 @@
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="PaymentPage.xaml" expanded="True" />
+              </Node>
             </Node>
             <Node name="quickfitgym.Android" expanded="True" />
           </Node>
