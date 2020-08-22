@@ -9,6 +9,7 @@
       <File FileName="quickfitgym/ViewModels/JoinProgramViewModel.cs" Line="14" Column="30" />
       <File FileName="quickfitgym/AppShell.xaml" Line="102" Column="28" />
       <File FileName="quickfitgym/Views/PaymentPage.xaml" Line="4" Column="14" />
+      <File FileName="quickfitgym/Models/PaymentModels.cs" Line="6" Column="43" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,9 +19,7 @@
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="PaymentPage.xaml" expanded="True" />
-              </Node>
+              <Node name="Views" expanded="True" />
             </Node>
             <Node name="quickfitgym.Android" expanded="True" />
           </Node>
