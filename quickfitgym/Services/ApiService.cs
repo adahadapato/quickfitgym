@@ -137,6 +137,30 @@ namespace quickfitgym.Services
             return null;
         }
 
+        public static async Task<bool> CreateSchedule(ProgramSchedule schedule)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+                var json = JsonConvert.SerializeObject(schedule);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}schedule/create"), content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    var jsonresult = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<SuccessReturn>(jsonresult);
+                    await Application.Current.MainPage.DisplayAlert("Success", result.Message, "OK");
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return false;
+        }
+
     }
 
     public static class TokeValidator
