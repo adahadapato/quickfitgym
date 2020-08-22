@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using quickfitgym.Models;
 using quickfitgym.Services;
+using quickfitgym.Views;
 using Xamarin.Forms;
 
 namespace quickfitgym.ViewModels
@@ -10,6 +11,7 @@ namespace quickfitgym.ViewModels
     {
         public AddProgramViewModel()
         {
+            CanSchedule = false;
         }
         private string _programName;
         public string ProgramName
@@ -41,6 +43,18 @@ namespace quickfitgym.ViewModels
                 OnPropertyChanged(nameof(ProgramId));
             }
         }
+
+        private bool _canSchedule;
+        public bool CanSchedule
+        {
+            get { return _canSchedule; }
+            set
+            {
+                SetProperty(ref _canSchedule, value);
+                OnPropertyChanged(nameof(CanSchedule));
+            }
+        }
+       
         public ICommand SubmitCommand
          {
             get
@@ -61,6 +75,7 @@ namespace quickfitgym.ViewModels
                     if(result!=null)
                     {
                         ProgramId = result.ProgramId;
+                        CanSchedule = true;
                     }
                 });
             }
@@ -70,9 +85,21 @@ namespace quickfitgym.ViewModels
         {
             get
             {
-                return new Command(() =>
+                return new Command(async() =>
                 {
+                    if (CanSchedule)
+                    {
+                        var program = new Program()
+                        {
+                            Id = ProgramId,
+                            Name = ProgramName,
+                            Description = Description
+                        };
 
+                        await Shell.Current.Navigation.PushAsync(new ProgramSchedulePage(program));
+                    }
+                    else
+                        return;
                 });
             }
         }

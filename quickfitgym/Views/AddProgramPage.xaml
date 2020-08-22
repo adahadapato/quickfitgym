@@ -35,6 +35,7 @@
                                  PlaceholderColor="#80574D"
                                  HeightRequest="150"
                                  TextColor="#80574D"
+                                 IsVisible="{Binding CanSchedule}"
                                  Text="{Binding Description}"
                                  Keyboard="Text" />
                      </StackLayout>
