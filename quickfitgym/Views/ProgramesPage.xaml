@@ -7,7 +7,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
                      Command="{Binding AddCommand}"
-                     IsEnabled="{Binding IsAdmin}"/>
+                     IsEnabled="{Binding IsAdmin, Mode=TwoWay}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.BindingContext>
         <vm:ProgramViewModel/>
@@ -25,6 +25,7 @@
                      IsPullToRefreshEnabled="True"
                      HasUnevenRows="True"
                      SeparatorColor="HotPink"
+                     x:Name="LvScedules"
                      SeparatorVisibility="Default">
                <ListView.ItemTemplate>
                    <DataTemplate>
@@ -44,6 +45,8 @@
                                        Background="HotPink"
                                        TextColor="White"
                                        CornerRadius="30"
+                                       Command="{Binding Source={x:Reference LvScedules}, Path= BindingContext.JoinCommand}"
+                                       CommandParameter="{Binding .}"
                                        VerticalOptions="Center"/>
                            </StackLayout>
                        </ViewCell>

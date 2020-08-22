@@ -48,6 +48,7 @@
                  <Button Text="SCHEDULE"
                          TextColor="White"
                          BackgroundColor="HotPink"
+                         IsEnabled="{Binding CanSchedule, Mode=TwoWay}"
                          Command="{Binding ScheduleCommand}"
                          CornerRadius="30"/>
              </StackLayout>

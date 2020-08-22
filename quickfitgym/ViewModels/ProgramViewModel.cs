@@ -78,5 +78,17 @@ namespace quickfitgym.ViewModels
            
         }
 
+        public ICommand JoinCommand
+        {
+            get
+            {
+                return new Command(async(e) =>
+                {
+                    var program = e as Program;
+                    await Shell.Current.Navigation.PushAsync(new JoinProgramPage(program));
+                });
+            }
+        }
+
     }
 }
