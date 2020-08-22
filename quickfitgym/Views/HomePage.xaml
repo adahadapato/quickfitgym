@@ -9,6 +9,7 @@
     <ContentPage.Content>
         <Grid>
             <CollectionView x:Name="CvProducts"
+                            ItemsSource="{Binding ProductsCollection}"
                              SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                      <GridItemsLayout Orientation="Vertical"
@@ -22,6 +23,7 @@
                                FontSize="Medium" />
                         <CollectionView  x:Name="CvCategories"
                                          HeightRequest="130"
+                                         ItemsSource="{Binding GymCollections}"
                                          SelectionMode="Single">
                             <CollectionView.ItemsLayout>
                                 <LinearItemsLayout Orientation="Horizontal" />

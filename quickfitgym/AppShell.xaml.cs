@@ -22,7 +22,7 @@ namespace quickfitgym
 
         Dictionary<string, Type> routes = new Dictionary<string, Type>();
         public ICommand NavigateCommand => new Command(Navigate);
-        //public ICommand SettingsCommand => new Command(async () => await PushPage(new OptionsPage()));
+        public ICommand LogoutCommand => new Command(async () => await PushPage(new LoginPage()));
 
         private async Task PushPage(Page page)
         {
@@ -46,7 +46,7 @@ namespace quickfitgym
             //routes.Add("videos", typeof(VideosPage));
             routes.Add("admin", typeof(AdminPage));
             routes.Add("programmes", typeof(ProgramesPage));
-            routes.Add("logout", typeof(LoginPage));
+            //routes.Add("logout", typeof(LoginPage));
             foreach (var i in routes)
             {
                 Routing.RegisterRoute(i.Key, i.Value);

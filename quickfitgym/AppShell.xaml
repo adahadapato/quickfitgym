@@ -106,7 +106,7 @@
     <MenuItem Text="Videos" Command="{Binding NavigateCommand}" CommandParameter="videos" IconImageSource="video.png"/>
     <MenuItem Text="Programmes" Command="{Binding NavigateCommand}" CommandParameter="programmes" IconImageSource="video.png"/>
     <MenuItem Text="Admin" Command="{Binding NavigateCommand}" CommandParameter="admin" IconImageSource="admin.png"/>
-    <MenuItem Text="Logout" Command="{Binding NavigateCommand}" CommandParameter="logout" IconImageSource="admin.png"/>
+    <MenuItem Text="Logout" Command="{Binding LogoutCommand}" CommandParameter="logout" IconImageSource="admin.png"/>
 
 
     <!--<TabBar>

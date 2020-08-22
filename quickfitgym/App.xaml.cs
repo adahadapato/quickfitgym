@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using quickfitgym.Services;
 using quickfitgym.Views;
+using Xamarin.Essentials;
 
 namespace quickfitgym
 {
@@ -14,6 +15,15 @@ namespace quickfitgym
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
+            /*var token = Preferences.Get("token", string.Empty);
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                MainPage = new NavigationPage(new RegisterPage());
+            }
+            else
+            {
+                MainPage = new AppShell();
+            }*/
             MainPage = new AppShell();
         }
 
