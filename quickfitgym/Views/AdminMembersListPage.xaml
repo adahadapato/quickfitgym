@@ -1,7 +1,73 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              x:Class="quickfitgym.Views.AdminMembersListPage">
+    <ContentPage.BindingContext>
+        <vm:AdminMembersListViewModel/>
+    </ContentPage.BindingContext>
+     <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="LightSkyBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <Label Margin="15,20,15,0"
+                       Text="MEMBERS LIST"
+                       TextColor="HotPink"
+                       HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="Medium" />
+                <CollectionView  x:Name="CvMembers"
+                                 ItemsSource="{Binding MembersCollection}"
+                                 SelectedItem="{Binding SelectedMember}"
+                                 SelectionMode="Single">
+                     <CollectionView.ItemsLayout>
+                           <LinearItemsLayout Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <StackLayout Spacing="5"
+                                         Padding="10"
+                                         Margin="20,5,20,5"
+                                         Orientation="Vertical">
+                                    <Label TextColor="Gray"
+                                           FontAttributes="Bold"
+                                           FontSize="Medium"
+                                           Text="{Binding FullName}"/>
+                                    <StackLayout Orientation="Horizontal">
+                                         <Label TextColor="Gray"
+                                                HorizontalOptions="StartAndExpand"
+                                                Text="{Binding Email}"/>
+                                        <Label TextColor="Gray"
+                                                HorizontalOptions="EndAndExpand"
+                                                Text="{Binding Mobile}"/>
+                                    </StackLayout>
+                                    <Label TextColor="Gray"
+                                           HorizontalOptions="EndAndExpand"
+                                           Text="{Binding RegistrationDate}"/>
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

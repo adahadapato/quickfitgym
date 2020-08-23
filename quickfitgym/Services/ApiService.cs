@@ -95,6 +95,26 @@ namespace quickfitgym.Services
             return null;
         }
 
+
+        public static async Task<List<Members>> GetMembers()
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new
+                    System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var response = await client.GetStringAsync($"{AppSettings.ApiUrl}accounts/users");
+
+                var json = JsonConvert.DeserializeObject<List<Members>>(response);
+                return json;
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return null;
+        }
+
         public static async Task<List<Program>> GetPrograms()
         {
             try

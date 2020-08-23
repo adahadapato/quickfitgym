@@ -80,11 +80,16 @@
               
             </ContentView>
         </DataTemplate>
-
         </ResourceDictionary>
     </Shell.Resources>
 
      <FlyoutItem Title="Home" Icon="dashboard.png" IsVisible="{Binding IsMember}" >
+        <Tab Title="Home" Icon="dashboard.png">
+            <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Home" Icon="dashboard.png" IsVisible="{Binding IsMember}" >
         <Tab Title="Home" Icon="dashboard.png">
             <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}"/>
         </Tab>
@@ -97,22 +102,20 @@
         <Tab Title="Options" Icon="settings.png" >
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
         </Tab>
-         
-         
     </FlyoutItem>
 
     <FlyoutItem Title="Admin" Icon="admin.png" IsVisible="{Binding IsAdmin}" >
         <Tab Title="Admin" Icon="admin.png">
             <ShellContent Title="Options" ContentTemplate="{DataTemplate local:AdminPage}"/>
         </Tab>
-        <Tab Title="Profile" Icon="profile.png">
+        <Tab Title="Profile" Icon="about.png">
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
         </Tab>
-        <Tab Title="payment" Icon="settings.png" >
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
+        <Tab Title="payment" Icon="payment.png" >
+            <ShellContent ContentTemplate="{DataTemplate local:AdminMembersListPage}"/>
         </Tab>
-         <Tab Title="Members" Icon="settings.png" >
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
+         <Tab Title="Members" Icon="members.png" >
+            <ShellContent ContentTemplate="{DataTemplate local:AdminMembersListPage}"/>
         </Tab>
     </FlyoutItem>
    
@@ -127,10 +130,10 @@
     <MenuItem Text="Logout" Command="{Binding LogoutCommand}" CommandParameter="logout" IconImageSource="admin.png"/>
 
 
-    <TabBar>
+    <!--<TabBar>
         <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
         <ShellContent Title="Browse" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
-    </TabBar>
+    </TabBar>-->
     <!--
         If you would like to navigate to this content you can do so by calling
         await Shell.Current.GoToAsync("//LoginPage");

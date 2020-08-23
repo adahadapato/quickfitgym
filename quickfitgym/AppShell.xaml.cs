@@ -59,7 +59,7 @@ namespace quickfitgym
         {
             get
             {
-                return !Preferences.Get("IsAdmin", false);
+                return ! IsAdmin;
             }
         }
 

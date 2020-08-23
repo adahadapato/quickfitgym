@@ -610,3 +610,13 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/quickfitgym.Android.csprojAssemblyReference.cache
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-hdpi/payment.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-hdpi/members.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/payment.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/members.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xhdpi/payment.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xhdpi/members.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxhdpi/payment.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxhdpi/members.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxxhdpi/payment.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxxhdpi/members.png
