@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using quickfitgym.ViewModels;
 using quickfitgym.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace quickfitgym
@@ -50,6 +51,23 @@ namespace quickfitgym
             foreach (var i in routes)
             {
                 Routing.RegisterRoute(i.Key, i.Value);
+            }
+        }
+
+
+        public bool IsMember
+        {
+            get
+            {
+                return !Preferences.Get("IsAdmin", false);
+            }
+        }
+
+        public bool IsAdmin
+        {
+            get
+            {
+                return Preferences.Get("IsAdmin", false);
             }
         }
     }
