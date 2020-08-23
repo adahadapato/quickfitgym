@@ -32,6 +32,7 @@ namespace quickfitgym.Services
             return false;
         }
 
+
         public static async Task<bool> Login(string UserName, string Password)
         {
             try
@@ -65,7 +66,6 @@ namespace quickfitgym.Services
                     var result = await response.Content.ReadAsStringAsync();
                     var json = JsonConvert.DeserializeObject<LoginFailedModel>(result);
                     await Application.Current.MainPage.DisplayAlert("Error", json.error_description, "Ok");
-
                 }
             }
             catch(Exception ex)
@@ -73,6 +73,34 @@ namespace quickfitgym.Services
                 await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
             }
            
+            return false;
+        }
+
+        public static async Task<bool> UpdateAboutUs(AboutUs aboutUs)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var json = JsonConvert.SerializeObject(aboutUs);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}admin/aboutus/update"), content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    var jsonresult = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<SuccessReturn>(jsonresult);
+                    await Application.Current.MainPage.DisplayAlert("Error", result.Message, "CANCEL");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
             return false;
         }
 
@@ -139,15 +167,19 @@ namespace quickfitgym.Services
             try
             {
                 var client = new HttpClient();
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(program);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/create"), content);
-                if (!response.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode)
                 {
                     var jsonresult = await response.Content.ReadAsStringAsync();
                     var result = JsonConvert.DeserializeObject<AddProgramResult>(jsonresult);
                     return result;
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Unable to add program", "CANCEL");
                 }
             }
             catch (Exception ex)
@@ -162,7 +194,7 @@ namespace quickfitgym.Services
             try
             {
                 var client = new HttpClient();
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("accessToken", string.Empty));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(schedule);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}schedule/create"), content);
@@ -170,9 +202,14 @@ namespace quickfitgym.Services
                 {
                     var jsonresult = await response.Content.ReadAsStringAsync();
                     var result = JsonConvert.DeserializeObject<SuccessReturn>(jsonresult);
-                    await Application.Current.MainPage.DisplayAlert("Success", result.Message, "OK");
-                    return true;
+                    await Application.Current.MainPage.DisplayAlert("Error", result.Message, "CANCEL");
+                    return false;
                 }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Success", "Schedule created successfully ", "OK");
+                }
+                return true;
             }
             catch (Exception ex)
             {
@@ -180,7 +217,6 @@ namespace quickfitgym.Services
             }
             return false;
         }
-
     }
 
     public static class TokeValidator

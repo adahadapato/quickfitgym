@@ -18,6 +18,7 @@ namespace quickfitgym
             //Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute("home", typeof(HomePage));
             RegistrRoutes();
+            
             BindingContext = this;
         }
 
@@ -54,6 +55,14 @@ namespace quickfitgym
             }
         }
 
+        /*private bool _IsFirstTime;
+        public bool IsFirstTime
+        {
+            get
+            {
+                return _IsFirstTime;
+            }
+        }*/
 
         public bool IsMember
         {

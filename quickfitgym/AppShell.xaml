@@ -83,8 +83,11 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-     <FlyoutItem Title="Home" Icon="dashboard.png" IsVisible="{Binding IsMember}" >
+     <FlyoutItem Title="Home" Icon="dashboard.png" IsVisible="{Binding IsMember}">
         <Tab Title="Home" Icon="dashboard.png">
+            <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}"/>
+        </Tab>
+         <Tab Title="About" Icon="about.png">
             <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}"/>
         </Tab>
     </FlyoutItem>
@@ -109,7 +112,7 @@
             <ShellContent Title="Options" ContentTemplate="{DataTemplate local:AdminPage}"/>
         </Tab>
         <Tab Title="Profile" Icon="about.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:UpdateAboutUsPage}"/>
         </Tab>
         <Tab Title="payment" Icon="payment.png" >
             <ShellContent ContentTemplate="{DataTemplate local:AdminMembersListPage}"/>

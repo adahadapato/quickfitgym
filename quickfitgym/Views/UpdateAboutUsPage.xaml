@@ -1,56 +1,49 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="#F7F5F4"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
-             x:Class="quickfitgym.Views.AddProgramPage">
-    <ContentPage.BindingContext>
-        <vm:AddProgramViewModel/>
+             x:Class="quickfitgym.Views.UpdateAboutUsPage">
+     <ContentPage.BindingContext>
+        <vm:AboutViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
-             <StackLayout Spacing="8"
-                          Margin="25,1">
+            <StackLayout Spacing="8"
+                         Margin="25,1">
                  <Label TextColor="HotPink"
-                        Text="ADD PROGRAM"
+                        Text="UPDATE PROFILE"
                         FontSize="Medium"
                         FontAttributes="Bold"
                         HorizontalTextAlignment="Center"
-                        Margin="30,0,30,0" />
-                 <Frame HasShadow="True"
-                        Padding="25"
-                        Margin="0,50,0,0">
+                        Margin="30,2,30,0" />
+                <Frame HasShadow="True"
+                       Padding="25"
+                       Margin="0,50,0,0">
                      <StackLayout>
-                         <Label Text="Program Details"
+                         <Label Text="Details"
                                FontAttributes="Bold"
                                FontSize="Small"
                                HorizontalOptions="Center"
                                TextColor="HotPink" />
                          <Entry Placeholder="Program"
                                 PlaceholderColor="#80574D"
-                                Text="{Binding ProgramName}"
+                                Text="{Binding About, Mode=TwoWay}"
                                 TextColor="#80574D"
                                 Keyboard="Email" />
                          <Editor Placeholder="Details"
                                  PlaceholderColor="#80574D"
                                  HeightRequest="150"
                                  TextColor="#80574D"
-                                 IsVisible="{Binding CanSchedule}"
-                                 Text="{Binding Description}"
+                                 Text="{Binding Message,Mode=TwoWay}"
                                  Keyboard="Text" />
                      </StackLayout>
-                 </Frame>
-                 <Button Text="SUBMIT"
+                </Frame>
+                <Button Text="SUBMIT"
                          TextColor="White"
                          BackgroundColor="HotPink"
                          Command="{Binding SubmitCommand}"
                          CornerRadius="30"/>
-                 <Button Text="SCHEDULE"
-                         TextColor="White"
-                         BackgroundColor="HotPink"
-                         Command="{Binding ScheduleCommand}"
-                         CornerRadius="30"/>
-             </StackLayout>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

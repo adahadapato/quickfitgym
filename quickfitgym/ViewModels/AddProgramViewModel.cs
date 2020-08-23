@@ -98,8 +98,7 @@ namespace quickfitgym.ViewModels
 
                         await Shell.Current.Navigation.PushAsync(new ProgramSchedulePage(program));
                     }
-                    else
-                        return;
+                   
                 });
             }
         }
