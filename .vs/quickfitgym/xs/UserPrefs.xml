@@ -12,13 +12,10 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="quickfitgym" expanded="True" selected="True">
-            <Node name="quickfitgym" expanded="True">
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True" />
+            <Node name="quickfitgym" expanded="True" />
+            <Node name="quickfitgym.Android" expanded="True">
+              <Node name="Resources" expanded="True" />
             </Node>
-            <Node name="quickfitgym.Android" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -26,7 +23,6 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.quickfitgym.iOS FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.quickfitgym.Android PreferredExecutionTarget="Android.zaraph" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
