@@ -20,7 +20,7 @@
                     <DataTemplate>
                         <StackLayout Spacing="5"
                                      Padding="10"
-                                     Margin="15,0,15,0"
+                                     Margin="15,1,15,0"
                                      Orientation="Vertical">
                             <Image Aspect="Fill"
                                    BackgroundColor="White"
