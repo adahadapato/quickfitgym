@@ -105,7 +105,7 @@ namespace quickfitgym.ViewModels
                         Mobile = Phone,
                         RoleName = "Member",
                         EmailConfirmed = false,
-                        Password =Password
+                        Password = Password
                     };
                     var result = await ApiService.Register(model);
                     if (result)

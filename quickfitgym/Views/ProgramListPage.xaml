@@ -2,13 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
-             Title="{Binding Title}"
-             x:Class="quickfitgym.Views.ProgramesPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add"
-                     Command="{Binding AddCommand}"/>
-    </ContentPage.ToolbarItems>
-    <ContentPage.BindingContext>
+             x:Class="quickfitgym.Views.ProgramListPage">
+     <ContentPage.BindingContext>
         <vm:ProgramViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>

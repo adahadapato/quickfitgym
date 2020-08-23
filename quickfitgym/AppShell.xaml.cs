@@ -26,6 +26,25 @@ namespace quickfitgym
         public ICommand NavigateCommand => new Command(Navigate);
         public ICommand LogoutCommand => new Command(async () => await PushPage(new LoginPage()));
 
+        public ICommand ProgramsCommand
+        {
+            get
+            {
+                return new Command(async() =>
+                {
+                    if(IsAdmin)
+                    {
+                        await Shell.Current.Navigation.PushAsync(new ProgramesPage());
+                    }
+                    else
+                    {
+                        await Shell.Current.Navigation.PushAsync(new ProgramListPage());
+                    }
+                    Shell.Current.FlyoutIsPresented = false;
+                });
+            }
+        }
+
         private async Task PushPage(Page page)
         {
             await Shell.Current.Navigation.PushModalAsync(page);
