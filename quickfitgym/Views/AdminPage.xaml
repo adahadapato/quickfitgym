@@ -3,9 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="quickfitgym.Views.AdminPage">
     <ContentPage.Content>
-        <Label Text="Welcome to Admin page"
-                   VerticalOptions="CenterAndExpand"
+        <StackLayout>
+            <Label TextColor="HotPink"
+                   FontSize="Medium"
+                   Text="ADMIN STATION"
+                   FontAttributes="Bold"
                    HorizontalOptions="CenterAndExpand"
-                   FontSize="20"/>
+                   HorizontalTextAlignment="Center" />
+            <CollectionView x:Name="CvAdmin"
+                            SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     Span="3" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Spacing="5"
+                                     Padding="10"
+                                     Margin="15,0,15,0"
+                                     Orientation="Vertical">
+                            <Image Aspect="Fill"
+                                   BackgroundColor="White"
+                                   HeightRequest="150"
+                                   WidthRequest="150"
+                                   Source="{Binding ImageUrl}"/>
+                            <Label TextColor="#000000"
+                                   Text="{Binding Name}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
