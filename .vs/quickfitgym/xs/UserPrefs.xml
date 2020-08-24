@@ -10,12 +10,13 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="quickfitgym" expanded="True">
+          <Node name="quickfitgym" expanded="True" selected="True">
             <Node name="quickfitgym" expanded="True">
-              <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="ProgramSchedulePage.xaml" expanded="True" />
+              </Node>
             </Node>
-            <Node name="quickfitgym.Android" expanded="True" selected="True" />
+            <Node name="quickfitgym.Android" expanded="True" />
           </Node>
         </State>
       </Pad>
