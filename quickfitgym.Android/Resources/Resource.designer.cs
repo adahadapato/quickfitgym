@@ -8425,22 +8425,13 @@ namespace quickfitgym.Droid
 			public const int settings = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int tab_about = 2131165319;
+			public const int tooltip_frame_dark = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int tab_feed = 2131165320;
+			public const int tooltip_frame_light = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int tooltip_frame_dark = 2131165321;
-			
-			// aapt resource value: 0x7F07008A
-			public const int tooltip_frame_light = 2131165322;
-			
-			// aapt resource value: 0x7F07008B
-			public const int video = 2131165323;
-			
-			// aapt resource value: 0x7F07008C
-			public const int xamarin_logo = 2131165324;
+			public const int video = 2131165321;
 			
 			static Drawable()
 			{
