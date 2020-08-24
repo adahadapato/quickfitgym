@@ -13,6 +13,7 @@ namespace quickfitgym.ViewModels
         {
             CanSchedule = false;
         }
+
         private string _programName;
         public string ProgramName
         {
