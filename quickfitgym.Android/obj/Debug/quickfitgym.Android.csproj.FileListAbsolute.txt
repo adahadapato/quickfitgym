@@ -40,9 +40,6 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/mipmap-xxhdpi/launcher_foreground.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/mipmap-xxxhdpi/icon.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/mipmap-xxxhdpi/launcher_foreground.png
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable/xamarin_logo.png
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable/tab_about.png
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable/tab_feed.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-hdpi/email.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-hdpi/dashboard.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-hdpi/settings.png
