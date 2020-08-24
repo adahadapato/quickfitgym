@@ -15,11 +15,11 @@
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="ProgramSchedulePage.xaml" selected="True" />
-              </Node>
+              <Node name="Views" expanded="True" />
             </Node>
-            <Node name="quickfitgym.Android" expanded="True" />
+            <Node name="quickfitgym.Android" expanded="True">
+              <Node name="Resources" expanded="True" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
