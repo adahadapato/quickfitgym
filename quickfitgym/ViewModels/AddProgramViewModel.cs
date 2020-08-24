@@ -96,7 +96,7 @@ namespace quickfitgym.ViewModels
                             Description = Description
                         };
 
-                        await Shell.Current.Navigation.PushAsync(new ProgramSchedulePage(program));
+                        //await Shell.Current.Navigation.PushAsync(new ProgramSchedulePage(program));
                     }
                    
                 });

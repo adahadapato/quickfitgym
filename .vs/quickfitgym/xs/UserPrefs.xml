@@ -2,8 +2,11 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="quickfitgym/ViewModels/ProgramViewModel.cs" Line="100" Column="20" />
-      <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="59" Column="27" />
+      <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="60" Column="42" />
       <File FileName="quickfitgym/Views/RegisterPage.xaml" Line="27" Column="39" />
+      <File FileName="quickfitgym/ViewModels/AddProgramViewModel.cs" Line="99" Column="27" />
+      <File FileName="quickfitgym/Views/ProgramSchedulePage.xaml" Line="10" Column="34" />
+      <File FileName="quickfitgym/Views/ProgramSchedulePage.xaml.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +16,9 @@
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="ProgramSchedulePage.xaml" expanded="True" />
+              </Node>
               <Node name="AppShell.xaml" expanded="True" />
             </Node>
           </Node>
@@ -25,7 +30,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.quickfitgym.Android PreferredExecutionTarget="Android.Xamarin_Android_API_23" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/ViewModels/ProgramViewModel.cs" relfile="quickfitgym/ViewModels/ProgramViewModel.cs" line="110" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
