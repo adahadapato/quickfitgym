@@ -10,7 +10,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="quickfitgym" expanded="True">
+          <Node name="quickfitgym" expanded="True" selected="True">
             <Node name="quickfitgym" expanded="True">
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
@@ -18,7 +18,7 @@
               <Node name="Views" expanded="True" />
             </Node>
             <Node name="quickfitgym.Android" expanded="True">
-              <Node name="Resources" expanded="True" selected="True" />
+              <Node name="Resources" expanded="True" />
             </Node>
           </Node>
         </State>
