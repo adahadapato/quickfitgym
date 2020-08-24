@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             x:Class="quickfitgym.Views.ProgramSchedulePage">
+    <ContentPage.BindingContext>
+        <vm:ProgramScheduleViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Spacing="20"
+                     Margin="25">
+             <Label    TextColor="HotPink"
+                       Text="{Binding ProgramName}"
+                       FontSize="Medium"
+                       TextTransform="Uppercase"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand" />
+            <Frame HasShadow="True"
+                   Padding="25"
+                   Margin="0,5,0,50">
+                 <StackLayout Margin="0,60,0,60">
+                     <Picker Title="Select a Day"
+                             ItemsSource="{Binding DaysCollection}"
+                             SelectedItem="{Binding SelectedDay}"
+                             TitleColor="Hotpink"/>
+                     <Label Text="Start Time"/>
+                     <TimePicker Time="{Binding StartTime}"
+                                 TextColor="HotPink"/>
+                     <Label Text="Stop Time"/>
+                     <TimePicker Time="{Binding StopTime}"
+                                 TextColor="HotPink"/>
+                 </StackLayout>
+            </Frame>
+             <Button Text="SUBMIT"
+                         TextColor="White"
+                         BackgroundColor="HotPink"
+                         Command="{Binding SubmitCommand}"
+                         CornerRadius="30"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
