@@ -90,5 +90,27 @@ namespace quickfitgym.ViewModels
             }
         }
 
+        public ICommand SwipeLeftCommand
+        {
+            get
+            {
+                return new Command((e) =>
+                {
+                    var program = e as Program;
+                });
+            }
+        }
+
+        public ICommand SwipeRightCommand
+        {
+            get
+            {
+                return new Command((e) =>
+                {
+                    var program = e as Program;
+                });
+            }
+        }
+
     }
 }

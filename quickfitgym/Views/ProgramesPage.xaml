@@ -39,15 +39,24 @@
                                    <Label Text="{Binding Description}"
                                           TextColor="Gray"/>
                                </StackLayout>
-                               <Button Text="Join"
+                               <!--<Button Text="Join"
                                        BorderColor="Silver"
                                        Background="HotPink"
                                        TextColor="White"
                                        CornerRadius="30"
                                        Command="{Binding Source={x:Reference LvScedules}, Path= BindingContext.JoinCommand}"
                                        CommandParameter="{Binding .}"
-                                       VerticalOptions="Center"/>
+                                       VerticalOptions="Center"/>-->
+                               <StackLayout.GestureRecognizers>
+                                   <SwipeGestureRecognizer Direction="Left"
+                                                           Command="{Binding SwipeLeftCommand}"
+                                                           CommandParameter="{Binding .}"/>
+                                   <SwipeGestureRecognizer Direction="Right"
+                                                           Command="{Binding SwipeRightCommand}"
+                                                           CommandParameter="{Binding .}"/>
+                               </StackLayout.GestureRecognizers>
                            </StackLayout>
+                          
                        </ViewCell>
                    </DataTemplate>
                </ListView.ItemTemplate>
