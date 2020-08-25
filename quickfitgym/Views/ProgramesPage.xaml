@@ -28,7 +28,7 @@
                      SeparatorVisibility="Default">
                <ListView.ItemTemplate>
                    <DataTemplate>
-                       <!--<ViewCell>-->
+                       <ViewCell>
                            <StackLayout Orientation="Horizontal">
                                <Image Source="{Binding Imageurl}"
                                       HeightRequest="50"
@@ -57,7 +57,7 @@
                                </StackLayout.GestureRecognizers>
                            </StackLayout>
                           
-                       <!--</ViewCell>-->
+                       </ViewCell>
                    </DataTemplate>
                </ListView.ItemTemplate>
            </ListView>

@@ -11,14 +11,14 @@ using Xamarin.Forms;
 
 namespace quickfitgym.ViewModels
 {
-    public class ProgramViewModel:BaseViewModel
+    public class ProgramViewModel : BaseViewModel
     {
         public ObservableCollection<Program> ProgramCollection { get; private set; }
         //private List<Program> _Programs;
         public ProgramViewModel()
         {
             Title = "Programs";
-            IsAdmin = false;// Preferences.Get("IsAdmin", false);
+            IsAdmin =  Preferences.Get("IsAdmin", false);
             ProgramCollection = new ObservableCollection<Program>();
             GetProgrames();
         }
@@ -28,8 +28,7 @@ namespace quickfitgym.ViewModels
             var result = await ApiService.GetPrograms();
             if (result != null)
             {
-                //_Programs = result;
-                foreach (var p in result)
+                foreach (Program p in result)
                 {
                     ProgramCollection.Add(p);
                 }

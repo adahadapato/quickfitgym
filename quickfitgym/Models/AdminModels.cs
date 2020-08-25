@@ -24,4 +24,11 @@ namespace quickfitgym.Models
         public List<object> Claims { get; set; }
         public string RegistrationDate { get; set; }
     }
+
+    public class AdminMenu
+    {
+        public string Title { get; set; }
+        public string ImageUrl { get; set; }
+        public string Details { get; set; }
+    }
 }
