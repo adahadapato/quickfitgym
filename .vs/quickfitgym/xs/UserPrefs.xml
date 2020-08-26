@@ -1,20 +1,16 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{C8939C5D-D44F-46B3-9155-9FDD360CB1B3}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="quickfitgym/ViewModels/JoinProgramViewModel.cs" Line="1" Column="1" />
-      <File FileName="quickfitgym/AppShell.xaml" />
-      <File FileName="quickfitgym/Views/AdminPage.xaml" />
-      <File FileName="quickfitgym/ViewModels/AdminViewModel.cs" />
-      <File FileName="quickfitgym/AppShell.xaml.cs" />
-      <File FileName="quickfitgym/Views/CustomersPagePage.xaml" />
-      <File FileName="quickfitgym/ViewModels/CustomerViewModel.cs" Line="39" Column="1" />
-      <File FileName="quickfitgym/Models/AdminModels.cs" />
+      <File FileName="quickfitgym/Views/CustomersPagePage.xaml" Line="80" Column="69" />
+      <File FileName="quickfitgym/ViewModels/CustomerViewModel.cs" Line="53" Column="43" />
+      <File FileName="quickfitgym/Models/AdminModels.cs" Line="23" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="quickfitgym" expanded="True" selected="True">
             <Node name="quickfitgym" expanded="True">
+              <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True" />
             </Node>
