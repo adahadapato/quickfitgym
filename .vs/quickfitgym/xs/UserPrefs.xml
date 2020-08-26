@@ -11,6 +11,7 @@
         <State name="__root__">
           <Node name="quickfitgym" expanded="True" selected="True">
             <Node name="quickfitgym" expanded="True">
+              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True" />
             </Node>
             <Node name="quickfitgym.Android" expanded="True">
