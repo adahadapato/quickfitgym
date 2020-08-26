@@ -23,6 +23,7 @@ namespace quickfitgym.Models
         public List<string> Roles { get; set; }
         public List<object> Claims { get; set; }
         public string RegistrationDate { get; set; }
+        public string PhotoUrl { get; set; }
     }
 
     public class AdminMenu
@@ -30,5 +31,6 @@ namespace quickfitgym.Models
         public string Title { get; set; }
         public string ImageUrl { get; set; }
         public string Details { get; set; }
+        public string route { get; set; }
     }
 }

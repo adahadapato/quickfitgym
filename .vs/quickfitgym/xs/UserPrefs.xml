@@ -2,25 +2,24 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="quickfitgym/ViewModels/JoinProgramViewModel.cs" Line="1" Column="1" />
-      <File FileName="quickfitgym/Views/ProgramesPage.xaml" />
       <File FileName="quickfitgym/AppShell.xaml" />
-      <File FileName="quickfitgym/Views/AdminPage.xaml" Line="39" Column="35" />
+      <File FileName="quickfitgym/Views/AdminPage.xaml" />
       <File FileName="quickfitgym/ViewModels/AdminViewModel.cs" />
-      <File FileName="quickfitgym/Views/LoginPage.xaml" Line="1" Column="1" />
+      <File FileName="quickfitgym/AppShell.xaml.cs" />
+      <File FileName="quickfitgym/Views/CustomersPagePage.xaml" />
+      <File FileName="quickfitgym/ViewModels/CustomerViewModel.cs" Line="39" Column="1" />
+      <File FileName="quickfitgym/Models/AdminModels.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="quickfitgym" expanded="True" selected="True">
             <Node name="quickfitgym" expanded="True">
-              <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True" />
             </Node>
             <Node name="quickfitgym.Android" expanded="True">
-              <Node name="Resources" expanded="True">
-                <Node name="drawable-hdpi" expanded="True" />
-              </Node>
+              <Node name="Resources" expanded="True" />
             </Node>
           </Node>
         </State>

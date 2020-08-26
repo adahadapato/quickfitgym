@@ -17,6 +17,9 @@
                    HorizontalTextAlignment="Center" />
             <CollectionView x:Name="CvAdmin"
                             ItemsSource="{Binding MenuCollection}"
+                            SelectedItem="{Binding SelectedMenu}"
+                            SelectionChangedCommand="{Binding SelectedItemCommand}"
+                            SelectionChangedCommandParameter="{Binding Title}"
                             SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical"
@@ -42,7 +45,7 @@
                                         HorizontalOptions="FillAndExpand"
                                         VerticalOptions="FillAndExpand"/>
                                  <Label Text="{Binding Title}"
-                                        Margin="0,30,0,0"
+                                        Margin="0,50,0,0"
                                         TextColor="#000"
                                         HorizontalOptions="CenterAndExpand"
                                         HorizontalTextAlignment="Center"
