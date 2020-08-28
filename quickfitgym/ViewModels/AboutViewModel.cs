@@ -80,5 +80,16 @@ namespace quickfitgym.ViewModels
                 Message = result.Message;
             }
         }
+
+        public ICommand PreviewCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Shell.Current.GoToAsync("about");
+                });
+            }
+        }
     }
 }

@@ -3,15 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              BackgroundColor="#90bff5"
+             Title="{Binding Title}"
              x:Class="quickfitgym.Views.UpdateAboutUsPage">
-     <Shell.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Preview"
+                     Command="{Binding PreviewCommand}"/>
+    </ContentPage.ToolbarItems>
+     <!--<Shell.TitleView>
         <Label Text="UPDATE PROFILE"
                     HorizontalOptions="StartAndExpand"
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center" 
                     TextColor="White"
                     VerticalOptions="Center" />
-    </Shell.TitleView>
+    </Shell.TitleView>-->
      <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>

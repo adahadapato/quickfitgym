@@ -12,6 +12,7 @@ namespace quickfitgym.ViewModels
         public ObservableCollection<Members> TrainersCollection { get; private set; }
         public CustomerViewModel()
         {
+            Title = "Members";
             MembersCollection = new ObservableCollection<Members>();
             TrainersCollection = new ObservableCollection<Members>();
             GetMembers();

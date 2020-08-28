@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              BackgroundColor="#90bff5"
+             Title="{Binding Title}"
              x:Class="quickfitgym.Views.CustomersPagePage">
     <ContentPage.BindingContext>
         <vm:CustomerViewModel/>

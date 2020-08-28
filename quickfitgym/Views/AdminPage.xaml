@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              BackgroundColor="{StaticResource ThemeColor}"
+             Title="{Binding Title}"
              x:Class="quickfitgym.Views.AdminPage">
-    <Shell.TitleView>
+    <!--<Shell.TitleView>
         <Label Text="ADMIN MENU"
                     HorizontalOptions="StartAndExpand"
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center" 
                     TextColor="White"
                     VerticalOptions="Center" />
-    </Shell.TitleView>
+    </Shell.TitleView>-->
     <ContentPage.BindingContext>
         <vm:AdminViewModel/>
     </ContentPage.BindingContext>

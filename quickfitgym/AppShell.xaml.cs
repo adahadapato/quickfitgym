@@ -14,20 +14,8 @@ namespace quickfitgym
         public AppShell()
         {
             InitializeComponent();
-            //Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            //Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-            Routing.RegisterRoute("home", typeof(HomePage));
-            //Routing.RegisterRoute("Program", typeof(ProgramesPage));
             RegisterRoutes();
-            //IsAdmin = false;
-            //IsMember = false;
             BindingContext = this;
-            _timer = new Timer(TimeSpan.FromSeconds(1), CountDown);
-            TotalSeconds = _totalSeconds;
-            _timer.Start();
-
-            //this.CurrentItem.CurrentItem = flAdmin;
-
             Activate();
         }
 
@@ -70,7 +58,7 @@ namespace quickfitgym
         void RegisterRoutes()
         {
             //routes.Add("contactus", typeof(ContactUsPage));
-            //routes.Add("photos", typeof(PhotosPage));
+            routes.Add("home", typeof(HomePage));
             routes.Add("aboutus", typeof(UpdateAboutUsPage));
             routes.Add("about", typeof(AboutPage));
             routes.Add("videos", typeof(VideosPage));
@@ -85,7 +73,7 @@ namespace quickfitgym
 
         private void Activate()
         {
-            var IsAdmin =  Preferences.Get("IsAdmin", false);
+            var IsAdmin = Preferences.Get("IsAdmin", false);
             if(IsAdmin)
             {
                 this.CurrentItem = flAdmin;
@@ -103,56 +91,5 @@ namespace quickfitgym
                 return _IsFirstTime;
             }
         }*/
-
-       
-
-        #region Landing Page
-
-        private Timer _timer;
-
-        private TimeSpan _totalSeconds = new TimeSpan(0, 0, 0, 10);
-        public TimeSpan TotalSeconds
-        {
-            get { return _totalSeconds; }
-            set
-            {
-                _totalSeconds = value;
-                //Set(ref _totalSeconds, value);
-                //OnPropertyChanged(nameof(TotalSeconds));
-            }
-        }
-
-        private void CountDown()
-        {
-            if (_totalSeconds.TotalSeconds == 0)
-            {
-                //do something after hitting 0, in this example it just stops/resets the timer
-                //StopTimerCommand();
-                StopTimerCommand();
-                //IsAdmin = Preferences.Get("IsAdmin", false);
-                //IsMember = !IsAdmin;
-                /*if (IsAdmin)
-                {
-                    flAdmin.IsVisible = true;
-                }
-                else
-                {
-                    flMembers.IsVisible = true;
-                }*/
-                Shell.Current.Navigation.PopToRootAsync();
-                flLoading.IsVisible = false;
-            }
-            else
-            {
-                TotalSeconds = _totalSeconds.Subtract(new TimeSpan(0, 0, 0, 1));
-            }
-        }
-
-        private void StopTimerCommand()
-        {
-            TotalSeconds = new TimeSpan(0, 0, 0, 10);
-            _timer.Stop();
-        }
-        #endregion
     }
 }

@@ -12,6 +12,7 @@ namespace quickfitgym.ViewModels
         public ObservableCollection<AdminMenu> MenuCollection { get; private set; }
         public AdminViewModel()
         {
+            Title = "Admin";
             MenuCollection = new ObservableCollection<AdminMenu>() {
 
             new AdminMenu(){Title ="Program", route="program",ImageUrl="xxx"},

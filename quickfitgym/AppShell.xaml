@@ -95,7 +95,7 @@
         <Tab Title="Home" Icon="dashboard.png" >
             <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}"/>
         </Tab>
-        <Tab Title="Programs" Icon="heart.png" >
+        <Tab Title="Programs" Icon="briefcase.png" >
             <ShellContent Title="Programms" ContentTemplate="{DataTemplate local:ProgramListPage}"/>
         </Tab>
         <Tab Title="Profile" Icon="profile.png">
