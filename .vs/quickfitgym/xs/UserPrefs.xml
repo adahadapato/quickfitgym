@@ -2,13 +2,11 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="quickfitgym/AppShell.xaml" Line="18" Column="13" />
-      <File FileName="quickfitgym/ViewModels/ProfileViewModel.cs" Line="15" Column="7" />
-      <File FileName="quickfitgym/AppShell.xaml.cs" Line="88" Column="27" />
-      <File FileName="quickfitgym/ViewModels/LandingPageViewModel.cs" Line="10" Column="23" />
-      <File FileName="quickfitgym/Views/RegisterPage.xaml" Line="7" Column="57" />
+      <File FileName="quickfitgym/AppShell.xaml.cs" />
+      <File FileName="quickfitgym/ViewModels/LandingPageViewModel.cs" />
       <File FileName="quickfitgym/Views/UpdateAboutUsPage.xaml" Line="27" Column="26" />
       <File FileName="quickfitgym/Views/AdminPage.xaml" Line="5" Column="57" />
-      <File FileName="quickfitgym/App.xaml" Line="10" Column="50" />
+      <File FileName="quickfitgym/Views/AboutPage.xaml" Line="42" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
