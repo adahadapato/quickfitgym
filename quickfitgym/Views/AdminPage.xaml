@@ -2,24 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
-             BackgroundColor="#000"
+             BackgroundColor="{StaticResource ThemeColor}"
              x:Class="quickfitgym.Views.AdminPage">
+    <Shell.TitleView>
+        <Label Text="ADMIN MENU"
+                    HorizontalOptions="StartAndExpand"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center" 
+                    TextColor="White"
+                    VerticalOptions="Center" />
+    </Shell.TitleView>
     <ContentPage.BindingContext>
         <vm:AdminViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label TextColor="HotPink"
+           <!-- <Label TextColor="HotPink"
                    FontSize="Medium"
                    Text="MAIN MENU"
                    FontAttributes="Bold"
                    HorizontalOptions="CenterAndExpand"
-                   HorizontalTextAlignment="Center" />
+                   HorizontalTextAlignment="Center" />-->
             <CollectionView x:Name="CvAdmin"
-                            ItemsSource="{Binding MenuCollection}"
-                            SelectedItem="{Binding SelectedMenu}"
+                            ItemsSource="{Binding MenuCollection, Mode=TwoWay}"
+                            SelectedItem="{Binding SelectedMenu, Mode=TwoWay}"
                             SelectionChangedCommand="{Binding SelectedItemCommand}"
-                            SelectionChangedCommandParameter="{Binding Title}"
                             SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical"
@@ -29,9 +36,9 @@
                     <DataTemplate>
                         <Frame Padding="10"
                                WidthRequest="120"
-                               BackgroundColor="#000"
+                               BackgroundColor="#90bff5"
                                HeightRequest="120">
-                        <Frame BackgroundColor="#fff"
+                        <Frame BackgroundColor="#bed4ed"
                                WidthRequest="100"
                                HeightRequest="100"
                                HasShadow="True"
@@ -46,7 +53,7 @@
                                         VerticalOptions="FillAndExpand"/>
                                  <Label Text="{Binding Title}"
                                         Margin="0,50,0,0"
-                                        TextColor="#000"
+                                        TextColor="#ffffff"
                                         HorizontalOptions="CenterAndExpand"
                                         HorizontalTextAlignment="Center"
                                         VerticalTextAlignment="Center" />

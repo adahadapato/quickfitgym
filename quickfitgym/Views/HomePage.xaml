@@ -19,7 +19,8 @@
                     <StackLayout>
                          <Label Margin="15,170,15,0"
                                Text="Inside the Gyn"
-                               TextColor="Black"
+                               TextColor="HotPink"
+                                FontAttributes="Bold"
                                FontSize="Medium" />
                         <CollectionView  x:Name="CvCategories"
                                          HeightRequest="130"
@@ -58,7 +59,8 @@
                         </CollectionView>
                         <Label Margin="15,15,15,0"
                                Text="Our Products"
-                               TextColor="Black"
+                               TextColor="HotPink"
+                               FontAttributes="Bold"
                                FontSize="Medium" />
                     </StackLayout>
                 </CollectionView.Header>

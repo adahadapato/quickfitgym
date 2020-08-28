@@ -2,7 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             BackgroundColor="#90bff5"
              x:Class="quickfitgym.Views.UpdateAboutUsPage">
+     <Shell.TitleView>
+        <Label Text="UPDATE PROFILE"
+                    HorizontalOptions="StartAndExpand"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center" 
+                    TextColor="White"
+                    VerticalOptions="Center" />
+    </Shell.TitleView>
      <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
@@ -10,21 +19,12 @@
         <Grid>
             <StackLayout Spacing="8"
                          Margin="25,1">
-                 <Label TextColor="HotPink"
-                        Text="UPDATE PROFILE"
-                        FontSize="Medium"
-                        FontAttributes="Bold"
-                        HorizontalTextAlignment="Center"
-                        Margin="30,2,30,0" />
+                 
                 <Frame HasShadow="True"
                        Padding="25"
                        Margin="0,50,0,0">
                      <StackLayout>
-                         <Label Text="Details"
-                               FontAttributes="Bold"
-                               FontSize="Small"
-                               HorizontalOptions="Center"
-                               TextColor="HotPink" />
+                         
                          <Entry Placeholder="Program"
                                 PlaceholderColor="#80574D"
                                 Text="{Binding About, Mode=TwoWay}"
@@ -33,14 +33,14 @@
                          <Editor Placeholder="Details"
                                  PlaceholderColor="#80574D"
                                  HeightRequest="150"
-                                 TextColor="#80574D"
+                                 TextColor="HotPink"
                                  Text="{Binding Message,Mode=TwoWay}"
                                  Keyboard="Text" />
                      </StackLayout>
                 </Frame>
                 <Button Text="SUBMIT"
                          TextColor="White"
-                         BackgroundColor="HotPink"
+                         BackgroundColor="#045bbf"
                          Command="{Binding SubmitCommand}"
                          CornerRadius="30"/>
             </StackLayout>

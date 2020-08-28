@@ -13,7 +13,7 @@ namespace quickfitgym
         public App()
         {
             InitializeComponent();
-
+            Device.SetFlags(new[] { "Brush_Experimental" });
             DependencyService.Register<MockDataStore>();
             /*var token = Preferences.Get("token", string.Empty);
             if (string.IsNullOrWhiteSpace(token))

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="quickfitgym.Views.AboutPage"
+             Background="#90bff5"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              Title="{Binding Title}">
     <ContentPage.BindingContext>
@@ -9,9 +10,9 @@
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">HotPink</Color>
+            <Color x:Key="Primary">#045bbf</Color>
             <Color x:Key="Accent">HotPink</Color>
-            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="LightTextColor">#ffffff</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
     <Grid>

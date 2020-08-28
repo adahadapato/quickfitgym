@@ -4,6 +4,7 @@
              Shell.PresentationMode="ModalAnimated"
              xmlns:local="clr-namespace:quickfitgym.Renderers"
              NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource ThemeColor}"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              x:Class="quickfitgym.Views.RegisterPage">
     <ContentPage.BindingContext>

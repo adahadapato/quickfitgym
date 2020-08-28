@@ -19,8 +19,16 @@ namespace quickfitgym
             Routing.RegisterRoute("home", typeof(HomePage));
             //Routing.RegisterRoute("Program", typeof(ProgramesPage));
             RegisterRoutes();
-            
+            //IsAdmin = false;
+            //IsMember = false;
             BindingContext = this;
+            _timer = new Timer(TimeSpan.FromSeconds(1), CountDown);
+            TotalSeconds = _totalSeconds;
+            _timer.Start();
+
+            //this.CurrentItem.CurrentItem = flAdmin;
+
+            Activate();
         }
 
         Dictionary<string, Type> routes = new Dictionary<string, Type>();
@@ -31,9 +39,9 @@ namespace quickfitgym
         {
             get
             {
-                return new Command(async() =>
+                return new Command(() =>
                 {
-                    if(IsAdmin)
+                   /* if(IsAdmin)
                     {
                         await Shell.Current.Navigation.PushAsync(new ProgramesPage());
                     }
@@ -41,7 +49,7 @@ namespace quickfitgym
                     {
                         await Shell.Current.Navigation.PushAsync(new ProgramListPage());
                     }
-                    Shell.Current.FlyoutIsPresented = false;
+                    Shell.Current.FlyoutIsPresented = false;*/
                 });
             }
         }
@@ -63,9 +71,9 @@ namespace quickfitgym
         {
             //routes.Add("contactus", typeof(ContactUsPage));
             //routes.Add("photos", typeof(PhotosPage));
-            //routes.Add("classes", typeof(ClassesPage));
+            routes.Add("aboutus", typeof(UpdateAboutUsPage));
             routes.Add("about", typeof(AboutPage));
-            //routes.Add("videos", typeof(VideosPage));
+            routes.Add("videos", typeof(VideosPage));
             routes.Add("admin", typeof(AdminPage));
             routes.Add("program", typeof(ProgramesPage));
             //routes.Add("logout", typeof(LoginPage));
@@ -75,6 +83,18 @@ namespace quickfitgym
             }
         }
 
+        private void Activate()
+        {
+            var IsAdmin =  Preferences.Get("IsAdmin", false);
+            if(IsAdmin)
+            {
+                this.CurrentItem = flAdmin;
+            }
+            else
+            {
+                this.CurrentItem = flMembers;
+            }
+        }
         /*private bool _IsFirstTime;
         public bool IsFirstTime
         {
@@ -84,20 +104,55 @@ namespace quickfitgym
             }
         }*/
 
-        public bool IsMember
+       
+
+        #region Landing Page
+
+        private Timer _timer;
+
+        private TimeSpan _totalSeconds = new TimeSpan(0, 0, 0, 10);
+        public TimeSpan TotalSeconds
         {
-            get
+            get { return _totalSeconds; }
+            set
             {
-                return ! IsAdmin;
+                _totalSeconds = value;
+                //Set(ref _totalSeconds, value);
+                //OnPropertyChanged(nameof(TotalSeconds));
             }
         }
 
-        public bool IsAdmin
+        private void CountDown()
         {
-            get
+            if (_totalSeconds.TotalSeconds == 0)
             {
-                return Preferences.Get("IsAdmin", false);
+                //do something after hitting 0, in this example it just stops/resets the timer
+                //StopTimerCommand();
+                StopTimerCommand();
+                //IsAdmin = Preferences.Get("IsAdmin", false);
+                //IsMember = !IsAdmin;
+                /*if (IsAdmin)
+                {
+                    flAdmin.IsVisible = true;
+                }
+                else
+                {
+                    flMembers.IsVisible = true;
+                }*/
+                Shell.Current.Navigation.PopToRootAsync();
+                flLoading.IsVisible = false;
+            }
+            else
+            {
+                TotalSeconds = _totalSeconds.Subtract(new TimeSpan(0, 0, 0, 1));
             }
         }
+
+        private void StopTimerCommand()
+        {
+            TotalSeconds = new TimeSpan(0, 0, 0, 10);
+            _timer.Stop();
+        }
+        #endregion
     }
 }

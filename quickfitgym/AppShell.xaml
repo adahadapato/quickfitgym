@@ -15,16 +15,13 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Color x:Key="NavigationPrimary">#FF4081</Color>
-            <Color x:Key="ThemeColor">HotPink</Color>
-            <Color x:Key="GreyColor">Gray</Color>
-            <Color x:Key="BGColor">#F0F0F0</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource BGColor}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource ThemeColor}" />
                 <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource GreyColor}" />
                 <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource ThemeColor}" />
                 <Setter Property="Shell.TitleColor" Value="{StaticResource ThemeColor}" />
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource ThemeColor}" />
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource BGColor}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="{StaticResource GreyColor}" />
                 <Setter Property="Shell.UnselectedColor" Value="{StaticResource GreyColor}" />
@@ -83,31 +80,33 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-     <FlyoutItem Title="Home" Icon="dashboard.png" IsVisible="{Binding IsMember}">
-        <Tab Title="Home" Icon="dashboard.png">
+
+    
+     <FlyoutItem Title="Home" Icon="dashboard.png" x:Name="flLoading">
+       <Tab Title="Home" Icon="dashboard.png">
+            <ShellContent Title="Home" ContentTemplate="{DataTemplate local:LandingPage}"/>
+       </Tab>
+         <!--<Tab Title="About" Icon="about.png">
             <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}"/>
-        </Tab>
-         <Tab Title="About" Icon="about.png">
-            <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}"/>
-        </Tab>
+        </Tab>-->
     </FlyoutItem>
 
-    <FlyoutItem Title="Home" Icon="dashboard.png" IsVisible="{Binding IsMember}" >
-        <Tab Title="Home" Icon="dashboard.png">
+    <FlyoutItem Title="Home" Icon="dashboard.png" x:Name="flMembers" >
+        <Tab Title="Home" Icon="dashboard.png" >
             <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}"/>
         </Tab>
-        <Tab Title="Programs" Icon="heart.png">
+        <Tab Title="Programs" Icon="heart.png" >
             <ShellContent Title="Programms" ContentTemplate="{DataTemplate local:ProgramListPage}"/>
         </Tab>
         <Tab Title="Profile" Icon="profile.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}"/>
         </Tab>
         <Tab Title="Options" Icon="settings.png" >
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="Admin" Icon="admin.png" IsVisible="{Binding IsAdmin}" >
+    <FlyoutItem Title="Admin" Icon="admin.png"  x:Name="flAdmin" >
         <Tab Title="Admin" Icon="admin.png">
             <ShellContent Title="Options" ContentTemplate="{DataTemplate local:AdminPage}"/>
         </Tab>
@@ -123,7 +122,7 @@
     </FlyoutItem>
    
     <MenuItem Text="About Us" Command="{Binding NavigateCommand}"  CommandParameter="about" IconImageSource="about.png"/>
-    <MenuItem Text="Payment" Command="{Binding NavigateCommand}" CommandParameter="admin" IconImageSource="admin.png"/>
+    <!--<MenuItem Text="Payment" Command="{Binding NavigateCommand}" CommandParameter="admin" IconImageSource="admin.png"/>-->
     <!--<MenuItem Text="Classes" Command="{Binding NavigateCommand}" CommandParameter="classes" IconImageSource="briefcase.png"/>
     <MenuItem Text="Articles" Command="{Binding NavigateCommand}" CommandParameter="articles" IconImageSource="article.png"/>-->
     <MenuItem Text="Photos" Command="{Binding NavigateCommand}" CommandParameter="photos" IconImageSource="photo.png"/>
