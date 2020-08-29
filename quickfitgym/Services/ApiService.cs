@@ -21,8 +21,20 @@ namespace quickfitgym.Services
                 var client = new HttpClient();
                 var json = JsonConvert.SerializeObject(Model);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                var response = await client.PostAsync($"{AppSettings.ApiUrl}accounts/register", content);
-                if (response.IsSuccessStatusCode) return true;
+                var response = await client.PostAsync($"{AppSettings.ApiUrl}accounts/create", content);
+                var jsonresult = await response.Content.ReadAsStringAsync();
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = JsonConvert.DeserializeObject<RegisterSuccess>(jsonresult);
+                    var str = "Registration successful, please confirm your email to continue";
+                    await Application.Current.MainPage.DisplayAlert("Success",  str, "OK");
+                    return true;
+                }
+                else
+                {
+                    var result = JsonConvert.DeserializeObject<SuccessReturn>(jsonresult);
+                    await Application.Current.MainPage.DisplayAlert("Error", result.Message, "CANCEL");
+                }
             }
             catch(Exception ex)
             {

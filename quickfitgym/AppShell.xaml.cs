@@ -74,7 +74,7 @@ namespace quickfitgym
 
         public void Activate()
         {
-            var IsAdmin = false;// Preferences.Get("IsAdmin", false);
+            var IsAdmin = Preferences.Get("IsAdmin", false);
             if (IsAdmin)
             {
                 this.CurrentItem = flAdmin;

@@ -101,7 +101,7 @@ namespace quickfitgym.ViewModels
                     {
                         Email = Email,
                         FirstName = FirstName,
-                        LasstName = LastName,
+                        LastName = LastName,
                         Mobile = Phone,
                         RoleName = "Member",
                         EmailConfirmed = false,
@@ -110,14 +110,7 @@ namespace quickfitgym.ViewModels
                     var result = await ApiService.Register(model);
                     if (result)
                     {
-                        await Shell.Current.Navigation.PopModalAsync();
-                        await Shell.Current.Navigation.PushModalAsync(new LoginPage());
-                    }
-                       
-                    else
-                    {
-                        await Application.Current.MainPage.DisplayAlert("Error", "Unable to complete the registration", "Ok");
-                        return;
+                        Application.Current.MainPage =new NavigationPage(new LoginPage());
                     }
                 });
             }

@@ -80,8 +80,8 @@
             <CollectionView x:Name="collectionViewListHorizontal"
                             HeightRequest="200"
                             SelectionMode="Single"
-                            SelectedItem="{Binding SelectedMember}"
-                            SelectionChangedCommand="{Binding SelectedCustomerCommand}"
+                            SelectedItem="{Binding SelectedTrainer, Mode=TwoWay}"
+                            SelectionChangedCommand="{Binding SelectedTrainerCommand}"
                             ItemsSource="{Binding TrainersCollection}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal" />

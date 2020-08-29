@@ -20,14 +20,25 @@ namespace quickfitgym.ViewModels
             GetMembers();
         }
 
-        private Members _selectedMember;
-        public Members SelectedMember
+        private Members _selectedCustomer;
+        public Members SelectedCustomer
         {
-            get { return _selectedMember; }
+            get { return _selectedCustomer; }
             set
             {
-                SetProperty(ref _selectedMember, value);
-                OnPropertyChanged(nameof(SelectedMember));
+                SetProperty(ref _selectedCustomer, value);
+                OnPropertyChanged(nameof(SelectedCustomer));
+            }
+        }
+
+        private Members _selectedTrainer;
+        public Members SelectedTrainer
+        {
+            get { return _selectedTrainer; }
+            set
+            {
+                SetProperty(ref _selectedTrainer, value);
+                OnPropertyChanged(nameof(SelectedTrainer));
             }
         }
 
@@ -64,7 +75,19 @@ namespace quickfitgym.ViewModels
             {
                 return new Command(async() =>
                 {
-                    var item = SelectedMember;
+                    var item = SelectedCustomer;
+                    await Shell.Current.GoToAsync("customerdetails");
+                });
+            }
+        }
+
+        public ICommand SelectedTrainerCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    var item = SelectedTrainer;
                     await Shell.Current.GoToAsync("customerdetails");
                 });
             }
