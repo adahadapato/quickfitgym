@@ -12,6 +12,23 @@
     <ContentPage.BindingContext>
         <vm:ProgramViewModel/>
     </ContentPage.BindingContext>
+     <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="LightSkyBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0">
             <SearchBar x:Name="SearchBar"
@@ -21,16 +38,48 @@
                        SearchCommand="{Binding SearchCommand}"
                        SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
                        TextColor="{StaticResource BGColor}"/>
-           <ListView ItemsSource="{Binding ProgramCollection}"
+            
+                <CollectionView  x:Name="CvPrograms"
+                                 SelectedItem="{Binding SelectedProgram }"
+                                 ItemsSource="{Binding ProgramCollection}"
+                                 SelectionChangedCommand="{Binding EditProgramCommand}"
+                                 SelectionMode="Single">
+                     <CollectionView.ItemsLayout>
+                           <LinearItemsLayout Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                         <DataTemplate>
+                            <Grid Padding="10"
+                                  Margin="12">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Imageurl}"
+                                            HeightRequest="50"
+                                            WidthRequest="50"/>
+                                    <StackLayout HorizontalOptions="StartAndExpand">
+                                         <Label Text="{Binding Name}"
+                                                FontAttributes="Bold"/>
+                                         <Label Text="{Binding Description}"
+                                                TextColor="Gray"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                         </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                   
+                </CollectionView>
+            
+           <!--<ListView ItemsSource="{Binding ProgramCollection}"
                      IsPullToRefreshEnabled="True"
                      HasUnevenRows="True"
                      SeparatorColor="{StaticResource BGColor}"
                      BackgroundColor="{StaticResource ThemeColor}"
+                     SelectedItem="{Binding SelectedProgram}"
+                     SelectionMode="Single"
                      x:Name="LvScedules"
                      SeparatorVisibility="Default">
                <ListView.ItemTemplate>
                    <DataTemplate>
-                       <ViewCell>
+                       <Grid>
                            <StackLayout Orientation="Horizontal">
                                <Image Source="{Binding Imageurl}"
                                       HeightRequest="50"
@@ -41,28 +90,28 @@
                                    <Label Text="{Binding Description}"
                                           TextColor="Gray"/>
                                </StackLayout>
-                               <!--<Button Text="Join"
+                               <Button Text="Join"
                                        BorderColor="Silver"
                                        Background="HotPink"
                                        TextColor="White"
                                        CornerRadius="30"
                                        Command="{Binding Source={x:Reference LvScedules}, Path= BindingContext.JoinCommand}"
                                        CommandParameter="{Binding .}"
-                                       VerticalOptions="Center"/>-->
-                               <StackLayout.GestureRecognizers>
-                                   <SwipeGestureRecognizer Direction="Left"
-                                                           Command="{Binding SwipeLeftCommand}"
-                                                           CommandParameter="{Binding .}"/>
+                                       VerticalOptions="Center"/>
+                              
+                           </StackLayout>
+                          <Grid.GestureRecognizers>
+                              <TapGestureRecognizer NumberOfTapsRequired="2"
+                                                         Command="{Binding EditProgramCommand}"
+                                                         CommandParameter="{Binding .}"/>
                                    <SwipeGestureRecognizer Direction="Right"
                                                            Command="{Binding SwipeRightCommand}"
                                                            CommandParameter="{Binding .}"/>
-                               </StackLayout.GestureRecognizers>
-                           </StackLayout>
-                          
-                       </ViewCell>
+                          </Grid.GestureRecognizers>
+                       </Grid>
                    </DataTemplate>
                </ListView.ItemTemplate>
-           </ListView>
+           </ListView>-->
 
         </StackLayout>
 

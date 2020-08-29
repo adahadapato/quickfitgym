@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="{StaticResource BGColor}"
+              BackgroundColor="{StaticResource BGColor}"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              Shell.PresentationMode="Animated"
              Title="{Binding Title}"
-             x:Class="quickfitgym.Views.AddProgramPage">
-    <ContentPage.BindingContext>
-        <vm:AddProgramViewModel/>
+             x:Class="quickfitgym.Views.EditProgramPage">
+     <ContentPage.BindingContext>
+        <vm:EditProgramViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid>
-             <StackLayout Spacing="8"
+        <StackLayout Spacing="8"
                           BackgroundColor="{StaticResource ThemeColor}"
                           Margin="0">
                  <Frame HasShadow="True"
@@ -22,14 +21,14 @@
                          
                          <Entry Placeholder="Program"
                                 PlaceholderColor="#80574D"
-                                Text="{Binding ProgramName}"
+                                Text="{Binding ProgramName, Mode=TwoWay}"
                                 TextColor="#80574D"
                                 Keyboard="Email" />
                          <Editor Placeholder="Details"
                                  PlaceholderColor="#80574D"
                                  HeightRequest="150"
                                  TextColor="#80574D"
-                                 Text="{Binding Description}"
+                                 Text="{Binding Description, Mode=TwoWay}"
                                  Keyboard="Text" />
                      </StackLayout>
                  </Frame>
@@ -39,14 +38,13 @@
                          Command="{Binding SubmitCommand}"
                          Margin="25,10,25,0"
                          CornerRadius="30"/>
-                 <Button Text="SCHEDULE"
+                 <!--<Button Text="SCHEDULE"
                          TextColor="White"
                          BackgroundColor="{StaticResource BGColor}"
                          Command="{Binding ScheduleCommand}"
                          IsVisible="{Binding CanSchedule}"
                          Margin="25,5,25,0"
-                         CornerRadius="30"/>
+                         CornerRadius="30"/>-->
              </StackLayout>
-        </Grid>
     </ContentPage.Content>
 </ContentPage>

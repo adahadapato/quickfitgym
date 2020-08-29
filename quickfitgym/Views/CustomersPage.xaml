@@ -10,6 +10,21 @@
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
+             <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="LightSkyBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
             <Style x:Key="NameLabel" TargetType="Label">
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="FontAttributes" Value="Bold" />
@@ -76,7 +91,9 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Spacing="5" BackgroundColor="#90bff5">
+        <Grid>
+        <StackLayout Spacing="5"
+                     BackgroundColor="#90bff5">
             <CollectionView x:Name="collectionViewListHorizontal"
                             HeightRequest="200"
                             SelectionMode="Single"
@@ -161,5 +178,6 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </StackLayout>
+            </Grid>
     </ContentPage.Content>
 </ContentPage>

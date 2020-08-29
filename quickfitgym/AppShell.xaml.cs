@@ -57,7 +57,7 @@ namespace quickfitgym
 
         void RegisterRoutes()
         {
-            //routes.Add("contactus", typeof(ContactUsPage));
+            routes.Add("editprogram", typeof(EditProgramPage));
             routes.Add("customerdetails", typeof(CustomerDetailsPage));
             routes.Add("home", typeof(HomePage));
             routes.Add("aboutus", typeof(UpdateAboutUsPage));

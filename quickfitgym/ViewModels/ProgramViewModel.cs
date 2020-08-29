@@ -35,6 +35,17 @@ namespace quickfitgym.ViewModels
             }
         }
 
+        private Program _selectedProgram;
+        public Program SelectedProgram
+        {
+            get { return _selectedProgram; }
+            set
+            {
+                SetProperty(ref _selectedProgram, value);
+                OnPropertyChanged(nameof(SelectedProgram));
+            }
+        }
+
         private List<string> _searchResults;
         public List<string> Searchresults
         {
@@ -89,13 +100,14 @@ namespace quickfitgym.ViewModels
             }
         }
 
-        public ICommand SwipeLeftCommand
+        public ICommand EditProgramCommand
         {
             get
             {
-                return new Command((e) =>
+                return new Command(async() =>
                 {
-                    var program = e as Program;
+                    var program = SelectedProgram;
+                    await Shell.Current.Navigation.PushAsync(new EditProgramPage(program));
                 });
             }
         }

@@ -11,6 +11,7 @@ namespace quickfitgym.ViewModels
     {
         public AddProgramViewModel()
         {
+            Title = "ADD PROGRAM";
             CanSchedule = false;
         }
 
