@@ -117,7 +117,7 @@
             <ShellContent ContentTemplate="{DataTemplate local:AdminMembersListPage}"/>
         </Tab>
          <Tab Title="Members" Icon="members.png" >
-            <ShellContent ContentTemplate="{DataTemplate local:CustomersPagePage}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:CustomersPage}"/>
         </Tab>
     </FlyoutItem>
    

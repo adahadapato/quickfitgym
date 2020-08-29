@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="quickfitgym.Views.LoginPage"
+             BackgroundColor="{StaticResource BGColor}"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              xmlns:local="clr-namespace:quickfitgym.Renderers"
              Shell.PresentationMode="ModalAnimated"
@@ -13,7 +14,7 @@
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-       <StackLayout BackgroundColor="#e6e6e6">
+       <StackLayout BackgroundColor="{StaticResource BGColor}">
         <Grid>
             <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
                 <Frame HeightRequest="150" BackgroundColor="HotPink" Padding="0" Margin="0">
@@ -23,7 +24,7 @@
             <StackLayout Padding="0"
                          Margin="10,100,10,0"
                          HorizontalOptions="FillAndExpand">
-                <Frame  BackgroundColor="White"
+                <Frame  BackgroundColor="{StaticResource ThemeColor}"
                         HeightRequest="500"
                         HasShadow="True"
                         Padding="0"
@@ -34,12 +35,13 @@
 
                         <StackLayout Margin="10">
                             <Label Text="SIGN IN"
-                                   TextColor="HotPink"
+                                   TextColor="{StaticResource BGColor}"
                                    HorizontalOptions="CenterAndExpand"
                                    FontAttributes="Bold"/>
                         </StackLayout>
 
-                        <StackLayout Padding="0" Margin="15,10">
+                        <StackLayout Padding="0"
+                                     Margin="15,10">
 
                             <Frame BackgroundColor="Transparent"
                                    BorderColor="DarkGray"
@@ -60,7 +62,7 @@
                                     </Frame>
 
                                     <local:CustomEntry Placeholder="Email"
-                                                       TextColor="HotPink"
+                                                       TextColor="#ffffff"
                                                        Text="{Binding Email}"
                                                        FontAttributes="None"
                                                        HorizontalOptions="FillAndExpand"
@@ -89,7 +91,7 @@
 
                                     <local:CustomEntry Placeholder="Password"
                                                        IsPassword="True"
-                                                       TextColor="HotPink"
+                                                       TextColor="#ffffff"
                                                        Text="{Binding Password}"
                                                        FontAttributes="None"
                                                        HorizontalOptions="FillAndExpand"
@@ -99,15 +101,15 @@
 
                             <StackLayout  Orientation="Horizontal">
                                 <CheckBox IsChecked="{Binding IsChecked}"
-                                          Color="HotPink" />
+                                          Color="{StaticResource BGColor}" />
                                 <Label Text="Remember me"
-                                       TextColor="DarkGray"
+                                       TextColor="{StaticResource BGColor}"
                                        FontSize="Small"
                                        VerticalTextAlignment="Center"
                                        HorizontalTextAlignment="Center" />
 
                                 <Label Text="Forgot Password"
-                                       TextColor="HotPink"
+                                       TextColor="{StaticResource BGColor}"
                                        FontAttributes="Bold"
                                        HorizontalOptions="EndAndExpand"
                                        FontSize="Small"
@@ -118,15 +120,19 @@
                             </StackLayout>
 
                             <Button Text="SIGN IN"
-                                    BackgroundColor="HotPink"
+                                    BackgroundColor="{StaticResource BGColor}"
                                     TextColor="White"
                                     Command="{Binding LoginCommand}"
                                     CornerRadius="30" />
                             <StackLayout Orientation="Horizontal"
                                          HorizontalOptions="CenterAndExpand">
                                 <Label Text="Still Not Connected ?"
-                                       TextColor="DarkGray" FontSize="Small"/>
-                                <Label Text="Sign Up" TextColor="HotPink" FontAttributes="Bold" FontSize="Small">
+                                       TextColor="#ffffff"
+                                       FontSize="Small"/>
+                                <Label Text="Sign Up"
+                                       TextColor="{StaticResource BGColor}"
+                                       FontAttributes="Bold"
+                                       FontSize="Small">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer NumberOfTapsRequired="1"
                                                               Command="{Binding RegisterCommand}"/>
@@ -140,7 +146,7 @@
                                              HeightRequest="1"
                                              WidthRequest="150"  HorizontalOptions="Center" VerticalOptions="Center"/>
                                     <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="DarkGray" Margin="0" HorizontalOptions="Center" Padding="0">
-                                        <Label Text="OR" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                        <Label Text="OR" TextColor="{StaticResource BGColor}" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                                     </Frame>
                                 </Grid>
                              </StackLayout>

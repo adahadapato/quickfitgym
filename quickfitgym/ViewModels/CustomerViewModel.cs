@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Input;
 using quickfitgym.Models;
 using quickfitgym.Services;
+using Xamarin.Forms;
 
 namespace quickfitgym.ViewModels
 {
@@ -53,6 +55,18 @@ namespace quickfitgym.ViewModels
                     if (trainer)
                         TrainersCollection.Add(m);
                 }
+            }
+        }
+
+        public ICommand SelectedCustomerCommand
+        {
+            get
+            {
+                return new Command(async() =>
+                {
+                    var item = SelectedMember;
+                    await Shell.Current.GoToAsync("customerdetails");
+                });
             }
         }
     }

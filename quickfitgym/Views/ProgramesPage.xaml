@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              Title="{Binding Title}"
+             BackgroundColor="{StaticResource ThemeColor}"
              x:Class="quickfitgym.Views.ProgramesPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
@@ -14,16 +15,17 @@
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0">
             <SearchBar x:Name="SearchBar"
-                       CancelButtonColor="HotPink"
+                       CancelButtonColor="{StaticResource BGColor}"
                        Placeholder="Search..."
                        PlaceholderColor="Gray"
                        SearchCommand="{Binding SearchCommand}"
                        SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
-                       TextColor="HotPink"/>
+                       TextColor="{StaticResource BGColor}"/>
            <ListView ItemsSource="{Binding ProgramCollection}"
                      IsPullToRefreshEnabled="True"
                      HasUnevenRows="True"
-                     SeparatorColor="HotPink"
+                     SeparatorColor="{StaticResource BGColor}"
+                     BackgroundColor="{StaticResource ThemeColor}"
                      x:Name="LvScedules"
                      SeparatorVisibility="Default">
                <ListView.ItemTemplate>

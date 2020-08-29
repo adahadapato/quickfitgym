@@ -4,7 +4,7 @@
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              BackgroundColor="#90bff5"
              Title="{Binding Title}"
-             x:Class="quickfitgym.Views.CustomersPagePage">
+             x:Class="quickfitgym.Views.CustomersPage">
     <ContentPage.BindingContext>
         <vm:CustomerViewModel/>
     </ContentPage.BindingContext>
@@ -68,7 +68,8 @@
                         Value="8" />
             </Style>
 
-            <Style x:Key="itemsInsideCardViewStackLayoutStyle" TargetType="StackLayout">
+            <Style x:Key="itemsInsideCardViewStackLayoutStyle"
+                   TargetType="StackLayout">
                 <Setter Property="Orientation" Value="Horizontal" />
                 <Setter Property="Spacing" Value="8" />
             </Style>
@@ -79,6 +80,8 @@
             <CollectionView x:Name="collectionViewListHorizontal"
                             HeightRequest="200"
                             SelectionMode="Single"
+                            SelectedItem="{Binding SelectedMember}"
+                            SelectionChangedCommand="{Binding SelectedCustomerCommand}"
                             ItemsSource="{Binding TrainersCollection}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal" />
@@ -87,9 +90,7 @@
                     <DataTemplate>
                         <StackLayout Spacing="8"
                                      HorizontalOptions="EndAndExpand">
-                            <Label Text="Trainers/Administrators"
-                                   TextColor="HotPink"
-                                   FontAttributes="Bold"/>
+                            
                             <Frame Style="{StaticResource FrameCardViewStyle}">
                                 <StackLayout Style="{StaticResource itemsCardViewStackLayoutStyle}">
                                     <StackLayout Style="{StaticResource itemsInsideCardViewStackLayoutStyle}">
@@ -121,6 +122,8 @@
             </CollectionView>
             <CollectionView x:Name="collectionViewListVertical"
                             ItemsSource="{Binding MembersCollection}"
+                            SelectedItem="{Binding SelectedMember}"
+                            SelectionChangedCommand="{Binding SelectedCustomerCommand}"
                             SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical" />

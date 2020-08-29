@@ -58,6 +58,12 @@ namespace quickfitgym.ViewModels
             {
                 return new Command(async() =>
                 {
+                    if(string.IsNullOrWhiteSpace(About) || string.IsNullOrWhiteSpace(Message))
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "All fields are mandatory", "CANCEL");
+                        return;
+                    }
+
                     var about = new AboutUs()
                     {
                         About = About,

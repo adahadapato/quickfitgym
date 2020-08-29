@@ -11,7 +11,7 @@
         <vm:RegisterViewModel />
     </ContentPage.BindingContext>
 <ContentPage.Content>
-    <StackLayout BackgroundColor="#e6e6e6">
+    <StackLayout BackgroundColor="{StaticResource BGColor}">
          <Grid>
              <StackLayout Padding="0"
                           Margin="0"
@@ -27,7 +27,7 @@
             <StackLayout Padding="0"
                          Margin="10,78,10,0"
                          HorizontalOptions="FillAndExpand">
-                <Frame  BackgroundColor="White"
+                <Frame  BackgroundColor="{StaticResource ThemeColor}"
                         HeightRequest="520"
                         HasShadow="True"
                         Padding="0"
@@ -35,7 +35,7 @@
                     <StackLayout>
                         <StackLayout Margin="10">
                             <Label Text="SIGN UP"
-                                   TextColor="HotPink"
+                                   TextColor="{StaticResource BGColor}"
                                    HorizontalOptions="CenterAndExpand"
                                    FontAttributes="Bold"/>
                         </StackLayout>
@@ -58,7 +58,7 @@
                                                Margin="0"/>
                                     </Frame>
                                     <local:CustomEntry Placeholder="Email"
-                                                       TextColor="HotPink"
+                                                       TextColor="#ffffff"
                                                        FontAttributes="None"
                                                        Text="{Binding Email, Mode=TwoWay}"
                                                        HorizontalOptions="FillAndExpand"
@@ -88,7 +88,7 @@
                                                        IsPassword="False"
                                                        Keyboard="Telephone"
                                                        Text="{Binding Phone}"
-                                                       TextColor="HotPink"
+                                                       TextColor="#ffffff"
                                                        FontAttributes="None"
                                                        HorizontalOptions="FillAndExpand"
                                                        Margin="0,0,20,0"/>
@@ -116,7 +116,7 @@
                                                        IsPassword="False"
                                                        Keyboard="Text"
                                                         Text="{Binding FirstName, Mode=TwoWay}"
-                                                       TextColor="HotPink"
+                                                       TextColor="#ffffff"
                                                        FontAttributes="None"
                                                        HorizontalOptions="FillAndExpand"
                                                        Margin="0,0,20,0"/>
@@ -144,7 +144,7 @@
                                                        IsPassword="False"
                                                        Keyboard="Text"
                                                         Text="{Binding LastName, Mode=TwoWay}"
-                                                       TextColor="HotPink"
+                                                       TextColor="#ffffff"
                                                        FontAttributes="None"
                                                        HorizontalOptions="FillAndExpand"
                                                        Margin="0,0,20,0"/>
@@ -172,7 +172,7 @@
                                                        IsPassword="True"
                                                         Text="{Binding Password, Mode=TwoWay}"
                                                        Keyboard="Text"
-                                                       TextColor="HotPink"
+                                                       TextColor="#ffffff"
                                                        FontAttributes="None"
                                                        HorizontalOptions="FillAndExpand"
                                                        Margin="0,0,20,0"/>
@@ -200,7 +200,7 @@
                                                        IsPassword="True"
                                                         Text="{Binding ConfirmPasword, Mode=TwoWay}"
                                                        Keyboard="Text"
-                                                       TextColor="HotPink"
+                                                       TextColor="#ffffff"
                                                        FontAttributes="None"
                                                        HorizontalOptions="FillAndExpand"
                                                        Margin="0,0,20,0"/>
@@ -209,14 +209,14 @@
                             <StackLayout  Orientation="Horizontal">
                                 
                                 <Label Text="By clicking register, you agree with our"
-                                       TextColor="DarkGray"
+                                       TextColor="#ffffff"
                                        FontSize="Small"
                                        HorizontalOptions="CenterAndExpand"
                                        VerticalTextAlignment="Center"
                                        HorizontalTextAlignment="End" />
 
                                 <Label Text="Terms of use."
-                                       TextColor="HotPink"
+                                       TextColor="{StaticResource BGColor}"
                                        FontAttributes="Bold"
                                        HorizontalOptions="CenterAndExpand"
                                        FontSize="Small"
@@ -226,14 +226,14 @@
 
                             </StackLayout>
                             <Button Text="REGISTER"
-                                    BackgroundColor="HotPink"
+                                    BackgroundColor="{StaticResource BGColor}"
                                     TextColor="White"
                                     Command="{Binding RegisterCommand}"
                                     CornerRadius="30" />
                             <StackLayout  Orientation="Horizontal">
                                 
                                 <Label Text="Alredy have an account "
-                                       TextColor="DarkGray"
+                                       TextColor="#ffffff"
                                        FontSize="Small"
                                        HorizontalOptions="CenterAndExpand"
                                        VerticalTextAlignment="Center"
@@ -245,7 +245,7 @@
                                 </Label>
 
                                 <Label Text="Log in."
-                                       TextColor="HotPink"
+                                       TextColor="{StaticResource BGColor}"
                                        FontAttributes="Bold"
                                        HorizontalOptions="CenterAndExpand"
                                        FontSize="Small"

@@ -27,25 +27,25 @@
                  
                 <Frame HasShadow="True"
                        Padding="25"
-                       Margin="0,50,0,0">
+                       Margin="0,50,0,10">
                      <StackLayout>
                          
                          <Entry Placeholder="Program"
-                                PlaceholderColor="#80574D"
+                                PlaceholderColor="{StaticResource BGColor}"
                                 Text="{Binding About, Mode=TwoWay}"
-                                TextColor="#80574D"
+                                TextColor="{StaticResource BGColor}"
                                 Keyboard="Email" />
                          <Editor Placeholder="Details"
-                                 PlaceholderColor="#80574D"
+                                 PlaceholderColor="{StaticResource BGColor}"
                                  HeightRequest="150"
-                                 TextColor="HotPink"
+                                 TextColor="{StaticResource BGColor}"
                                  Text="{Binding Message,Mode=TwoWay}"
                                  Keyboard="Text" />
                      </StackLayout>
                 </Frame>
                 <Button Text="SUBMIT"
                          TextColor="White"
-                         BackgroundColor="#045bbf"
+                         BackgroundColor="{StaticResource BGColor}"
                          Command="{Binding SubmitCommand}"
                          CornerRadius="30"/>
             </StackLayout>
