@@ -163,6 +163,7 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxxhdpi/gmail.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxxhdpi/gphone.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/normalprofile.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/profile02.jpg
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/uploadflags.txt
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/resolvedassemblies.hash
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/assets/FFImageLoading.dll

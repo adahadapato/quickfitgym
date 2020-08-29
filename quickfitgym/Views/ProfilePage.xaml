@@ -7,12 +7,15 @@
         <vm:ProfileViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
+        <ScrollView>
        <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" /> 
             </Grid.RowDefinitions>
 <!-- 1. Profile picture-->   
-         <Image Grid.Row="0" Source="Katty"
+         <Image Grid.Row="0"
+                Source="profile02.jpg"
+                
                 VerticalOptions="Start" /> 
            <StackLayout Grid.Row="0"
                         BackgroundColor="White"
@@ -20,7 +23,7 @@
                 <Frame CornerRadius="40"
                        Style="{StaticResource stlMainFrame}">
                     <!-- Blocks: 3 and 4 -->
-                    <Grid Padding="25,10,25,0"
+                    <Grid Padding="25,0,25,0"
                           RowSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -40,12 +43,12 @@
                                 Grid.Column="1"
                                 Style="{StaticResource stlContactBtn}"
                                 HorizontalOptions="End"
-                                ImageSource="phone.png"/>
+                                ImageSource="admin.png"/>
                         <Button Grid.Row="0"
                                 Grid.Column="2"
                                 Style="{StaticResource stlContactBtn}"
                                 HorizontalOptions="Start"
-                                ImageSource="Correo"/>
+                                ImageSource="Correo.png"/>
                         <!-- 4. Contact information-->
                         <Label Grid.Row="0"
                                Grid.Column="0"
@@ -61,7 +64,7 @@
                         <Label Grid.Row="2"
                                Grid.Column="0"
                                Grid.ColumnSpan="3"
-                               Padding="0,10,0,0"
+                               Padding="0,6,0,0"
                                FontSize="16">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -107,13 +110,13 @@
                                 TextColor="White"
                                 BackgroundColor="#2193f3"
                                 Text="Follow"
-                                Margin="0,20,0,2"
+                                Margin="0,5,0,0"
                                 FontAttributes="Bold"
-                                FontSize="17"
-                                HeightRequest="45"/> 
+                                CornerRadius="30"/> 
                     </Grid>
                 </Frame>
            </StackLayout>
       </Grid>
+            </ScrollView>
     </ContentPage.Content>
 </ContentPage>
