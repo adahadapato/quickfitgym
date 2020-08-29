@@ -15,7 +15,7 @@ namespace quickfitgym
             InitializeComponent();
             Device.SetFlags(new[] { "Brush_Experimental" });
             DependencyService.Register<MockDataStore>();
-            /*var token = Preferences.Get("token", string.Empty);
+            var token = "";// Preferences.Get("token", string.Empty);
             if (string.IsNullOrWhiteSpace(token))
             {
                 MainPage = new NavigationPage(new RegisterPage());
@@ -23,8 +23,8 @@ namespace quickfitgym
             else
             {
                 MainPage = new AppShell();
-            }*/
-            MainPage = new AppShell();
+            }
+            //MainPage = new AppShell();
         }
 
         protected override void OnStart()

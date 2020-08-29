@@ -127,10 +127,10 @@ namespace quickfitgym.ViewModels
         {
             get
             {
-                return new Command(async() =>
+                return new Command(() =>
                 {
-                    await Shell.Current.Navigation.PopModalAsync();
-                    await Shell.Current.Navigation.PushModalAsync(new LoginPage());
+                    Application.Current.MainPage = new NavigationPage(new LoginPage());
+                    //await Shell.Current.Navigation.PushModalAsync(new LoginPage());
                 });
             }
         }

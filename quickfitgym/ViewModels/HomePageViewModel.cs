@@ -16,20 +16,5 @@ namespace quickfitgym.ViewModels
             ProductsCollection = new ObservableCollection<string>();
             //CheckRegistration();
         }
-
-        private async void CheckRegistration()
-        {
-           /* var token =  Preferences.Get("token", string.Empty);
-            if (string.IsNullOrWhiteSpace(token))
-            {
-               await Shell.Current.Navigation.PushModalAsync(new RegisterPage());
-            }*/
-
-            var IsAdmin = Preferences.Get("IsAdmin", false);
-            if (IsAdmin)
-            {
-                await Shell.Current.Navigation.PushAsync(new AdminPage());
-            }
-        }
     }
 }

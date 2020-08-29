@@ -87,14 +87,13 @@ namespace quickfitgym.ViewModels
                         await Application.Current.MainPage.DisplayAlert("Error", "Please provide Password", "Ok");
                         return;
                     }
-
                     var result = await ApiService.Login(Email, Password);
                     if (result)
                     {
                         Preferences.Set("Email", Email);
                         Preferences.Set("Password", Password);
-                        await Shell.Current.Navigation.PopModalAsync();
-                        
+                        Application.Current.MainPage = new AppShell();
+
                     }
                     else
                         return;
@@ -106,12 +105,13 @@ namespace quickfitgym.ViewModels
         {
             get
             {
-                return new Command(async() =>
+                return new Command(() =>
                 {
-                    await Shell.Current.Navigation.PushModalAsync(new RegisterPage());
+                   Application.Current.MainPage= new NavigationPage(new RegisterPage());
                 });
             }
         }
+
         private async void OnLoginClicked(object obj)
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one

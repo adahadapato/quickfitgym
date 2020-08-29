@@ -17,9 +17,6 @@ namespace quickfitgym {
     public partial class AppShell : global::Xamarin.Forms.Shell {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.FlyoutItem flLoading;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.FlyoutItem flMembers;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -28,7 +25,6 @@ namespace quickfitgym {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AppShell));
-            flLoading = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.FlyoutItem>(this, "flLoading");
             flMembers = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.FlyoutItem>(this, "flMembers");
             flAdmin = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.FlyoutItem>(this, "flAdmin");
         }

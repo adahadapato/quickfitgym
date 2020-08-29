@@ -72,16 +72,20 @@ namespace quickfitgym
             }
         }
 
-        private void Activate()
+        public void Activate()
         {
             var IsAdmin = Preferences.Get("IsAdmin", false);
-            if(IsAdmin)
+            if (IsAdmin)
             {
                 this.CurrentItem = flAdmin;
+                flMembers.IsEnabled = false;
+                flMembers.IsVisible = false;
             }
             else
             {
                 this.CurrentItem = flMembers;
+                flAdmin.IsEnabled = false;
+                flAdmin.IsVisible = false;
             }
         }
         /*private bool _IsFirstTime;
