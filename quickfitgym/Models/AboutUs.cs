@@ -7,4 +7,8 @@ namespace quickfitgym.Models
         public string Message { get; set; }
        
     }
+    public class Talk
+    {
+
+    }
 }
