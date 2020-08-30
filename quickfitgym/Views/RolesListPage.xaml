@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             BackgroundColor="{StaticResource ThemeColor}"
+             xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             x:Class="quickfitgym.Views.RolesListPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Command="{Binding AddCommand}"/>
+    </ContentPage.ToolbarItems>
+     <ContentPage.BindingContext>
+        <vm:RolesViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="5,0,5,0">
+             <SearchBar x:Name="SearchBar"
+                       CancelButtonColor="{StaticResource BGColor}"
+                       Placeholder="Search..."
+                       PlaceholderColor="{StaticResource LabelColor}"
+                       SearchCommand="{Binding SearchCommand}"
+                       SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
+                       TextColor="{StaticResource LabelColor}"/>
+
+            <CollectionView  x:Name="CvRoles"
+                             ItemsSource="{Binding RolesCollection}"
+                             BackgroundColor="#ffffff"
+                             Margin="15,0,15,15"
+                             SelectionMode="Single">
+                 <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" />
+                 </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems Mode="Execute"
+                                            SwipeBehaviorOnInvoked="Close">
+                                     <SwipeItem Text="Delete"
+                                                IconImageSource="delete.png"
+                                                BackgroundColor="#ad1909"
+                                                Command="{Binding Source={x:Reference CvRoles}, Path=BindingContext.DeleteRoleCommand}"
+                                                CommandParameter="{Binding .}"/>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <SwipeView.LeftItems>
+                                <SwipeItems Mode="Execute">
+                                    <SwipeItem Text="Modify"
+                                               IconImageSource="favorite.png"
+                                               BackgroundColor="#e68107"
+                                               Command="{Binding Source={x:Reference CvRoles}, Path=BindingContext.EditRoleCommand}"
+                                               CommandParameter="{Binding .}"/>
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+                            <Grid Padding="10"
+                                  Margin="10,0,10,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Imageurl}"
+                                            HeightRequest="50"
+                                            WidthRequest="50"/>
+                                    <StackLayout HorizontalOptions="StartAndExpand">
+                                        <Label Text="{Binding Name}"
+                                                TextColor="{StaticResource LabelColor}"
+                                                FontAttributes="Bold"/>
+                                         <Label Text="{Binding Description}"
+                                                TextColor="{StaticResource LabelColor}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

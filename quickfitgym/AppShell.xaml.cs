@@ -65,7 +65,7 @@ namespace quickfitgym
             routes.Add("videos", typeof(VideosPage));
             routes.Add("admin", typeof(AdminPage));
             routes.Add("program", typeof(ProgramesPage));
-            //routes.Add("logout", typeof(LoginPage));
+            routes.Add("roles", typeof(RolesListPage));
             foreach (var i in routes)
             {
                 Routing.RegisterRoute(i.Key, i.Value);

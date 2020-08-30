@@ -17,7 +17,7 @@ namespace quickfitgym.ViewModels
 
             new AdminMenu(){Title ="Program", route="program",ImageUrl="xxx"},
             new AdminMenu(){Title ="Videos" , route="videos",ImageUrl="xxx"},
-            new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
+            new AdminMenu(){Title ="Roles",route="roles" ,ImageUrl="xxx"},
             new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
             new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
             new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
