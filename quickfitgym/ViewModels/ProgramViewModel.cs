@@ -104,21 +104,22 @@ namespace quickfitgym.ViewModels
         {
             get
             {
-                return new Command(async() =>
+                return new Command(async(e) =>
                 {
-                    var program = SelectedProgram;
+                    var program = e as Program;
                     await Shell.Current.Navigation.PushAsync(new EditProgramPage(program));
                 });
             }
         }
 
-        public ICommand SwipeRightCommand
+        public ICommand DeleteProgramCommand
         {
             get
             {
-                return new Command((e) =>
+                return new Command(async(e) =>
                 {
                     var program = e as Program;
+                    bool answer = await Application.Current.MainPage.DisplayAlert("Confirm", $"DO you want to delete {program.Name}", "Yes", "No");
                 });
             }
         }

@@ -201,6 +201,59 @@ namespace quickfitgym.Services
             return null;
         }
 
+        public static async Task<AddProgramResult> EditProgram(Program program)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var json = JsonConvert.SerializeObject(program);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/update"), content);
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonresult = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<AddProgramResult>(jsonresult);
+                    return result;
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Unable to save program", "CANCEL");
+                }
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return null;
+        }
+
+       /* public static async Task<AddProgramResult> DeleteProgram(int Id)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/update"), content);
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonresult = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<AddProgramResult>(jsonresult);
+                    return result;
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Unable to save program", "CANCEL");
+                }
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return null;
+        }*/
+
         public static async Task<bool> CreateSchedule(ProgramSchedule schedule)
         {
             try

@@ -43,12 +43,12 @@
                                 Grid.Column="1"
                                 Style="{StaticResource stlContactBtn}"
                                 HorizontalOptions="End"
-                                ImageSource="Gphone.png"/>
+                                ImageSource="Pphone.png"/>
                         <Button Grid.Row="0"
                                 Grid.Column="2"
                                 Style="{StaticResource stlContactBtn}"
                                 HorizontalOptions="Start"
-                                ImageSource="Gmail.png"/>
+                                ImageSource="Correo.png"/>
                         <!-- 4. Contact information-->
                         <Label Grid.Row="0"
                                Grid.Column="0"

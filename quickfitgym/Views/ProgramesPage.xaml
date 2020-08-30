@@ -41,17 +41,35 @@
                        TextColor="{StaticResource LabelColor}"/>
             
                 <CollectionView  x:Name="CvPrograms"
-                                 SelectedItem="{Binding SelectedProgram }"
                                  ItemsSource="{Binding ProgramCollection}"
                                  BackgroundColor="#ffffff"
                                  Margin="15,0,15,15"
-                                 SelectionChangedCommand="{Binding EditProgramCommand}"
                                  SelectionMode="Single">
                      <CollectionView.ItemsLayout>
                            <LinearItemsLayout Orientation="Vertical" />
                     </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                          <DataTemplate>
+                           <SwipeView>
+                               <SwipeView.RightItems>
+                                   <SwipeItems Mode="Execute"
+                                               SwipeBehaviorOnInvoked="Close">
+                                       <SwipeItem Text="Delete"
+                                                  IconImageSource="delete.png"
+                                                  BackgroundColor="#ad1909"
+                                                  Command="{Binding Source={x:Reference CvPrograms}, Path=BindingContext.DeleteProgramCommand}"
+                                                  CommandParameter="{Binding .}"/>
+                                   </SwipeItems>
+                               </SwipeView.RightItems>
+                               <SwipeView.LeftItems>
+                                   <SwipeItems Mode="Execute">
+                                       <SwipeItem Text="Modify"
+                                                  IconImageSource="favorite.png"
+                                                  BackgroundColor="#e68107"
+                                                  Command="{Binding Source={x:Reference CvPrograms}, Path=BindingContext.EditProgramCommand}"
+                                                  CommandParameter="{Binding .}"/>
+                                   </SwipeItems>
+                               </SwipeView.LeftItems>
                             <Grid Padding="10"
                                   Margin="10,0,10,0">
                                 <StackLayout Orientation="Horizontal">
@@ -66,7 +84,9 @@
                                                 TextColor="{StaticResource LabelColor}"/>
                                     </StackLayout>
                                 </StackLayout>
+                               
                             </Grid>
+                          </SwipeView>
                          </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>

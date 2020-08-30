@@ -2,8 +2,9 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="quickfitgym/AppShell.xaml.cs" Line="76" Column="10" />
-      <File FileName="quickfitgym/AppShell.xaml" Line="79" Column="47" />
-      <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="55" Column="31" />
+      <File FileName="quickfitgym/AppShell.xaml" />
+      <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="58" Column="74" />
+      <File FileName="quickfitgym/Views/ProfilePage.xaml" Line="51" Column="52" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,9 +15,12 @@
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True" />
-              <Node name="AppShell.xaml" expanded="True" />
             </Node>
-            <Node name="quickfitgym.Android" expanded="True" />
+            <Node name="quickfitgym.Android" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable-mdpi" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>

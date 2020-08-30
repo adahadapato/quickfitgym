@@ -11,5 +11,9 @@ namespace quickfitgym.Views
         {
             InitializeComponent();
         }
+
+        void SwipeGestureRecognizer_Swiped(System.Object sender, Xamarin.Forms.SwipedEventArgs e)
+        {
+        }
     }
 }
