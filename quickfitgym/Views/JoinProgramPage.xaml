@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             BackgroundColor="{StaticResource ThemeColor}"
              x:Class="quickfitgym.Views.JoinProgramPage">
     <ContentPage.BindingContext>
         <vm:JoinProgramViewModel/>
@@ -28,12 +29,14 @@
             <StackLayout>
                  <Label Margin="15,50,15,0"
                         Text="{Binding FTitle, Mode=TwoWay}"
-                        TextColor="HotPink"
+                        TextColor="{StaticResource LabelColor}"
                         HorizontalOptions="CenterAndExpand"
                         FontSize="Medium" />
                 <CollectionView  x:Name="CvSchedules"
                                  SelectedItems="{Binding SelectedSchedule }"
                                  ItemsSource="{Binding ScheduleCollection}"
+                                 Margin="15,0,15,0"
+                                 BackgroundColor="#ffffff"
                                  SelectionMode="Multiple">
                     <CollectionView.ItemsLayout>
                            <LinearItemsLayout Orientation="Vertical" />
@@ -45,19 +48,19 @@
                                          Padding="10"
                                          Margin="25,5,25,5"
                                          Orientation="Vertical">
-                                <Label TextColor="Gray"
+                                <Label TextColor="{StaticResource LabelColor}"
                                        FontAttributes="Bold"
                                        FontSize="Medium"
                                        Text="{Binding DayOfWeek}"/>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label TextColor="Gray"
+                                    <Label TextColor="{StaticResource LabelColor}"
                                            HorizontalOptions="StartAndExpand"
                                            Text="{Binding StartTime}"/>
                                     <Label Text=" to "
                                            HorizontalTextAlignment="Center"
-                                           TextColor="Gray"
+                                           TextColor="{StaticResource LabelColor}"
                                            HorizontalOptions="CenterAndExpand"/>
-                                    <Label TextColor="Gray"
+                                    <Label TextColor="{StaticResource LabelColor}"
                                            HorizontalOptions="EndAndExpand"
                                        Text="{Binding StopTime}"/>
                                 </StackLayout>
@@ -72,7 +75,7 @@
                        HorizontalOptions="CenterAndExpand"/>
                 <Button Text="SUBMIT"
                         TextColor="White"
-                        BackgroundColor="HotPink"
+                        BackgroundColor="{StaticResource BGColor}"
                         Margin="18,2,18,10"
                         Command="{Binding SubmitCommand}"
                         CornerRadius="30"/>

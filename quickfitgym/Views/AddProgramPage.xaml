@@ -16,7 +16,7 @@
                           Margin="0">
                  <Frame HasShadow="True"
                         Padding="25"
-                       
+                        BackgroundColor="#ffffff"
                         Margin="25,50,25,0">
                      <StackLayout>
                          

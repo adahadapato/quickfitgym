@@ -15,19 +15,18 @@
                           Margin="0">
                  <Frame HasShadow="True"
                         Padding="25"
-                       
                         Margin="25,50,25,0">
                      <StackLayout>
                          
                          <Entry Placeholder="Program"
-                                PlaceholderColor="#80574D"
+                                PlaceholderColor="{StaticResource LabelColor}"
                                 Text="{Binding ProgramName, Mode=TwoWay}"
-                                TextColor="#80574D"
+                                TextColor="{StaticResource LabelColor}"
                                 Keyboard="Email" />
                          <Editor Placeholder="Details"
-                                 PlaceholderColor="#80574D"
+                                 PlaceholderColor="{StaticResource LabelColor}"
                                  HeightRequest="150"
-                                 TextColor="#80574D"
+                                 TextColor="{StaticResource LabelColor}"
                                  Text="{Binding Description, Mode=TwoWay}"
                                  Keyboard="Text" />
                      </StackLayout>

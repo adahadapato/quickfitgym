@@ -4,6 +4,7 @@
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              Title="{Binding Title}"
              BackgroundColor="{StaticResource ThemeColor}"
+             
              x:Class="quickfitgym.Views.ProgramesPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
@@ -30,18 +31,20 @@
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0">
+        <StackLayout Padding="5,0,5,0">
             <SearchBar x:Name="SearchBar"
                        CancelButtonColor="{StaticResource BGColor}"
                        Placeholder="Search..."
-                       PlaceholderColor="Gray"
+                       PlaceholderColor="{StaticResource LabelColor}"
                        SearchCommand="{Binding SearchCommand}"
                        SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
-                       TextColor="{StaticResource BGColor}"/>
+                       TextColor="{StaticResource LabelColor}"/>
             
                 <CollectionView  x:Name="CvPrograms"
                                  SelectedItem="{Binding SelectedProgram }"
                                  ItemsSource="{Binding ProgramCollection}"
+                                 BackgroundColor="#ffffff"
+                                 Margin="15,0,15,15"
                                  SelectionChangedCommand="{Binding EditProgramCommand}"
                                  SelectionMode="Single">
                      <CollectionView.ItemsLayout>
@@ -50,22 +53,22 @@
                     <CollectionView.ItemTemplate>
                          <DataTemplate>
                             <Grid Padding="10"
-                                  Margin="12">
+                                  Margin="10,0,10,0">
                                 <StackLayout Orientation="Horizontal">
                                     <Image Source="{Binding Imageurl}"
                                             HeightRequest="50"
                                             WidthRequest="50"/>
                                     <StackLayout HorizontalOptions="StartAndExpand">
                                          <Label Text="{Binding Name}"
+                                                TextColor="{StaticResource LabelColor}"
                                                 FontAttributes="Bold"/>
                                          <Label Text="{Binding Description}"
-                                                TextColor="Gray"/>
+                                                TextColor="{StaticResource LabelColor}"/>
                                     </StackLayout>
                                 </StackLayout>
                             </Grid>
                          </DataTemplate>
                     </CollectionView.ItemTemplate>
-                   
                 </CollectionView>
             
            <!--<ListView ItemsSource="{Binding ProgramCollection}"

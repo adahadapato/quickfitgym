@@ -37,9 +37,9 @@
                     <DataTemplate>
                         <Frame Padding="10"
                                WidthRequest="120"
-                               BackgroundColor="#90bff5"
+                               BackgroundColor="{StaticResource ThemeColor}"
                                HeightRequest="120">
-                        <Frame BackgroundColor="#bed4ed"
+                        <Frame BackgroundColor="#ffffff"
                                WidthRequest="100"
                                HeightRequest="100"
                                HasShadow="True"
@@ -50,12 +50,14 @@
                             <Grid>
                                  <Image Source="briefcase.png"
                                         Aspect="AspectFill"
+                                        Margin="5,0,5,18"
                                         HorizontalOptions="FillAndExpand"
                                         VerticalOptions="FillAndExpand"/>
                                  <Label Text="{Binding Title}"
-                                        Margin="0,50,0,0"
-                                        TextColor="#ffffff"
+                                        Margin="0,80,0,0"
+                                        TextColor="{StaticResource LabelColor}"
                                         HorizontalOptions="CenterAndExpand"
+                                        FontAttributes="Bold"
                                         HorizontalTextAlignment="Center"
                                         VerticalTextAlignment="Center" />
                             </Grid>

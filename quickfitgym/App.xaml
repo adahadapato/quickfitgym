@@ -9,6 +9,7 @@
             <Color x:Key="ThemeColor">#90bff5</Color>
             <Color x:Key="GreyColor">Gray</Color>
             <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="LabelColor">#80574D</Color>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White">
                 </Setter>
