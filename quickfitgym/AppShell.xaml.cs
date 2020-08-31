@@ -15,6 +15,8 @@ namespace quickfitgym
         {
             InitializeComponent();
             RegisterRoutes();
+            //RegName = "Adahada Enobong";
+            //RegEmail = "adahadapato@gmail.com";
             BindingContext = this;
             Activate();
         }
@@ -88,6 +90,31 @@ namespace quickfitgym
                 flAdmin.IsVisible = false;
             }
         }
+       
+        public string RegName
+        {
+            get
+            {
+                return $"{Preferences.Get("firstName",string.Empty)} {Preferences.Get("lastName", string.Empty)}";
+            }
+        }
+
+        public string RegEmail
+        {
+            get
+            {
+                return Preferences.Get("Email", string.Empty);
+            }
+        }
+
+        public string RegPhone
+        {
+            get
+            {
+                return Preferences.Get("mobile", string.Empty);
+            }
+        }
+
         /*private bool _IsFirstTime;
         public bool IsFirstTime
         {

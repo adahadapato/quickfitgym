@@ -16,9 +16,15 @@
     <ContentPage.Content>
        <StackLayout BackgroundColor="{StaticResource BGColor}">
         <Grid>
-            <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
-                <Frame HeightRequest="150" BackgroundColor="HotPink" Padding="0" Margin="0">
-                    <Image Source="logo.png" Aspect="AspectFill" Margin="0"/>
+            <StackLayout Padding="0"
+                         Margin="0"
+                         HorizontalOptions="FillAndExpand">
+                <Frame HeightRequest="150"
+                       BackgroundColor="HotPink"
+                       Padding="0" Margin="0">
+                    <Image Source="logo.png"
+                           Aspect="AspectFill"
+                           Margin="0"/>
                 </Frame>
             </StackLayout>
             <StackLayout Padding="0"

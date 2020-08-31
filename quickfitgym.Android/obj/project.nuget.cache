@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6OSi7HPtjB7oKr1JkuKYCti14NnoGz6yiDp6h5xpiDxZdp4ADTllbmKuqWg4noeBxIygL5ADF2caZGWBEBedVQ==",
+  "dgSpecHash": "nL/z5bNAPcNTnXhqq5etVRpUAbB9m7Vv9TDbqCrnw6H6af/g1/P/qh3NWojdyfe50WfSAeSqJWh1++cB1PHBZw==",
   "success": true,
   "projectFilePath": "/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/quickfitgym.Android.csproj",
   "expectedPackageFiles": [
@@ -47,7 +47,7 @@
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading/2.4.11.982/xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.forms/2.4.11.982/xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.transformations/2.4.11.982/xamarin.ffimageloading.transformations.2.4.11.982.nupkg.sha512",
-    "/Users/adahadaenobong/.nuget/packages/xamarin.forms/4.8.0.1269/xamarin.forms.4.8.0.1269.nupkg.sha512"
+    "/Users/adahadaenobong/.nuget/packages/xamarin.forms/4.8.0.1364/xamarin.forms.4.8.0.1364.nupkg.sha512"
   ],
   "logs": []
 }

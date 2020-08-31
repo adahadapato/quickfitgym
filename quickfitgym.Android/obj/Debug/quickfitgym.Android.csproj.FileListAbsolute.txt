@@ -17,7 +17,6 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/R.txt
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/R.cs.flag
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/quickfitgym.Android.csproj.CoreCompileInputs.cache
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/XamlC.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/quickfitgym.Android.csproj.CopyComplete
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/quickfitgym.Android.dll
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/quickfitgym.Android.pdb
@@ -164,6 +163,12 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxxhdpi/gphone.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/normalprofile.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/profile02.jpg
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/delete.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/correo.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/pphone.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxxhdpi/role.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxxhdpi/program.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxxhdpi/videos.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/uploadflags.txt
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/resolvedassemblies.hash
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/assets/FFImageLoading.dll
@@ -639,6 +644,3 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/delete.png
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/correo.png
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/pphone.png

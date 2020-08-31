@@ -15,9 +15,9 @@ namespace quickfitgym.ViewModels
             Title = "Admin";
             MenuCollection = new ObservableCollection<AdminMenu>() {
 
-            new AdminMenu(){Title ="Program", route="program",ImageUrl="xxx"},
-            new AdminMenu(){Title ="Videos" , route="videos",ImageUrl="xxx"},
-            new AdminMenu(){Title ="Roles",route="roles" ,ImageUrl="xxx"},
+            new AdminMenu(){Title ="Program", route="program",ImageUrl="program.png"},
+            new AdminMenu(){Title ="Videos" , route="videos",ImageUrl="Videos.png"},
+            new AdminMenu(){Title ="Roles",route="roles" ,ImageUrl="Role.png"},
             new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
             new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
             new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},

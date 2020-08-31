@@ -119,7 +119,15 @@ namespace quickfitgym.ViewModels
                 return new Command(async(e) =>
                 {
                     var program = e as Program;
-                    bool answer = await Application.Current.MainPage.DisplayAlert("Confirm", $"DO you want to delete {program.Name}", "Yes", "No");
+                    
+                    bool answer = await Application.Current.MainPage.DisplayAlert("Confirm", $"Do you want to delete {program.Name}", "Yes", "No");
+                    if (answer)
+                    {
+                        var result = await ApiService.DeleteProgram(program);
+                        if(result)
+                            ProgramCollection.Remove(program);
+                       // await Application.Current.MainPage.DisplayAlert("Confirm", $"DO you want to delete {program.Name}", "Yes", "No");
+                    }
                 });
             }
         }

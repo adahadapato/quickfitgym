@@ -82,18 +82,25 @@
                             Source="logo.png" 
                             Opacity="0.3" />
                      
-                     <Label Text="User name"
-                            Margin="15,140,5,10"
-                            x:Name="lblUserName"
+                     <Label Text="{Binding RegName}"
+                            Margin="15,110,5,10"
                             TextColor="White" 
                             FontAttributes="Bold"
                             FontSize="Medium"
                             HorizontalTextAlignment="Center"
                             HorizontalOptions="StartAndExpand"
                             VerticalTextAlignment="Center" />
-                     <Label Text="email@email.com"
-                            Margin="15,190,5,10"
-                            x:Name="lblUserEmail"
+                     <Label Text="{Binding RegEmail}"
+                            Margin="15,160,5,10"
+                            TextColor="White"
+                            FontSize="Small"
+                            FontAttributes="Bold"
+                            HorizontalOptions="StartAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center" />
+
+                     <Label Text="{Binding RegPhone}"
+                            Margin="15,210,5,10"
                             TextColor="White"
                             FontSize="Small"
                             FontAttributes="Bold"

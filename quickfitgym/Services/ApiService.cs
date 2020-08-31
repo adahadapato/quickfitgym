@@ -63,7 +63,7 @@ namespace quickfitgym.Services
                     var tempTime = DateTime.Parse(json.Expiry_date).ToUniversalTime();
 
                     var tokenExp = ((DateTimeOffset)tempTime).ToUnixTimeMilliseconds();
-
+                    
                     Preferences.Set("token", json.access_token);
                     Preferences.Set("mobile", json.Mobile);
                     Preferences.Set("firstName", json.firstName);
@@ -203,7 +203,7 @@ namespace quickfitgym.Services
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(program);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/create"), content);
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/CreateProgram"), content);
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonresult = await response.Content.ReadAsStringAsync();
@@ -230,7 +230,7 @@ namespace quickfitgym.Services
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(program);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/update"), content);
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/UpdateProgram"), content);
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonresult = await response.Content.ReadAsStringAsync();
@@ -249,32 +249,66 @@ namespace quickfitgym.Services
             return null;
         }
 
-       /* public static async Task<AddProgramResult> DeleteProgram(int Id)
+        public static async Task<bool> DeleteProgram(Program program)
         {
             try
             {
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var json = JsonConvert.SerializeObject(program);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/update"), content);
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/RemoveProgram"), content);
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonresult = await response.Content.ReadAsStringAsync();
-                    var result = JsonConvert.DeserializeObject<AddProgramResult>(jsonresult);
-                    return result;
+                    var result = JsonConvert.DeserializeObject<SuccessReturn>(jsonresult);
+                    await Application.Current.MainPage.DisplayAlert("Success", result.Message, "OK");
+                    return true;
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Unable to save program", "CANCEL");
+                    var jsonresult = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<SuccessReturn>(jsonresult);
+                    await Application.Current.MainPage.DisplayAlert("Error", result.Message, "CANCEL");
                 }
             }
             catch (Exception ex)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
             }
-            return null;
-        }*/
+            return false;
+        }
 
+        public static async Task<bool> JoinProgram(JoinProgram program)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var json = JsonConvert.SerializeObject(program);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}program/JoinProgram"), content);
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonresult = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<SuccessReturn>(jsonresult);
+                    await Application.Current.MainPage.DisplayAlert("Success", result.Message, "OK");
+                    return true;
+                }
+                else
+                {
+                    var jsonresult = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<SuccessReturn>(jsonresult);
+                    await Application.Current.MainPage.DisplayAlert("Error", result.Message, "CANCEL");
+                }
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return false;
+        }
+        
         public static async Task<bool> CreateSchedule(ProgramSchedule schedule)
         {
             try

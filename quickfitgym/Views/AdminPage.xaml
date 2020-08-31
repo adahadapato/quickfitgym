@@ -48,7 +48,7 @@
                                VerticalOptions="FillAndExpand"
                                HorizontalOptions="FillAndExpand" >
                             <Grid>
-                                 <Image Source="briefcase.png"
+                                 <Image Source="{Binding ImageUrl}"
                                         Aspect="AspectFill"
                                         Margin="5,0,5,18"
                                         HorizontalOptions="FillAndExpand"

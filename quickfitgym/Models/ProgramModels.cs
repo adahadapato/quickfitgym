@@ -25,4 +25,10 @@ namespace quickfitgym.Models
         public string Message { get; set; }
         public int ProgramId { get; set; }
     }
+
+    public class JoinProgram
+    {
+        public string UserId { get; set; }
+        public int ScheduleId { get; set; }
+    }
 }
