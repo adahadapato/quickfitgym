@@ -1,12 +1,14 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{C8939C5D-D44F-46B3-9155-9FDD360CB1B3}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="quickfitgym/ViewModels/RolesViewModel.cs" Line="18" Column="65" />
-      <File FileName="quickfitgym/Views/RolesListPage.xaml" Line="1" Column="1" />
-      <File FileName="quickfitgym/Views/ProgramesPage.xaml" Line="34" Column="8" />
-      <File FileName="quickfitgym/ViewModels/ProgramViewModel.cs" Line="128" Column="29" />
-      <File FileName="quickfitgym/Views/AdminPage.xaml" Line="51" Column="66" />
-      <File FileName="quickfitgym/ViewModels/AdminViewModel.cs" Line="19" Column="82" />
+      <File FileName="quickfitgym/Views/RolesListPage.xaml" Line="58" Column="69" />
+      <File FileName="quickfitgym/Views/ProgramesPage.xaml" />
+      <File FileName="quickfitgym/Views/AdminPage.xaml" />
+      <File FileName="quickfitgym/ViewModels/AdminViewModel.cs" />
+      <File FileName="quickfitgym/Views/CustomerProfilePage.xaml" Line="90" Column="35" />
+      <File FileName="quickfitgym/ViewModels/CustomerViewModel.cs" Line="79" Column="70" />
+      <File FileName="quickfitgym/ViewModels/CustomerProfileViewModel.cs" Line="12" Column="25" />
+      <File FileName="quickfitgym/Models/CustomerModels.cs" Line="8" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

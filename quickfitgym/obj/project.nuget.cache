@@ -1,19 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "mZvVnfHjSCf1kUZss4/6TDbOJN9pIYbfww5+prDzy+Cq4HzMiWkSKnaN6gBzItsVXcUE0IRIpoUpxR1vGPTGlw==",
+  "dgSpecHash": "yTUdNvl50Ofq5ZhaY3snIaNtTFevrmITot/vNMBHN/GRQr6QYF2cWJawR+byiAECRU3Em2Ixesxvw0Y0uJ2U9g==",
   "success": true,
   "projectFilePath": "/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/quickfitgym.csproj",
   "expectedPackageFiles": [
     "/Users/adahadaenobong/.nuget/packages/epoch.unix.timestamp/2.0.0/epoch.unix.timestamp.2.0.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading/2.4.11.982/xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.forms/2.4.11.982/xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.transformations/2.4.11.982/xamarin.ffimageloading.transformations.2.4.11.982.nupkg.sha512",
-    "/Users/adahadaenobong/.nuget/packages/xamarin.forms/4.8.0.1364/xamarin.forms.4.8.0.1364.nupkg.sha512"
+    "/Users/adahadaenobong/.nuget/packages/xamarin.forms/4.8.0.1364/xamarin.forms.4.8.0.1364.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/xamarin.forms.pancakeview/2.1.0.722-beta/xamarin.forms.pancakeview.2.1.0.722-beta.nupkg.sha512"
   ],
   "logs": []
 }

@@ -52,12 +52,12 @@
                                                CommandParameter="{Binding .}"/>
                                 </SwipeItems>
                             </SwipeView.LeftItems>
-                            <Grid Padding="10"
+                            <Grid Padding="1"
                                   Margin="10,0,10,0">
                                 <StackLayout Orientation="Horizontal">
                                     <Image Source="{Binding Imageurl}"
-                                            HeightRequest="50"
-                                            WidthRequest="50"/>
+                                            HeightRequest="20"
+                                            WidthRequest="20"/>
                                     <StackLayout HorizontalOptions="StartAndExpand">
                                         <Label Text="{Binding Name}"
                                                 TextColor="{StaticResource LabelColor}"

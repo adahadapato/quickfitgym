@@ -644,3 +644,7 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/assets/Xamarin.Forms.PancakeView.dll
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64f8908e42fa42e603/PancakeDrawable.java
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64f8908e42fa42e603/PancakeViewRenderer.java
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64f8908e42fa42e603/RoundedCornerOutlineProvider.java

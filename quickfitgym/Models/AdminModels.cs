@@ -10,9 +10,16 @@ namespace quickfitgym.Models
         public List<Payment> Payments { get; set; }
     }*/
 
+    public class AssignRole
+    {
+        public string Id { get; set; }
+        public List<string> EnrolledUsers { get; set; }
+        public List<string> RemovedUsers { get; set; }
+    }
+
     public class Role
     {
-        //public List<object> Users { get; set; }
+        public List<object> Users { get; set; }
         public string Id { get; set; }
         public string Name { get; set; }
     }

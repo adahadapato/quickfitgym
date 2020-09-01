@@ -12,6 +12,7 @@
     <PackageReference Include="Epoch.Unix.TimeStamp" Version="2.0.0" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.1.0.722-beta" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Views\CustomersPagePage.xaml" />

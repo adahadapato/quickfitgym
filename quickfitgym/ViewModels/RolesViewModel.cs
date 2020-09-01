@@ -65,5 +65,16 @@ namespace quickfitgym.ViewModels
                 }
             }
         }
+
+        public ICommand SaveRoleCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+
+                });
+            }
+        }
     }
 }

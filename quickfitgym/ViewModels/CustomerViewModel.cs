@@ -76,7 +76,8 @@ namespace quickfitgym.ViewModels
                 return new Command(async() =>
                 {
                     var item = SelectedCustomer;
-                    await Shell.Current.GoToAsync("customerdetails");
+                    await Shell.Current.GoToAsync("customerprofile");
+                    //await Shell.Current.GoToAsync("customerdetails");
                 });
             }
         }
@@ -88,7 +89,7 @@ namespace quickfitgym.ViewModels
                 return new Command(async () =>
                 {
                     var item = SelectedTrainer;
-                    await Shell.Current.GoToAsync("customerdetails");
+                    await Shell.Current.GoToAsync("customerprofile");
                 });
             }
         }

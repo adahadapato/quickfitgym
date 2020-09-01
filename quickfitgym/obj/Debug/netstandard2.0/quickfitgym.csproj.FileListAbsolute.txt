@@ -20,6 +20,7 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/LandingPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/LoginPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/NewItemPage.xaml.g.cs
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/NoInternetConnectionPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/PaymentPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/ProfilePage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/ProgramesPage.xaml.g.cs
@@ -36,4 +37,3 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.dll
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/ref/quickfitgym.dll
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.pdb
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.csprojAssemblyReference.cache
