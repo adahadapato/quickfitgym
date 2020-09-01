@@ -69,6 +69,7 @@ namespace quickfitgym
             routes.Add("program", typeof(ProgramesPage));
             routes.Add("roles", typeof(RolesListPage));
             routes.Add("customerprofile", typeof(CustomerProfilePage));
+            routes.Add("dietplan", typeof(DietPlansPage));
             foreach (var i in routes)
             {
                 Routing.RegisterRoute(i.Key, i.Value);

@@ -176,11 +176,11 @@
    
     <MenuItem Text="About Us" Command="{Binding NavigateCommand}"  CommandParameter="about" IconImageSource="about.png"/>
     <!--<MenuItem Text="Payment" Command="{Binding NavigateCommand}" CommandParameter="admin" IconImageSource="admin.png"/>-->
-    <!--<MenuItem Text="Classes" Command="{Binding NavigateCommand}" CommandParameter="classes" IconImageSource="briefcase.png"/>
-    <MenuItem Text="Articles" Command="{Binding NavigateCommand}" CommandParameter="articles" IconImageSource="article.png"/>-->
+    <!--<MenuItem Text="Classes" Command="{Binding NavigateCommand}" CommandParameter="classes" IconImageSource="briefcase.png"/>-->
+    <MenuItem Text="Weekly Challenges" Command="{Binding NavigateCommand}" CommandParameter="dietplan" IconImageSource="article.png"/>
     <MenuItem Text="Photos" Command="{Binding NavigateCommand}" CommandParameter="photos" IconImageSource="photo.png"/>
     <MenuItem Text="Videos" Command="{Binding NavigateCommand}" CommandParameter="videos" IconImageSource="video.png"/>
-    <!--<MenuItem Text="Programs" Command="{Binding ProgramsCommand}" IconImageSource="video.png"/>-->
+    <MenuItem Text="Diet Plans" Command="{Binding NavigateCommand}" CommandParameter="dietplan" IconImageSource="video.png"/>
     <!--<MenuItem Text="Admin" Command="{Binding NavigateCommand}" CommandParameter="admin" IconImageSource="admin.png"/>-->
     <MenuItem Text="Logout" Command="{Binding LogoutCommand}" CommandParameter="logout" IconImageSource="admin.png"/>
 
