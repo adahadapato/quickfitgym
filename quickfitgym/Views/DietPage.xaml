@@ -36,7 +36,7 @@
             <Label Grid.Row="1"
                    Grid.Column="1"
                    Grid.ColumnSpan="2"
-                   Text="Monday, 5th&#10;April"
+                   Text="{Binding Date, Mode=TwoWay}"
                    Margin="0,-100,0,0"
                    TextColor="#535257"
                    FontAttributes="Bold"
@@ -80,7 +80,7 @@
                                                FontAttributes="Bold"
                                                TextColor="#535257"
                                                FontSize="18"/>
-                                        <Label Text=" : "
+                                        <Label Text=":"
                                                FontAttributes="Bold"
                                                TextColor="#535257"
                                                FontSize="18"/>

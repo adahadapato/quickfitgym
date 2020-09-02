@@ -12,6 +12,7 @@ namespace quickfitgym.ViewModels
         public DietViewModel()
         {
             Title = "Diet Plan";
+            Date = DateTime.Now.ToString("dddd, dd MMMM yyyy");
             DietCollection = new ObservableCollection<Diet>
             {
                 new Diet
@@ -111,6 +112,17 @@ namespace quickfitgym.ViewModels
                       }
                 }
             };
+        }
+
+        public string _date;
+        public string Date
+        {
+            get { return _date; }
+            set
+            {
+                SetProperty(ref _date, value);
+                OnPropertyChanged(nameof(Date));
+            }
         }
     }
 }
