@@ -39,3 +39,4 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.pdb
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.csprojAssemblyReference.cache
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/DietPlansPage.xaml.g.cs
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/DietPage.xaml.g.cs

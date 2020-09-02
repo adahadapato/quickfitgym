@@ -648,3 +648,5 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64f8908e42fa42e603/PancakeDrawable.java
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64f8908e42fa42e603/PancakeViewRenderer.java
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64f8908e42fa42e603/RoundedCornerOutlineProvider.java
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/calendar.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/corner.png
