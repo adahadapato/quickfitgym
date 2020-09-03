@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Input;
 using quickfitgym.Models;
 using quickfitgym.Services;
+using quickfitgym.Views;
 using Xamarin.Forms;
 
 namespace quickfitgym.ViewModels
@@ -53,18 +54,7 @@ namespace quickfitgym.ViewModels
                 
                 foreach (var m in members)
                 {
-                    //if (string.IsNullOrWhiteSpace(m.PhotoUrl))
-                    //    m.PhotoUrl = "NormalProfile.png";
-
-                    //m.RegistrationDate = m.JoinDate.ToString("dd/MM/yyyy");
-                    
-                    var trainer = m.Roles.Any(x=> x=="Trainer" || x=="Admin");
-                    var member = m.Roles.Any(x => x == "Member");
-                   if(member)
-                      MembersCollection.Add(m);
-
-                    if (trainer)
-                        TrainersCollection.Add(m);
+                    MembersCollection.Add(m);
                 }
             }
         }
@@ -76,8 +66,7 @@ namespace quickfitgym.ViewModels
                 return new Command(async() =>
                 {
                     var item = SelectedCustomer;
-                    await Shell.Current.GoToAsync("customerprofile");
-                    //await Shell.Current.GoToAsync("customerdetails");
+                    await Shell.Current.Navigation.PushAsync(new CustomerProfilePage(item));
                 });
             }
         }
@@ -86,10 +75,10 @@ namespace quickfitgym.ViewModels
         {
             get
             {
-                return new Command(async () =>
+                return new Command( () =>
                 {
                     var item = SelectedTrainer;
-                    await Shell.Current.GoToAsync("customerprofile");
+                    //await Shell.Current.GoToAsync("customerprofile");
                 });
             }
         }

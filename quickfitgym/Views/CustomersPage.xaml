@@ -94,7 +94,7 @@
         <Grid>
         <StackLayout Spacing="5"
                      BackgroundColor="#90bff5">
-            <CollectionView x:Name="collectionViewListHorizontal"
+            <!--<CollectionView x:Name="collectionViewListHorizontal"
                             HeightRequest="200"
                             SelectionMode="Single"
                             SelectedItem="{Binding SelectedTrainer, Mode=TwoWay}"
@@ -136,10 +136,10 @@
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-            </CollectionView>
+            </CollectionView>-->
             <CollectionView x:Name="collectionViewListVertical"
                             ItemsSource="{Binding MembersCollection}"
-                            SelectedItem="{Binding SelectedMember}"
+                            SelectedItem="{Binding SelectedCustomer}"
                             SelectionChangedCommand="{Binding SelectedCustomerCommand}"
                             SelectionMode="Single">
                 <CollectionView.ItemsLayout>

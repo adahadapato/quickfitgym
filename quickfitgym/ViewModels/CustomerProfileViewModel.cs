@@ -15,6 +15,10 @@ namespace quickfitgym.ViewModels
         public ObservableCollection<Pictures> PictureColection { get; set; }
         public CustomerProfileViewModel()
         {
+
+        }
+        public CustomerProfileViewModel(Members customer)
+        {
             Title = "";
             ProfilePicture = "profile02";
             CoverPicture = ProfilePicture;
@@ -27,8 +31,14 @@ namespace quickfitgym.ViewModels
                 new Pictures { Picture = "profile02"},
                 new Pictures { Picture = "profile02"}
             };
+            Init(customer);
         }
 
+        private void Init(Members customer)
+        {
+            CustomerName = customer.FullName;
+        }
+       
         private string _customerName;
         public string CustomerName
         {

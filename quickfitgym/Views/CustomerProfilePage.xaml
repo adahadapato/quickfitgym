@@ -20,6 +20,7 @@
                   Grid.ColumnSpan="2"
                   Source="{Binding CoverPicture}"
                   Aspect="AspectFill"
+                  Opacity="0.3"
                   HeightRequest="280">
                <Image.GestureRecognizers>
                    <TapGestureRecognizer NumberOfTapsRequired="1"
@@ -34,7 +35,7 @@
                   TextColor="White"
                   Padding="20,0,0,5"
                   FontSize="28"
-                  Text="Dennis Hoper"/>
+                  Text="{Binding CustomerName}"/>
            <!--Actor description-->
            <Label Grid.Row="1"
                   Grid.Column="0"
@@ -85,7 +86,7 @@
                    TextColor="White"
                    FontAttributes="Bold"
                    CornerRadius="10"
-                   Text="Born: May 17, 1936"/>
+                   Text="May 17, 1936"/>
            <!-- Dividing line-->
            <BoxView Grid.Row="4"
                     Grid.Column="0"
