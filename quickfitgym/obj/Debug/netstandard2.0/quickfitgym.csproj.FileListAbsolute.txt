@@ -12,6 +12,8 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/CustomerDetailsPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/CustomerProfilePage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/CustomersPage.xaml.g.cs
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/DietPage.xaml.g.cs
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/DietPlansPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/EditProgramPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/HomePage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/ItemDetailPage.xaml.g.cs
@@ -22,6 +24,7 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/NewItemPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/NoInternetConnectionPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/PaymentPage.xaml.g.cs
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/PicturePage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/ProfilePage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/ProgramesPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/ProgramListPage.xaml.g.cs
@@ -38,5 +41,3 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/ref/quickfitgym.dll
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.pdb
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.csprojAssemblyReference.cache
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/DietPlansPage.xaml.g.cs
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/DietPage.xaml.g.cs

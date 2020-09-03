@@ -1,10 +1,10 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{C8939C5D-D44F-46B3-9155-9FDD360CB1B3}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="quickfitgym/AppShell.xaml" Line="183" Column="66" />
-      <File FileName="quickfitgym/ViewModels/DietPlanViewModel.cs" Line="15" Column="17" />
-      <File FileName="quickfitgym/Views/DietPage.xaml" Line="39" Column="52" />
-      <File FileName="quickfitgym/Models/DietPlanModels.cs" Line="10" Column="30" />
+      <File FileName="quickfitgym/Views/CustomersPage.xaml" Line="1" Column="1" />
+      <File FileName="quickfitgym/ViewModels/CustomerProfileViewModel.cs" Line="119" Column="92" />
+      <File FileName="quickfitgym/Views/PicturePage.xaml.cs" Line="13" Column="64" />
+      <File FileName="quickfitgym/ViewModels/PicturePageViewModel.cs" Line="17" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,12 +15,16 @@
               <Node name="Services" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="DietPage.xaml" expanded="True" />
-                <Node name="DietPlansPage.xaml" expanded="True" />
+                <Node name="PicturePage.xaml" expanded="True" />
               </Node>
-              <Node name="AppShell.xaml" expanded="True" />
             </Node>
-            <Node name="quickfitgym.Android" expanded="True" />
+            <Node name="quickfitgym.Android" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="xml" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="quickfitgym.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

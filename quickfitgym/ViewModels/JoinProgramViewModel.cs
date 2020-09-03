@@ -8,11 +8,11 @@ namespace quickfitgym.ViewModels
 {
     public class JoinProgramViewModel:BaseViewModel
     {
-        public ObservableCollection<ProgramSchedule> ScheduleCollection { get; private set; }
+        public ObservableCollection<ProgramTime> ScheduleCollection { get; private set; }
         ObservableCollection<object> _selectedSchedule;
         public JoinProgramViewModel(Program program)
         {
-            ScheduleCollection = new ObservableCollection<ProgramSchedule>(program.ProgramSchedules);
+            ScheduleCollection = new ObservableCollection<ProgramTime>(program.ProgramSchedules);
             _selectedSchedule = new ObservableCollection<object>();
             FTitle = $"Join {program.Name}";
         }

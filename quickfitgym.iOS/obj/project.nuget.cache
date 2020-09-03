@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "X9yZbPOBsKTbgl5o3Z7A64CYlUpDN7q4zZz6bDmK24p+8BLRMvbjO7wA9hrdEUgfMgwTAZwQ7yn5ELibLPb58A==",
+  "dgSpecHash": "xuC5doCMmZHpPY72yJNWM6kpch1OeWmHkIYrsGmW3zoB5y9og1O5TCO5z5dGsOk4NhURzI6oR7oJsZVtD44ywQ==",
   "success": true,
   "projectFilePath": "/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.iOS/quickfitgym.iOS.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "/Users/adahadaenobong/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/webp.touch/1.0.8/webp.touch.1.0.8.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/xam.plugin.imagearray/1.0.0/xam.plugin.imagearray.1.0.0.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/xam.plugin.media/5.0.1/xam.plugin.media.5.0.1.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading/2.4.11.982/xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.forms/2.4.11.982/xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",

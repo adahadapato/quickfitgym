@@ -23,7 +23,8 @@ namespace quickfitgym
             }
             else
             {
-                MainPage = new AppShell();
+                 MainPage = new AppShell();
+                //MainPage = new PicturePage();
             }
             //MainPage = new AppShell();
         }

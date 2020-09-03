@@ -18,9 +18,15 @@
            <Image Grid.Row="0"
                   Grid.Column="0"
                   Grid.ColumnSpan="2"
-                  Source="{Binding ProfileImage}"
+                  Source="{Binding CoverPicture}"
                   Aspect="AspectFill"
-                  HeightRequest="280"/>
+                  HeightRequest="280">
+               <Image.GestureRecognizers>
+                   <TapGestureRecognizer NumberOfTapsRequired="1"
+                                         Command="{Binding ProfileImageCommand}"
+                                         CommandParameter="coverpict"/>
+               </Image.GestureRecognizers>
+           </Image>
            <!--Actor name-->
            <Label Grid.Row="0"
                   Grid.Column="0"
@@ -54,10 +60,16 @@
            <Image Grid.Row="2"
                   Grid.Column="0"
                   Grid.RowSpan="2"
-                  Source="{Binding ProfileImage}"
+                  Source="{Binding ProfilePicture}"
                   Margin="0,0,0,0"
                   WidthRequest="150"
-                  HeightRequest="160"/>
+                  HeightRequest="160">
+               <Image.GestureRecognizers>
+                   <TapGestureRecognizer NumberOfTapsRequired="1"
+                                         Command="{Binding ProfileImageCommand}"
+                                         CommandParameter="profilepict"/>
+               </Image.GestureRecognizers>
+           </Image>
            <!--Description-->
            <Label Grid.Row="2"
                   Grid.Column="1"
