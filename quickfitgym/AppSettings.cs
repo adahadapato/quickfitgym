@@ -18,6 +18,14 @@ namespace quickfitgym
                 return "https://quickfit.zayun.biz/Token";
             }
         }
+
+        public static string ImageUrl
+        {
+            get
+            {
+                return "https://quickfit.zayun.biz/wwwroot/";
+            }
+        }
     }
 
 }

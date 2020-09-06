@@ -8,10 +8,10 @@ namespace quickfitgym.Views
 {
     public partial class CustomerProfilePage : ContentPage
     {
-        public CustomerProfilePage(Members member)
+        public CustomerProfilePage(Customer customer)
         {
             InitializeComponent();
-            BindingContext = new CustomerProfileViewModel(member);
+            BindingContext = new CustomerProfileViewModel(customer);
         }
     }
 }

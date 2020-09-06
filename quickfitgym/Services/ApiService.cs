@@ -40,7 +40,6 @@ namespace quickfitgym.Services
             {
                 await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
             }
-           
             return false;
         }
 
@@ -87,6 +86,7 @@ namespace quickfitgym.Services
            
             return false;
         }
+
 
         public static async Task<bool> UpdateAboutUs(AboutUs aboutUs)
         {
@@ -137,6 +137,7 @@ namespace quickfitgym.Services
             return null;
         }
 
+
         public static async Task<AboutUs> GetAboutUs()
         {
             try
@@ -156,6 +157,77 @@ namespace quickfitgym.Services
             return null;
         }
 
+        
+        public static async Task<List<Customer>> GetAllCustomers()
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new
+                    System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var response = await client.GetStringAsync($"{AppSettings.ApiUrl}customers/getall");
+
+                var json = JsonConvert.DeserializeObject<List<Customer>>(response);
+                return json;
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return null;
+        }
+
+        public static async Task<bool> UpdateProfilePict(ProfilePict profile)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var json = JsonConvert.SerializeObject(profile);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}customers/updateprofilepict"), content);
+                if (response.IsSuccessStatusCode)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Success", "Photo saved successfully", "OK");
+                    return true;
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Unable to save Photo", "CANCEL");
+                }
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return false;
+        }
+
+        public static async Task<bool> UpdateCoverPict(CoverPict cover)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var json = JsonConvert.SerializeObject(cover);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}customers/updatecoverpict"), content);
+                if (response.IsSuccessStatusCode)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Success", "Photo saved successfully", "OK");
+                    return true;
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Unable to save Photo", "CANCEL");
+                }
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return false;
+        }
 
         public static async Task<List<Members>> GetMembers()
         {

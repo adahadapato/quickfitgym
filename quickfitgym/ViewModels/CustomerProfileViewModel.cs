@@ -17,7 +17,7 @@ namespace quickfitgym.ViewModels
         {
 
         }
-        public CustomerProfileViewModel(Members customer)
+        public CustomerProfileViewModel(Customer customer)
         {
             Title = "";
             ProfilePicture = "profile02";
@@ -34,11 +34,49 @@ namespace quickfitgym.ViewModels
             Init(customer);
         }
 
-        private void Init(Members customer)
+        private void Init(Customer customer)
         {
-            CustomerName = customer.FullName;
+            CustomerName = customer.Name;
+            Occupation = customer.Occupation;
+            DateOfBirth = customer.DateOfBirth.ToString();// "ddd, dd MM yyyy");
+            About = customer.AboutMe;
+            ProfilePicture = customer.FullProfilePictUrl;
+
+            CoverPicture = customer.CoverPictUrl;
         }
-       
+        //With an amacing cinematic career of more than five decades, Dennis Hopper was a multi-talent and unconventional actor/director, regarded by many as one of the..."/>
+        private string _about;
+        public string About
+        {
+            get { return _about; }
+            set
+            {
+                SetProperty(ref _about, value);
+                OnPropertyChanged(nameof(About));
+            }
+        }
+
+        private string _occupation;
+        public string Occupation
+        {
+            get { return _occupation; }
+            set
+            { SetProperty(ref _occupation, value);
+                OnPropertyChanged(nameof(Occupation));
+            }
+        }
+
+        private string _dateOfBirth;
+        public string DateOfBirth
+        {
+            get { return _dateOfBirth; }
+            set
+            {
+                SetProperty(ref _dateOfBirth, value);
+                OnPropertyChanged(nameof(DateOfBirth));
+            }
+        }
+
         private string _customerName;
         public string CustomerName
         {
@@ -80,7 +118,7 @@ namespace quickfitgym.ViewModels
             set
             {
                 SetProperty(ref _profilePict, value);
-                OnPropertyChanged(nameof(ProfileImage));
+                OnPropertyChanged(nameof(ProfilePict));
             }
         }
 

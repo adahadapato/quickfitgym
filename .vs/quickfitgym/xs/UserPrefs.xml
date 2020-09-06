@@ -1,5 +1,12 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{C8939C5D-D44F-46B3-9155-9FDD360CB1B3}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="quickfitgym/Views/CustomerProfilePage.xaml" Line="80" Column="43" />
+      <File FileName="quickfitgym/ViewModels/CustomerViewModel.cs" />
+      <File FileName="quickfitgym/ViewModels/PicturePageViewModel.cs" Line="172" Column="1" />
+      <File FileName="quickfitgym/Views/CustomersPage.xaml" Line="151" Column="31" />
+      <File FileName="quickfitgym/Views/PicturePage.xaml" Line="36" Column="33" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -11,7 +18,6 @@
               <Node name="Views" expanded="True" />
             </Node>
             <Node name="quickfitgym.Android" expanded="True" />
-            <Node name="quickfitgym.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

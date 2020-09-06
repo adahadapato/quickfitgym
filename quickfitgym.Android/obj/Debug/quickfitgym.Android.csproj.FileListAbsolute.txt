@@ -171,6 +171,7 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-xxxhdpi/videos.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/calendar.png
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/corner.png
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/res/drawable-mdpi/place.jpg
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/uploadflags.txt
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/resolvedassemblies.hash
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/assets/FFImageLoading.dll
@@ -566,9 +567,6 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64ee486da937c010f4/FrameRenderer.java
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64ee486da937c010f4/ImageRenderer.java
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64ee486da937c010f4/LabelRenderer.java
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64f8908e42fa42e603/PancakeDrawable.java
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64f8908e42fa42e603/PancakeViewRenderer.java
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64f8908e42fa42e603/RoundedCornerOutlineProvider.java
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/ffimageloading/cross/MvxCachedImageView.java
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/ffimageloading/views/ImageViewAsync.java
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/mono/android/app/ApplicationRegistration.java

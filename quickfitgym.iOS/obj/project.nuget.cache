@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xuC5doCMmZHpPY72yJNWM6kpch1OeWmHkIYrsGmW3zoB5y9og1O5TCO5z5dGsOk4NhURzI6oR7oJsZVtD44ywQ==",
+  "dgSpecHash": "0ROX91hKFalax/yeDNsWMuV0eI3nhkDe1jruDzxq06dvLo+FoH8040Y7QMBDK2Q6sZSi4WgDvyAknMp8rIdQQA==",
   "success": true,
   "projectFilePath": "/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.iOS/quickfitgym.iOS.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,7 @@
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.forms/2.4.11.982/xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.transformations/2.4.11.982/xamarin.ffimageloading.transformations.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.forms/4.8.0.1364/xamarin.forms.4.8.0.1364.nupkg.sha512",
-    "/Users/adahadaenobong/.nuget/packages/xamarin.forms.pancakeview/2.1.0.722-beta/xamarin.forms.pancakeview.2.1.0.722-beta.nupkg.sha512"
+    "/Users/adahadaenobong/.nuget/packages/xamarin.forms.pancakeview/2.2.0.740/xamarin.forms.pancakeview.2.2.0.740.nupkg.sha512"
   ],
   "logs": []
 }

@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[1.5.3.2, )"
             },
+            "Xamarin.FFImageLoading": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
             "Xamarin.FFImageLoading.Forms": {
               "target": "Package",
               "version": "[2.4.11.982, )"
@@ -76,7 +80,7 @@
             },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
-              "version": "[2.1.0.722-beta, )"
+              "version": "[2.2.0.740, )"
             }
           },
           "imports": [

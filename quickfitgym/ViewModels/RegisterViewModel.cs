@@ -35,25 +35,15 @@ namespace quickfitgym.ViewModels
             }
         }
 
-        private string _firstName;
-        public string FirstName
+       
+        private string _name;
+        public string Name
         {
-            get { return _firstName; }
+            get { return _name; }
             set
             {
-                SetProperty(ref _firstName, value);
-                OnPropertyChanged(nameof(FirstName));
-            }
-        }
-
-        private string _lastName;
-        public string LastName
-        {
-            get { return _lastName; }
-            set
-            {
-                SetProperty(ref _lastName, value);
-                OnPropertyChanged(nameof(LastName));
+                SetProperty(ref _name, value);
+                OnPropertyChanged(nameof(Name));
             }
         }
 
@@ -85,23 +75,39 @@ namespace quickfitgym.ViewModels
             {
                 return new Command(async() =>
                 {
-                    if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Phone) || string.IsNullOrWhiteSpace(FirstName)
-                || string.IsNullOrWhiteSpace(Password))
+                    if (string.IsNullOrWhiteSpace(Email))
                     {
-                        await Application.Current.MainPage.DisplayAlert("Error", "All fields are mandatory", "Ok");
+                        await Application.Current.MainPage.DisplayAlert("Error", "Supply value for Email", "CANCEL");
+                        return;
+                    }
+
+                    if (string.IsNullOrWhiteSpace(Phone) )
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Supply value for Phone", "CANCEL");
+                        return;
+                    }
+
+                    if (string.IsNullOrWhiteSpace(Name))
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Supply value for Name", "CANCEL");
+                        return;
+                    }
+
+                    if (string.IsNullOrWhiteSpace(Password))
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Error", "Supply value for Password", "CANCEL");
                         return;
                     }
 
                     if (Password != ConfirmPasword)
                     {
-                        await Application.Current.MainPage.DisplayAlert("Error", "Password and Confirm Pasword do not match", "Ok");
+                        await Application.Current.MainPage.DisplayAlert("Error", "Password and Confirm Password do not match", "CANCEL");
                         return;
                     }
                     var model = new Register()
                     {
                         Email = Email,
-                        FirstName = FirstName,
-                        LastName = LastName,
+                        Name = Name,
                         Mobile = Phone,
                         RoleName = "Member",
                         EmailConfirmed = false,
@@ -123,7 +129,6 @@ namespace quickfitgym.ViewModels
                 return new Command(() =>
                 {
                     Application.Current.MainPage = new NavigationPage(new LoginPage());
-                    //await Shell.Current.Navigation.PushModalAsync(new LoginPage());
                 });
             }
         }

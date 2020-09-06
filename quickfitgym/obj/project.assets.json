@@ -170,7 +170,7 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.Forms.PancakeView/2.1.0.722-beta": {
+      "Xamarin.Forms.PancakeView/2.2.0.740": {
         "type": "package",
         "dependencies": {
           "System.ComponentModel": "4.3.0",
@@ -1148,22 +1148,30 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "Xamarin.Forms.PancakeView/2.1.0.722-beta": {
-      "sha512": "er0mVOtACOyrcbfSJhWalkru/xHQk9cxhfHPU4pdZMQvJ3hZWF469nZ+D6v7B5XnGB3BZlULz8C4FaIhGKvw+g==",
+    "Xamarin.Forms.PancakeView/2.2.0.740": {
+      "sha512": "K9BCl9RtI04MklXocJEpizd+o4gHuHJFfKAAQx0fpOSwH5UvpF/8ZE/IRWeZQ1nQZIRxrHu8z7/rAPFxIdi8hw==",
       "type": "package",
-      "path": "xamarin.forms.pancakeview/2.1.0.722-beta",
+      "path": "xamarin.forms.pancakeview/2.2.0.740",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/monoandroid90/Xamarin.Forms.PancakeView.dll",
+        "lib/monoandroid10.0/Xamarin.Forms.PancakeView.dll",
+        "lib/monoandroid10.0/Xamarin.Forms.PancakeView.xml",
         "lib/net461/Xamarin.Forms.PancakeView.dll",
+        "lib/net461/Xamarin.Forms.PancakeView.xml",
         "lib/netstandard1.0/Xamarin.Forms.PancakeView.dll",
+        "lib/netstandard1.0/Xamarin.Forms.PancakeView.xml",
         "lib/netstandard2.0/Xamarin.Forms.PancakeView.dll",
+        "lib/netstandard2.0/Xamarin.Forms.PancakeView.xml",
         "lib/tizen40/Xamarin.Forms.PancakeView.dll",
+        "lib/tizen40/Xamarin.Forms.PancakeView.xml",
         "lib/uap10.0.16299/Xamarin.Forms.PancakeView.dll",
         "lib/uap10.0.16299/Xamarin.Forms.PancakeView.pri",
+        "lib/uap10.0.16299/Xamarin.Forms.PancakeView.xml",
+        "lib/uap10.0.16299/Xamarin.Forms.PancakeView/Xamarin.Forms.PancakeView.xr.xml",
         "lib/xamarinios10/Xamarin.Forms.PancakeView.dll",
-        "xamarin.forms.pancakeview.2.1.0.722-beta.nupkg.sha512",
+        "lib/xamarinios10/Xamarin.Forms.PancakeView.xml",
+        "xamarin.forms.pancakeview.2.2.0.740.nupkg.sha512",
         "xamarin.forms.pancakeview.nuspec"
       ]
     }
@@ -1176,10 +1184,11 @@
       "Xam.Plugin.ImageArray >= 1.0.0",
       "Xam.Plugin.Media >= 5.0.1",
       "Xamarin.Essentials >= 1.5.3.2",
+      "Xamarin.FFImageLoading >= 2.4.11.982",
       "Xamarin.FFImageLoading.Forms >= 2.4.11.982",
       "Xamarin.FFImageLoading.Transformations >= 2.4.11.982",
       "Xamarin.Forms >= 4.8.0.1364",
-      "Xamarin.Forms.PancakeView >= 2.1.0.722-beta"
+      "Xamarin.Forms.PancakeView >= 2.2.0.740"
     ]
   },
   "packageFolders": {
@@ -1243,6 +1252,10 @@
             "target": "Package",
             "version": "[1.5.3.2, )"
           },
+          "Xamarin.FFImageLoading": {
+            "target": "Package",
+            "version": "[2.4.11.982, )"
+          },
           "Xamarin.FFImageLoading.Forms": {
             "target": "Package",
             "version": "[2.4.11.982, )"
@@ -1257,7 +1270,7 @@
           },
           "Xamarin.Forms.PancakeView": {
             "target": "Package",
-            "version": "[2.1.0.722-beta, )"
+            "version": "[2.2.0.740, )"
           }
         },
         "imports": [

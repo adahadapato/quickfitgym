@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
@@ -11,18 +12,18 @@ namespace quickfitgym.ViewModels
 {
     public class CustomerViewModel : BaseViewModel
     {
-        public ObservableCollection<Members> MembersCollection { get; private set; }
-        public ObservableCollection<Members> TrainersCollection { get; private set; }
+        public ObservableCollection<Customer> MembersCollection { get; private set; }
+        //public ObservableCollection<Members> TrainersCollection { get; private set; }
         public CustomerViewModel()
         {
-            Title = "Members";
-            MembersCollection = new ObservableCollection<Members>();
-            TrainersCollection = new ObservableCollection<Members>();
-            GetMembers();
+            Title = "Customers";
+            MembersCollection = new ObservableCollection<Customer>();
+            //TrainersCollection = new ObservableCollection<Members>();
+            GetAllCustomers();
         }
 
-        private Members _selectedCustomer;
-        public Members SelectedCustomer
+        private Customer _selectedCustomer;
+        public Customer SelectedCustomer
         {
             get { return _selectedCustomer; }
             set
@@ -32,27 +33,20 @@ namespace quickfitgym.ViewModels
             }
         }
 
-        private Members _selectedTrainer;
-        public Members SelectedTrainer
-        {
-            get { return _selectedTrainer; }
-            set
-            {
-                SetProperty(ref _selectedTrainer, value);
-                OnPropertyChanged(nameof(SelectedTrainer));
-            }
-        }
+       
 
-        private async void GetMembers()
+        private List<Customer> cusomers = new List<Customer>();
+        private async void GetAllCustomers()
         {
-            var members = await ApiService.GetMembers();
-            if (members != null)
+            cusomers = await ApiService.GetAllCustomers();
+            if (cusomers != null)
             {
-                members.ForEach(x => { x.RegistrationDate = x.JoinDate.ToString("dd/MM/yyyy");
-                    x.PhotoUrl = (string.IsNullOrWhiteSpace(x.PhotoUrl)) ? "NormalProfile.png" : x.PhotoUrl;
+                cusomers.ForEach(x => { x.RegistrationDate = x.JoinDate.ToString("dd/MM/yyyy");
+                    //x.FullProfilePictUrl = (string.IsNullOrWhiteSpace(x.ProfilePictUrl)) ? "NormalProfile.png" : x.ProfilePictUrl;
+                    
                 });
                 
-                foreach (var m in members)
+                foreach (var m in cusomers)
                 {
                     MembersCollection.Add(m);
                 }
@@ -77,7 +71,7 @@ namespace quickfitgym.ViewModels
             {
                 return new Command( () =>
                 {
-                    var item = SelectedTrainer;
+                    //var item = SelectedTrainer;
                     //await Shell.Current.GoToAsync("customerprofile");
                 });
             }

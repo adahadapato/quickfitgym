@@ -112,38 +112,10 @@
                                                BackgroundColor="DeepSkyBlue"
                                                Margin="0"/>
                                      </Frame>
-                                     <local:CustomEntry Placeholder="First Name"
+                                     <local:CustomEntry Placeholder="Name"
                                                        IsPassword="False"
                                                        Keyboard="Text"
-                                                        Text="{Binding FirstName, Mode=TwoWay}"
-                                                       TextColor="#ffffff"
-                                                       FontAttributes="None"
-                                                       HorizontalOptions="FillAndExpand"
-                                                       Margin="0,0,20,0"/>
-                                 </StackLayout>
-                             </Frame>
-                            <Frame BackgroundColor="Transparent"
-                                   BorderColor="DarkGray"
-                                   Margin="0,10,0,0"
-                                   Padding="0"
-                                   HorizontalOptions="FillAndExpand"
-                                   CornerRadius="30">
-                                 <StackLayout Orientation="Horizontal">
-                                     <Frame BackgroundColor="DeepSkyBlue"
-                                           HeightRequest="40"
-                                           WidthRequest="40"
-                                           CornerRadius="30"
-                                           Padding="0"
-                                           Margin="5">
-                                         <Image Source="name.png"
-                                               Aspect="AspectFill"
-                                               BackgroundColor="DeepSkyBlue"
-                                               Margin="0"/>
-                                     </Frame>
-                                     <local:CustomEntry Placeholder="Last Name"
-                                                       IsPassword="False"
-                                                       Keyboard="Text"
-                                                        Text="{Binding LastName, Mode=TwoWay}"
+                                                        Text="{Binding Name, Mode=TwoWay}"
                                                        TextColor="#ffffff"
                                                        FontAttributes="None"
                                                        HorizontalOptions="FillAndExpand"
@@ -207,7 +179,6 @@
                                  </StackLayout>
                              </Frame>
                             <StackLayout  Orientation="Horizontal">
-                                
                                 <Label Text="By clicking register, you agree with our"
                                        TextColor="#ffffff"
                                        FontSize="Small"
@@ -222,8 +193,6 @@
                                        FontSize="Small"
                                        VerticalTextAlignment="Center"
                                        HorizontalTextAlignment="Start" />
-
-
                             </StackLayout>
                             <Button Text="REGISTER"
                                     BackgroundColor="{StaticResource BGColor}"
@@ -261,7 +230,6 @@
                     </StackLayout>
                 </Frame>
             </StackLayout>
-               
          </Grid>
     </StackLayout>
 </ContentPage.Content>

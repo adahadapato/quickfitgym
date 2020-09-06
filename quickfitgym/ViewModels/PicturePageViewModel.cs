@@ -4,6 +4,7 @@ using ImageToArray;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using quickfitgym.Models;
+using quickfitgym.Services;
 using Xamarin.Forms;
 
 namespace quickfitgym.ViewModels
@@ -16,6 +17,7 @@ namespace quickfitgym.ViewModels
         {
             Title = $"Change {Picture} Picture";
             this.Picture = Picture;
+            IsLoading = false;
         }
 
         public PicturePageViewModel()
@@ -62,8 +64,9 @@ namespace quickfitgym.ViewModels
 
                     file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
                     {
-                        Directory = "Sample",
-                        Name = "test.jpg",
+                        SaveToAlbum = true,
+                        Directory = "Quickfit",
+                        //Name = "test.jpg",
                         PhotoSize = PhotoSize.Custom,
                         CustomPhotoSize = 30,
                         CompressionQuality = 60
@@ -97,14 +100,17 @@ namespace quickfitgym.ViewModels
                         return;
                     }
 
-                    file = await CrossMedia.Current.PickPhotoAsync();
+                    file = await CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+                    {
+                        PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
+                    });
 
 
                     if (file == null)
                         return;
 
                     //await Application.Current.MainPage.DisplayAlert("File Location", file.Path, "OK");
-                    Pict = file.Path;
+                    Pict =    file.Path;
                     IMG = new Image();
                     IMG.Source = ImageSource.FromStream(() =>
                     {
@@ -116,6 +122,19 @@ namespace quickfitgym.ViewModels
             }
         }
 
+        private bool _isLoading;
+        public bool IsLoading
+        {
+            get
+            {
+                return _isLoading;
+            }
+            set
+            {
+                SetProperty(ref _isLoading, value);
+                OnPropertyChanged(nameof(IsLoading));
+            }
+        }
 
         public ICommand SaveCommand
         {
@@ -126,20 +145,48 @@ namespace quickfitgym.ViewModels
                     switch (Picture)
                     {
                         case "Profile":
+                            SaveProfilePicture();
                             break;
                         case "Cover":
+                            SaveCoverPicture();
                             break;
                     }
                 });
             }
         }
-        private void SaveCoverPicture()
+
+        private async void SaveCoverPicture()
         {
+            IsLoading = true;
             var imageArray = FromFile.ToArray(file.GetStream());
-            var picture = new ProfileImage
+            file.Dispose();
+            var cover = new CoverPict
             {
-                ImageArray = imageArray,
+                CoverPictArray = imageArray
             };
+
+            var result = await ApiService.UpdateCoverPict(cover);
+            if (result)
+                await Shell.Current.Navigation.PopAsync();
+            IsLoading = false;
+
+        }
+
+
+        private async void SaveProfilePicture()
+        {
+            IsLoading = true;
+            var imageArray = FromFile.ToArray(file.GetStream());
+            file.Dispose();
+            var picture = new ProfilePict
+            {
+                ProfilePictArray = imageArray
+            };
+
+            var result = await ApiService.UpdateProfilePict(picture);
+            if (result)
+                await Shell.Current.Navigation.PopAsync();
+            IsLoading = false;
         }
     }
 }

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              BackgroundColor="#90bff5"
              Title="{Binding Title}"
              x:Class="quickfitgym.Views.CustomersPage">
@@ -152,11 +153,18 @@
                                 <StackLayout Style="{StaticResource itemsCardViewStackLayoutStyle}">
                                     <StackLayout Style="{StaticResource itemsInsideCardViewStackLayoutStyle}">
                                         <Frame Style="{StaticResource profileImageFrameStyle}">
-                                            <Image Style="{StaticResource profileImageStyle}"
-                                                   Source="{Binding PhotoUrl}" />
+                                            <!--<Image Style="{StaticResource profileImageStyle}"
+                                                   Source="{Binding FullProfilePictUrl}" />-->
+                                            <ffimageloading:CachedImage Style="{StaticResource profileImageStyle}"
+			                                                            DownsampleToViewSize="True"
+                                                                        CacheType="All"
+                                                                        Aspect="AspectFill"
+                                                                        LoadingPlaceholder="place.jpg"
+			                                                            Source = "{Binding FullProfilePictUrl, Mode=TwoWay}">
+		                                    </ffimageloading:CachedImage>
                                         </Frame>
                                         <StackLayout Style="{StaticResource detailsStackLayout}">
-                                            <Label Text="{Binding FullName}" Style="{StaticResource NameLabel}" />
+                                            <Label Text="{Binding Name}" Style="{StaticResource NameLabel}" />
                                             <StackLayout Style="{StaticResource imageLableStackLayout}">
                                                 <Image Source="Gphone.png" Style="{StaticResource imageStyle}"></Image>
                                                 <Label Text="{Binding Mobile}" Style="{StaticResource LabelStyle}" />
@@ -167,7 +175,7 @@
                                             </StackLayout>
                                             <StackLayout Style="{StaticResource imageLableStackLayout}">
                                                 <Image Source="Glocation.png" Style="{StaticResource imageStyle}"></Image>
-                                                <Label Text="{Binding Country}" Style="{StaticResource LabelStyle}" />
+                                                <Label Text="{Binding Region}" Style="{StaticResource LabelStyle}" />
                                             </StackLayout>
                                         </StackLayout>
                                     </StackLayout>
