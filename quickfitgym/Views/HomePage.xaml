@@ -19,7 +19,7 @@
                     <StackLayout>
                          <Label Margin="15,170,15,0"
                                Text="Inside the Gyn"
-                               TextColor="HotPink"
+                               TextColor="{StaticResource BGColor}"
                                 FontAttributes="Bold"
                                FontSize="Medium" />
                         <CollectionView  x:Name="CvCategories"
@@ -59,7 +59,7 @@
                         </CollectionView>
                         <Label Margin="15,15,15,0"
                                Text="Our Products"
-                               TextColor="HotPink"
+                               TextColor="{StaticResource BGColor}"
                                FontAttributes="Bold"
                                FontSize="Medium" />
                     </StackLayout>

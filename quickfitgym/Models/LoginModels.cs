@@ -7,8 +7,8 @@ namespace quickfitgym.Models
         public string token_type { get; set; }
         public int expires_in { get; set; }
         public string userName { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
+        public string Name { get; set; }
+        //public string lastName { get; set; }
         public string Mobile { get; set; }
         public string Issued_date { get; set; }
         public string Expiry_date { get; set; }

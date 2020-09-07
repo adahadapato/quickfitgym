@@ -15,10 +15,11 @@
           "Xam.Plugin.ImageArray": "1.0.0",
           "Xam.Plugin.Media": "5.0.1",
           "Xamarin.Essentials": "1.5.3.2",
+          "Xamarin.FFImageLoading": "2.4.11.982",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Transformations": "2.4.11.982",
           "Xamarin.Forms": "4.8.0.1364",
-          "Xamarin.Forms.PancakeView": "2.1.0.722-beta"
+          "Xamarin.Forms.PancakeView": "2.2.0.740"
         },
         "runtime": {
           "quickfitgym.dll": {}
@@ -153,7 +154,7 @@
           }
         }
       },
-      "Xamarin.Forms.PancakeView/2.1.0.722-beta": {
+      "Xamarin.Forms.PancakeView/2.2.0.740": {
         "dependencies": {
           "System.ComponentModel": "4.3.0",
           "Xamarin.Forms": "4.8.0.1364"
@@ -278,12 +279,12 @@
       "path": "xamarin.forms/4.8.0.1364",
       "hashPath": "xamarin.forms.4.8.0.1364.nupkg.sha512"
     },
-    "Xamarin.Forms.PancakeView/2.1.0.722-beta": {
+    "Xamarin.Forms.PancakeView/2.2.0.740": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-er0mVOtACOyrcbfSJhWalkru/xHQk9cxhfHPU4pdZMQvJ3hZWF469nZ+D6v7B5XnGB3BZlULz8C4FaIhGKvw+g==",
-      "path": "xamarin.forms.pancakeview/2.1.0.722-beta",
-      "hashPath": "xamarin.forms.pancakeview.2.1.0.722-beta.nupkg.sha512"
+      "sha512": "sha512-K9BCl9RtI04MklXocJEpizd+o4gHuHJFfKAAQx0fpOSwH5UvpF/8ZE/IRWeZQ1nQZIRxrHu8z7/rAPFxIdi8hw==",
+      "path": "xamarin.forms.pancakeview/2.2.0.740",
+      "hashPath": "xamarin.forms.pancakeview.2.2.0.740.nupkg.sha512"
     }
   }
 }

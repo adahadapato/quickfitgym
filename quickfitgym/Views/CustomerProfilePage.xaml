@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             xmlns:vm="clr-namespace:quickfitgym.ViewModels" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="quickfitgym.Views.CustomerProfilePage">
     <ContentPage.BindingContext>
         <vm:CustomerProfileViewModel/>
@@ -15,10 +15,10 @@
              Margin="0,-21,0,0">
            <!-- Main banner-->
            <!--Banner-->
-           <Image Grid.Row="0"
+           <!--<Image Grid.Row="0"
                   Grid.Column="0"
                   Grid.ColumnSpan="2"
-                  Source="{Binding CoverPicture}"
+                  Source="{Binding ProfilePicture}"
                   Aspect="AspectFill"
                   Opacity="0.3"
                   HeightRequest="280">
@@ -27,7 +27,36 @@
                                          Command="{Binding ProfileImageCommand}"
                                          CommandParameter="coverpict"/>
                </Image.GestureRecognizers>
-           </Image>
+           </Image>-->
+           <ffimageloading:CachedImage Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+			                           DownsampleToViewSize="True"
+                                       CacheType="All"
+                                       Aspect="AspectFill"
+                                       Opacity="0.3"
+                                       HeightRequest="280"
+                                       LoadingPlaceholder="place.jpg"
+			                           Source = "{Binding ProfilePicture}">
+               <ffimageloading:CachedImage.GestureRecognizers>
+                   <TapGestureRecognizer NumberOfTapsRequired="1"
+                                         Command="{Binding ProfileImageCommand}"
+                                         CommandParameter="coverpict"/>
+               </ffimageloading:CachedImage.GestureRecognizers>
+		  </ffimageloading:CachedImage>
+           <!--Like Button-->
+           <Button Grid.Row="0"
+                   Grid.Column="1"
+                   BackgroundColor="Transparent"
+                   ImageSource="heart"
+                   BorderColor="White"
+                   BorderWidth="1"
+                   CornerRadius="27"
+                   Margin="0,60,30,0"
+                   HeightRequest="70"
+                   WidthRequest="70"
+                   HorizontalOptions="End"
+                   VerticalOptions="Start"/>
            <!--Actor name-->
            <Label Grid.Row="0"
                   Grid.Column="0"
@@ -61,7 +90,7 @@
            <Image Grid.Row="2"
                   Grid.Column="0"
                   Grid.RowSpan="2"
-                  Source="{Binding ProfilePicture}"
+                  Source="{Binding ProfilePicture, Mode=TwoWay}"
                   Margin="0,0,0,0"
                   WidthRequest="150"
                   HeightRequest="160">

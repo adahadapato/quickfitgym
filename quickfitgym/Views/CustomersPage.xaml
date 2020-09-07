@@ -158,9 +158,12 @@
                                             <ffimageloading:CachedImage Style="{StaticResource profileImageStyle}"
 			                                                            DownsampleToViewSize="True"
                                                                         CacheType="All"
+                                                                        CacheDuration="{Binding CahedDuration}"
+                                                                        RetryCount="0"
+                                                                        RetryDelay="250"
                                                                         Aspect="AspectFill"
                                                                         LoadingPlaceholder="place.jpg"
-			                                                            Source = "{Binding FullProfilePictUrl, Mode=TwoWay}">
+			                                                            Source = "{Binding FullProfilePictUrl}">
 		                                    </ffimageloading:CachedImage>
                                         </Frame>
                                         <StackLayout Style="{StaticResource detailsStackLayout}">

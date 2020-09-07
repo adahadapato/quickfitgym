@@ -69,14 +69,16 @@ namespace quickfitgym.ViewModels
                         //Name = "test.jpg",
                         PhotoSize = PhotoSize.Custom,
                         CustomPhotoSize = 30,
-                        CompressionQuality = 60
+                        CompressionQuality = 60,
+                        AllowCropping=true
                     });
 
                     if (file == null)
                         return;
 
-                    await Application.Current.MainPage.DisplayAlert("File Location", file.Path, "OK");
-
+                    //await Application.Current.MainPage.DisplayAlert("File Location", file.Path, "OK");
+                    Pict = file.Path;
+                    IMG = new Image();
                     IMG.Source = ImageSource.FromStream(() =>
                     {
                         var stream = file.GetStream();
@@ -102,7 +104,11 @@ namespace quickfitgym.ViewModels
 
                     file = await CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
                     {
-                        PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
+                        //PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
+                        PhotoSize = PhotoSize.Custom,
+                        CustomPhotoSize = 30,
+                        CompressionQuality = 60,
+                        
                     });
 
 

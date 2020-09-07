@@ -20,8 +20,8 @@ namespace quickfitgym.ViewModels
         public CustomerProfileViewModel(Customer customer)
         {
             Title = "";
-            ProfilePicture = "profile02";
-            CoverPicture = ProfilePicture;
+            //ProfilePicture = "profile02";
+            //CoverPicture = ProfilePicture;
             PictureColection = new ObservableCollection<Pictures>
             {
                 new Pictures { Picture = "profile02"},
@@ -38,11 +38,12 @@ namespace quickfitgym.ViewModels
         {
             CustomerName = customer.Name;
             Occupation = customer.Occupation;
-            DateOfBirth = customer.DateOfBirth.ToString();// "ddd, dd MM yyyy");
+            DateOfBirth = "07/10/2020";// customer.DateOfBirth.ToString();// "ddd, dd MM yyyy");
             About = customer.AboutMe;
             ProfilePicture = customer.FullProfilePictUrl;
-
-            CoverPicture = customer.CoverPictUrl;
+            CoverPicture = customer.FullCoverPictUrl;
+            About = "With an amacing cinematic career of more than five decades, Dennis Hopper was a multi-talent and unconventional actor/director, regarded by many as one of the...";
+            
         }
         //With an amacing cinematic career of more than five decades, Dennis Hopper was a multi-talent and unconventional actor/director, regarded by many as one of the..."/>
         private string _about;

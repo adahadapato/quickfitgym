@@ -65,8 +65,7 @@ namespace quickfitgym.Services
                     
                     Preferences.Set("token", json.access_token);
                     Preferences.Set("mobile", json.Mobile);
-                    Preferences.Set("firstName", json.firstName);
-                    Preferences.Set("lastName", json.lastName);
+                    Preferences.Set("Name", json.Name);
                     Preferences.Set("IsAdmin", IsAdmin);
                     Preferences.Set("tokeExpirationTime", tokenExp);
                     Preferences.Set("CurrentTime", UnixTime.GetCurrentTime());
@@ -168,6 +167,44 @@ namespace quickfitgym.Services
                 var response = await client.GetStringAsync($"{AppSettings.ApiUrl}customers/getall");
 
                 var json = JsonConvert.DeserializeObject<List<Customer>>(response);
+                return json;
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return null;
+        }
+
+        public static async Task<Customer> GetCustomerById(string Id)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new
+                    System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var response = await client.GetStringAsync($"{AppSettings.ApiUrl}customers/getbyid/{Id}");
+
+                var json = JsonConvert.DeserializeObject<Customer>(response);
+                return json;
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return null;
+        }
+
+        public static async Task<Customer> GetCustomer()
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new
+                    System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var response = await client.GetStringAsync($"{AppSettings.ApiUrl}customers/getbyid");
+
+                var json = JsonConvert.DeserializeObject<Customer>(response);
                 return json;
             }
             catch (Exception ex)

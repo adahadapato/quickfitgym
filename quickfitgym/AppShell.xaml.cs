@@ -97,7 +97,7 @@ namespace quickfitgym
         {
             get
             {
-                return $"{Preferences.Get("firstName",string.Empty)} {Preferences.Get("lastName", string.Empty)}";
+                return Preferences.Get("Name",string.Empty);
             }
         }
 
@@ -117,13 +117,6 @@ namespace quickfitgym
             }
         }
 
-        /*private bool _IsFirstTime;
-        public bool IsFirstTime
-        {
-            get
-            {
-                return _IsFirstTime;
-            }
-        }*/
+       
     }
 }

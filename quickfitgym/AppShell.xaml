@@ -6,6 +6,7 @@
        Shell.ItemTemplate="{StaticResource MenuTemplate}"
        Shell.MenuItemTemplate="{StaticResource MenuTemplate}"
        Shell.FlyoutHeaderTemplate="{StaticResource FlyoutHeaderTemplate}"
+       
        FlyoutBackgroundColor="{StaticResource ThemeColor}"
        
        x:Class="quickfitgym.AppShell">
@@ -130,9 +131,12 @@
               
             </ContentView>
         </DataTemplate>
+            <DataTemplate x:Key="FlyoutFooterTemplate">
+
+            </DataTemplate>
         </ResourceDictionary>
     </Shell.Resources>
-
+    
 
     
      <!--<FlyoutItem Title="Home" Icon="dashboard.png" x:Name="flLoading" Route="loading">
@@ -152,7 +156,7 @@
             <ShellContent Title="Programms" ContentTemplate="{DataTemplate local:ProgramListPage}"/>
         </Tab>
         <Tab Title="Profile" Icon="profile.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:PersonalProfilePage}"/>
         </Tab>
         <Tab Title="Options" Icon="settings.png" >
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}"/>
@@ -163,8 +167,8 @@
         <Tab Title="Admin" Icon="admin.png">
             <ShellContent Title="Options" ContentTemplate="{DataTemplate local:AdminPage}"/>
         </Tab>
-        <Tab Title="Profile" Icon="about.png">
-            <ShellContent ContentTemplate="{DataTemplate local:UpdateAboutUsPage}"/>
+        <Tab Title="Profile" Icon="profile.png">
+            <ShellContent ContentTemplate="{DataTemplate local:PersonalProfilePage}"/>
         </Tab>
         <Tab Title="payment" Icon="payment.png" >
             <ShellContent ContentTemplate="{DataTemplate local:AdminMembersListPage}"/>
