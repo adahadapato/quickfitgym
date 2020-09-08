@@ -4,7 +4,12 @@
              xmlns:vm="clr-namespace:quickfitgym.ViewModels"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             Title="{Binding Title}"
              x:Class="quickfitgym.Views.PersonalProfilePage">
+     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Update"
+                     Command="{Binding UpdateCommand}"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.BindingContext>
         <vm:PersonalProfileViewModel/>
     </ContentPage.BindingContext>
@@ -26,7 +31,8 @@
                                        Opacity="0.3"
                                        HeightRequest="280"
                                        LoadingPlaceholder="place.jpg"
-			                           Source = "{Binding ProfilePicture}">
+                                             ErrorPlaceholder="place.jpg"
+			                           Source = "{Binding CoverPicture}">
                     <ffimageloading:CachedImage.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1"
                                               Command="{Binding ChangePictureCommand}"
@@ -63,7 +69,7 @@
                 </StackLayout>
                 <!--Actor description-->
                 <!--Picture option-->
-                <Image Grid.Row="2"
+                <!--<Image Grid.Row="2"
                        Grid.Column="0"
                        Grid.RowSpan="2"
                        Source="{Binding ProfilePicture, Mode=TwoWay}"
@@ -76,7 +82,27 @@
                                               Command="{Binding ProfileImageCommand}"
                                               CommandParameter="profilepict"/>
                     </Image.GestureRecognizers>
-                </Image>
+                </Image>-->
+                <ffimageloading:CachedImage Grid.Row="2"
+                                            Grid.Column="0"
+                                            Grid.RowSpan="2"
+			                                DownsampleToViewSize="True"
+                                            Margin="0,0,0,0"
+                                            CacheType="All"
+                                            Aspect="AspectFit"
+                                            HeightRequest="160"
+                                            WidthRequest="145"
+                                            RetryCount="3"
+                                            RetryDelay="1000"
+                                            LoadingPlaceholder="place.jpg"
+                                            ErrorPlaceholder="place.jpg"
+			                                Source = "{Binding ProfilePicture}">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1"
+                                              Command="{Binding ChangePictureCommand}"
+                                              CommandParameter="profilepict"/>
+                    </ffimageloading:CachedImage.GestureRecognizers>
+		        </ffimageloading:CachedImage>
                  <!--Description-->
                 <Label Grid.Row="2"
                        Grid.Column="1"
@@ -146,11 +172,11 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                <ActivityIndicator IsEnabled="{Binding Isloaded}"
+                <!--<ActivityIndicator IsEnabled="{Binding Isloaded}"
                                    IsRunning="True"
                                    IsVisible="{Binding Isloaded}"
                                    HorizontalOptions="CenterAndExpand"
-                                   VerticalOptions="CenterAndExpand"/>
+                                   VerticalOptions="CenterAndExpand"/>-->
             </Grid>
         </ScrollView>
     </ContentPage.Content>

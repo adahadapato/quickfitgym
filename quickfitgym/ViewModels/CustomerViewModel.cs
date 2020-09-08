@@ -13,15 +13,15 @@ namespace quickfitgym.ViewModels
     public class CustomerViewModel : BaseViewModel
     {
         public ObservableCollection<Customer> MembersCollection { get; private set; }
-        //public ObservableCollection<Members> TrainersCollection { get; private set; }
+        
         public CustomerViewModel()
         {
             Title = "Customers";
             MembersCollection = new ObservableCollection<Customer>();
-            //TrainersCollection = new ObservableCollection<Members>();
             GetAllCustomers();
             CahedDuration = TimeSpan.FromMinutes(2);
         }
+
         //https://quickfit.zayun.biz/wwwroot/Pc1965299-ea06-42bf-ab53-e30f234f6993.jpg
         private Customer _selectedCustomer;
         public Customer SelectedCustomer
@@ -45,10 +45,20 @@ namespace quickfitgym.ViewModels
             }
         }
 
-        private List<Customer> cusomers = new List<Customer>();
+        bool isRefreshing;
+        public bool IsRefreshing
+        {
+            get => isRefreshing;
+            set
+            {
+               SetProperty(ref isRefreshing, value);
+                OnPropertyChanged(nameof(IsRefreshing));
+            }
+        }
+
         private async void GetAllCustomers()
         {
-            cusomers = await ApiService.GetAllCustomers();
+            var cusomers = await ApiService.GetAllCustomers();
             if (cusomers != null)
             {
                 cusomers.ForEach(x => { x.RegistrationDate = x.JoinDate.ToString("dd/MM/yyyy");
@@ -75,14 +85,19 @@ namespace quickfitgym.ViewModels
             }
         }
 
-        public ICommand SelectedTrainerCommand
-        {
+        public ICommand RefreshCommand {
             get
             {
-                return new Command( () =>
+                return new Command(() =>
                 {
-                    //var item = SelectedTrainer;
-                    //await Shell.Current.GoToAsync("customerprofile");
+                    if (IsRefreshing)
+                        return;
+
+                    IsRefreshing = true;
+
+                    MembersCollection.Clear();
+                    GetAllCustomers();
+                    IsRefreshing = false;
                 });
             }
         }

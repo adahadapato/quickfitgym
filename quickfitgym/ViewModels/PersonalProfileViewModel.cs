@@ -13,7 +13,7 @@ namespace quickfitgym.ViewModels
         public ObservableCollection<Pictures> PictureColection { get; set; }
         public PersonalProfileViewModel()
         {
-            Title = "";
+            Title = "My Profile";
             //ProfilePicture = "profile02";
             //CoverPicture = ProfilePicture;
             PictureColection = new ObservableCollection<Pictures>
@@ -32,7 +32,7 @@ namespace quickfitgym.ViewModels
 
         private async void Init()
         {
-            Isloaded = true;
+            //Isloaded = true;
             var customer = await ApiService.GetCustomer();
             if (customer != null)
             {
@@ -42,9 +42,18 @@ namespace quickfitgym.ViewModels
                 About = customer.AboutMe;
                 ProfilePicture = customer.FullProfilePictUrl;
                 CoverPicture = customer.FullCoverPictUrl;
+                /*ProfilePicture = new UriImageSource()
+                {
+                    Uri = new Uri(customer.FullProfilePictUrl)
+                };
+
+                CoverPicture = new UriImageSource()
+                {
+                    Uri = new Uri(customer.FullCoverPictUrl)
+                };*/
                 About = "With an amacing cinematic career of more than five decades, Dennis Hopper was a multi-talent and unconventional actor/director, regarded by many as one of the...";
             }
-            Isloaded = false;
+            //Isloaded = false;
         }
 
         private bool _isLoaded;
@@ -114,6 +123,17 @@ namespace quickfitgym.ViewModels
         }
 
 
+        /*private UriImageSource _profilePicture;
+        public UriImageSource ProfilePicture
+        {
+            get { return _profilePicture; }
+            set
+            {
+                SetProperty(ref _profilePicture, value);
+                OnPropertyChanged(nameof(ProfilePicture));
+            }
+        }*/
+        
         private string _coverPicture;
         public string CoverPicture
         {
@@ -124,6 +144,17 @@ namespace quickfitgym.ViewModels
                 OnPropertyChanged(nameof(CoverPicture));
             }
         }
+
+        /*private UriImageSource _coverPicture;
+        public UriImageSource CoverPicture
+        {
+            get { return _coverPicture; }
+            set
+            {
+                SetProperty(ref _coverPicture, value);
+                OnPropertyChanged(nameof(CoverPicture));
+            }
+        }*/
 
         public ICommand ChangePictureCommand
         {
@@ -146,6 +177,17 @@ namespace quickfitgym.ViewModels
                     }
                     if (!string.IsNullOrWhiteSpace(Picture))
                         await Shell.Current.Navigation.PushAsync(new PicturePage(Picture));
+                });
+            }
+        }
+
+        public ICommand UpdateCommand
+        {
+            get
+            {
+                return new Command(async() =>
+                {
+                    await Shell.Current.Navigation.PushAsync(new UpdatePersonalProfilePage());
                 });
             }
         }

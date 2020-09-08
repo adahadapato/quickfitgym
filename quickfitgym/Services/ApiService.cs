@@ -26,7 +26,7 @@ namespace quickfitgym.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var result = JsonConvert.DeserializeObject<RegisterSuccess>(jsonresult);
-                    var str = "Registration successful, please confirm your email to continue";
+                    var str = "Registration successful, please login to continue";
                     await Application.Current.MainPage.DisplayAlert("Success",  str, "OK");
                     return true;
                 }

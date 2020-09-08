@@ -95,6 +95,59 @@
         <Grid>
         <StackLayout Spacing="5"
                      BackgroundColor="#90bff5">
+            <RefreshView IsRefreshing="{Binding IsRefreshing, Mode=OneWay}"
+                         Command="{Binding RefreshCommand}">
+                 <CollectionView x:Name="collectionViewListVertical"
+                            ItemsSource="{Binding MembersCollection}"
+                            SelectedItem="{Binding SelectedCustomer}"
+                            SelectionChangedCommand="{Binding SelectedCustomerCommand}"
+                            SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Spacing="8">
+                            <Frame Style="{StaticResource FrameCardViewStyle}">
+                                <StackLayout Style="{StaticResource itemsCardViewStackLayoutStyle}">
+                                    <StackLayout Style="{StaticResource itemsInsideCardViewStackLayoutStyle}">
+                                        <Frame Style="{StaticResource profileImageFrameStyle}">
+                                            <!--<Image Style="{StaticResource profileImageStyle}"
+                                                   Source="{Binding FullProfilePictUrl}" />-->
+                                            <ffimageloading:CachedImage Style="{StaticResource profileImageStyle}"
+			                                                            DownsampleToViewSize="True"
+                                                                        CacheType="All"
+                                                                        CacheDuration="{Binding CahedDuration}"
+                                                                        RetryCount="0"
+                                                                        RetryDelay="250"
+                                                                        Aspect="AspectFit"
+                                                                        LoadingPlaceholder="place.jpg"
+			                                                            Source = "{Binding FullProfilePictUrl}">
+		                                    </ffimageloading:CachedImage>
+                                        </Frame>
+                                        <StackLayout Style="{StaticResource detailsStackLayout}">
+                                            <Label Text="{Binding Name}" Style="{StaticResource NameLabel}" />
+                                            <StackLayout Style="{StaticResource imageLableStackLayout}">
+                                                <Image Source="Gphone.png" Style="{StaticResource imageStyle}"></Image>
+                                                <Label Text="{Binding Mobile}" Style="{StaticResource LabelStyle}" />
+                                            </StackLayout>
+                                            <StackLayout Style="{StaticResource imageLableStackLayout}">
+                                                <Image Source="Gmail.png" Style="{StaticResource imageStyle}"></Image>
+                                                <Label Text="{Binding Email}" Style="{StaticResource LabelStyle}" />
+                                            </StackLayout>
+                                            <StackLayout Style="{StaticResource imageLableStackLayout}">
+                                                <Image Source="Glocation.png" Style="{StaticResource imageStyle}"></Image>
+                                                <Label Text="{Binding Region}" Style="{StaticResource LabelStyle}" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </RefreshView >
             <!--<CollectionView x:Name="collectionViewListHorizontal"
                             HeightRequest="200"
                             SelectionMode="Single"
@@ -138,56 +191,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>-->
-            <CollectionView x:Name="collectionViewListVertical"
-                            ItemsSource="{Binding MembersCollection}"
-                            SelectedItem="{Binding SelectedCustomer}"
-                            SelectionChangedCommand="{Binding SelectedCustomerCommand}"
-                            SelectionMode="Single">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Spacing="8">
-                            <Frame Style="{StaticResource FrameCardViewStyle}">
-                                <StackLayout Style="{StaticResource itemsCardViewStackLayoutStyle}">
-                                    <StackLayout Style="{StaticResource itemsInsideCardViewStackLayoutStyle}">
-                                        <Frame Style="{StaticResource profileImageFrameStyle}">
-                                            <!--<Image Style="{StaticResource profileImageStyle}"
-                                                   Source="{Binding FullProfilePictUrl}" />-->
-                                            <ffimageloading:CachedImage Style="{StaticResource profileImageStyle}"
-			                                                            DownsampleToViewSize="True"
-                                                                        CacheType="All"
-                                                                        CacheDuration="{Binding CahedDuration}"
-                                                                        RetryCount="0"
-                                                                        RetryDelay="250"
-                                                                        Aspect="AspectFill"
-                                                                        LoadingPlaceholder="place.jpg"
-			                                                            Source = "{Binding FullProfilePictUrl}">
-		                                    </ffimageloading:CachedImage>
-                                        </Frame>
-                                        <StackLayout Style="{StaticResource detailsStackLayout}">
-                                            <Label Text="{Binding Name}" Style="{StaticResource NameLabel}" />
-                                            <StackLayout Style="{StaticResource imageLableStackLayout}">
-                                                <Image Source="Gphone.png" Style="{StaticResource imageStyle}"></Image>
-                                                <Label Text="{Binding Mobile}" Style="{StaticResource LabelStyle}" />
-                                            </StackLayout>
-                                            <StackLayout Style="{StaticResource imageLableStackLayout}">
-                                                <Image Source="Gmail.png" Style="{StaticResource imageStyle}"></Image>
-                                                <Label Text="{Binding Email}" Style="{StaticResource LabelStyle}" />
-                                            </StackLayout>
-                                            <StackLayout Style="{StaticResource imageLableStackLayout}">
-                                                <Image Source="Glocation.png" Style="{StaticResource imageStyle}"></Image>
-                                                <Label Text="{Binding Region}" Style="{StaticResource LabelStyle}" />
-                                            </StackLayout>
-                                        </StackLayout>
-                                    </StackLayout>
-                                </StackLayout>
-                            </Frame>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+           
         </StackLayout>
             </Grid>
     </ContentPage.Content>

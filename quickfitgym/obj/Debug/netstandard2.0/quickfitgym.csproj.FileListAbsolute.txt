@@ -1,3 +1,7 @@
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/bin/Debug/netstandard2.0/quickfitgym.deps.json
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/bin/Debug/netstandard2.0/quickfitgym.dll
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/bin/Debug/netstandard2.0/ref/quickfitgym.dll
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/bin/Debug/netstandard2.0/quickfitgym.pdb
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/AppShell.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/AboutPage.xaml.g.cs
@@ -29,15 +33,11 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/RegisterPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/RolesListPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/UpdateAboutUsPage.xaml.g.cs
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/UpdatePersonalProfilePage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/Views/VideosPage.xaml.g.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.AssemblyInfoInputs.cache
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.AssemblyInfo.cs
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.csproj.CoreCompileInputs.cache
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/bin/Debug/netstandard2.0/quickfitgym.deps.json
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/bin/Debug/netstandard2.0/quickfitgym.dll
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/bin/Debug/netstandard2.0/ref/quickfitgym.dll
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/bin/Debug/netstandard2.0/quickfitgym.pdb
-/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.csprojAssemblyReference.cache
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/quickfitgym.dll
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym/obj/Debug/netstandard2.0/ref/quickfitgym.dll

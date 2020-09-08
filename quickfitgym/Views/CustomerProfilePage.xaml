@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             xmlns:vm="clr-namespace:quickfitgym.ViewModels" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:vm="clr-namespace:quickfitgym.ViewModels"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="quickfitgym.Views.CustomerProfilePage">
     <ContentPage.BindingContext>
         <vm:CustomerProfileViewModel/>
@@ -38,11 +39,7 @@
                                        HeightRequest="280"
                                        LoadingPlaceholder="place.jpg"
 			                           Source = "{Binding ProfilePicture}">
-               <ffimageloading:CachedImage.GestureRecognizers>
-                   <TapGestureRecognizer NumberOfTapsRequired="1"
-                                         Command="{Binding ProfileImageCommand}"
-                                         CommandParameter="coverpict"/>
-               </ffimageloading:CachedImage.GestureRecognizers>
+               
 		  </ffimageloading:CachedImage>
            <!--Like Button-->
            <Button Grid.Row="0"
@@ -55,8 +52,20 @@
                    Margin="0,60,30,0"
                    HeightRequest="70"
                    WidthRequest="70"
+                   Command="{Binding LikeCommand}"
                    HorizontalOptions="End"
                    VerticalOptions="Start"/>
+           <!--Like Label-->
+           <Label Text="{Binding Likes}"
+                  Grid.Row="0"
+                  Grid.Column="1"
+                  TextColor="White"
+                  BackgroundColor="Transparent"
+                  Margin="0,135,30,0"
+                  WidthRequest="70"
+                  HorizontalOptions="EndAndExpand"
+                  VerticalOptions="StartAndExpand"
+                  HorizontalTextAlignment="Center"/>
            <!--Actor name-->
            <Label Grid.Row="0"
                   Grid.Column="0"
@@ -74,9 +83,30 @@
                   FontAttributes="Bold"
                   TextColor="#adadad"
                   Padding="20,0,20,20"/>
-            <!--More option-->
-           <StackLayout  Grid.Row="1"
-                         Grid.Column="1"
+           <!--Contact section-->
+           <Grid Grid.Column="1"
+                 ColumnDefinitions="Auto,Auto,*"
+                 Padding="0,0,20,0"
+                 Grid.Row="1">
+                <Image Grid.Row="0"
+                       Grid.Column="0"
+                       Source="phone"
+                       WidthRequest="30"
+                       HeightRequest="30"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Center"/>
+
+               <Image Grid.Row="0"
+                      Grid.Column="1"
+                      Source="email"
+                      WidthRequest="30"
+                      HeightRequest="30"
+                      VerticalOptions="Start"
+                      HorizontalOptions="Center"/>
+
+                <!--More option-->
+           <StackLayout  Grid.Row="0"
+                         Grid.Column="2"
                          Padding="0,0,20,0"
                          Orientation="Horizontal"
                          VerticalOptions="Start"
@@ -85,6 +115,10 @@
                       Text="MORE"/>
                <Image Source="Arrow"  /> 
            </StackLayout>
+           </Grid>
+           
+           
+           
            <!--Actor description-->
            <!--Picture option-->
            <Image Grid.Row="2"
@@ -94,11 +128,7 @@
                   Margin="0,0,0,0"
                   WidthRequest="150"
                   HeightRequest="160">
-               <Image.GestureRecognizers>
-                   <TapGestureRecognizer NumberOfTapsRequired="1"
-                                         Command="{Binding ProfileImageCommand}"
-                                         CommandParameter="profilepict"/>
-               </Image.GestureRecognizers>
+              
            </Image>
            <!--Description-->
            <Label Grid.Row="2"

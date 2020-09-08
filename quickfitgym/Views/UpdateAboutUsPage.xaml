@@ -34,7 +34,7 @@
                                 PlaceholderColor="{StaticResource BGColor}"
                                 Text="{Binding About, Mode=TwoWay}"
                                 TextColor="{StaticResource BGColor}"
-                                Keyboard="Email" />
+                                Keyboard="Text" />
                          <Editor Placeholder="Details"
                                  PlaceholderColor="{StaticResource BGColor}"
                                  HeightRequest="150"

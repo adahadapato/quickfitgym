@@ -110,7 +110,7 @@ namespace quickfitgym.ViewModels
                         Name = Name,
                         Mobile = Phone,
                         RoleName = "Member",
-                        EmailConfirmed = false,
+                        EmailConfirmed = true,
                         Password = Password
                     };
                     var result = await ApiService.Register(model);

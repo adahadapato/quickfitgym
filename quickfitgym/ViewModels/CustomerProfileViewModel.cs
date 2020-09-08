@@ -13,6 +13,7 @@ namespace quickfitgym.ViewModels
     public class CustomerProfileViewModel : BaseViewModel
     {
         public ObservableCollection<Pictures> PictureColection { get; set; }
+        private int ILikes;
         public CustomerProfileViewModel()
         {
 
@@ -36,6 +37,7 @@ namespace quickfitgym.ViewModels
 
         private void Init(Customer customer)
         {
+            Likes = "0";
             CustomerName = customer.Name;
             Occupation = customer.Occupation;
             DateOfBirth = "07/10/2020";// customer.DateOfBirth.ToString();// "ddd, dd MM yyyy");
@@ -145,30 +147,27 @@ namespace quickfitgym.ViewModels
             }
         }
 
-        public ICommand ProfileImageCommand
+        private string _likes;
+        public string Likes
         {
-            get
+            get { return _likes; }
+            set
             {
-                return new Command(async(e) =>
-                {
-                    string Picture="";
-                    var param = e as string;
-                    switch (param)
-                    {
-                        case "profilepict":
-                            Picture = "Profile";
-                            break;
-                        case "coverpict":
-                            Picture = "Cover";
-                            break;
-                        default:
-                            break;
-                    }
-                    if (!string.IsNullOrWhiteSpace(Picture))
-                        await Shell.Current.Navigation.PushAsync(new PicturePage(Picture));
-                });
+                SetProperty(ref _likes, value);
+                OnPropertyChanged(nameof(Likes));
             }
         }
 
+        public ICommand LikeCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    ILikes++;
+                    Likes = ILikes.ToString();
+                });
+            }
+        }
     }
 }

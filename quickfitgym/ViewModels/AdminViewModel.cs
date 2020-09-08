@@ -20,12 +20,13 @@ namespace quickfitgym.ViewModels
             new AdminMenu(){Title ="Roles",route="roles" ,ImageUrl="Role.png"},
             new AdminMenu(){Title ="Home" , route="home",ImageUrl="xxx"},
             new AdminMenu(){Title ="About Us",route="aboutus" ,ImageUrl="xxx"},
+            new AdminMenu(){Title ="Product" ,ImageUrl="xxx"},
+            new AdminMenu(){Title ="Diets" ,ImageUrl="xxx"},
+            new AdminMenu(){Title ="Challenges" ,ImageUrl="xxx"},
+            new AdminMenu(){Title ="Trainers" ,ImageUrl="xxx"},
             new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
-            new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
-            new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
-            new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
-            new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
-
+             new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
+              new AdminMenu(){Title ="Transatcions" ,ImageUrl="xxx"},
             };
         }
 

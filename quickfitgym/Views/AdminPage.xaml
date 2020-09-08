@@ -17,7 +17,8 @@
         <vm:AdminViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+             <StackLayout>
            <!-- <Label TextColor="HotPink"
                    FontSize="Medium"
                    Text="MAIN MENU"
@@ -67,5 +68,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </StackLayout>
+        </ScrollView>
+       
     </ContentPage.Content>
 </ContentPage>
