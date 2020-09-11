@@ -30,7 +30,7 @@ namespace quickfitgym.ViewModels
             CustomerName = customer.Name;
             Address = customer.ContactAddress;
             Country = customer.Country;
-            Id = customer.
+            
         }
 
         private string _about;

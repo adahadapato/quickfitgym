@@ -3,7 +3,7 @@
     <Files>
       <File FileName="quickfitgym/Views/UpdatePersonalProfilePage.xaml" Line="53" Column="23" />
       <File FileName="quickfitgym/ViewModels/PersonalProfileViewModel.cs" />
-      <File FileName="quickfitgym/ViewModels/UpdatePersonalProfileViewModel.cs" Line="31" Column="47" />
+      <File FileName="quickfitgym/ViewModels/UpdatePersonalProfileViewModel.cs" Line="33" Column="13" />
       <File FileName="quickfitgym/Services/ApiService.cs" Line="255" Column="1" />
       <File FileName="quickfitgym/Models/CustomerModels.cs" Line="64" Column="21" />
     </Files>
