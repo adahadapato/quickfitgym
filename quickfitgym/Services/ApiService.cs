@@ -176,6 +176,7 @@ namespace quickfitgym.Services
             return null;
         }
 
+
         public static async Task<Customer> GetCustomerById(string Id)
         {
             try
@@ -194,6 +195,7 @@ namespace quickfitgym.Services
             }
             return null;
         }
+
 
         public static async Task<Customer> GetCustomer()
         {
@@ -238,6 +240,32 @@ namespace quickfitgym.Services
                 await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
             }
             return false;
+        }
+
+        public static async Task<Customer> UpdateCustomer(Customer customer)
+        {
+            try
+            {
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
+                var json = JsonConvert.SerializeObject(customer);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(new Uri($"{AppSettings.ApiUrl}Customers"), content);
+                if (response.IsSuccessStatusCode)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Success", "Customer saved successfully", "OK");
+                    return null;
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Error", "Unable to save customer", "CANCEL");
+                }
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "CANCEL");
+            }
+            return null;
         }
 
         public static async Task<bool> UpdateCoverPict(CoverPict cover)

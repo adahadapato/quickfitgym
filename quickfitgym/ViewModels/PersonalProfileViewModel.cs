@@ -11,6 +11,7 @@ namespace quickfitgym.ViewModels
     public class PersonalProfileViewModel : BaseViewModel
     {
         public ObservableCollection<Pictures> PictureColection { get; set; }
+        
         public PersonalProfileViewModel()
         {
             Title = "My Profile";
@@ -25,6 +26,7 @@ namespace quickfitgym.ViewModels
                 new Pictures { Picture = "profile02"},
                 new Pictures { Picture = "profile02"}
             };
+           
             Init();
         }
 
@@ -100,6 +102,7 @@ namespace quickfitgym.ViewModels
             }
         }
 
+        
         private string _customerName;
         public string CustomerName
         {
@@ -187,7 +190,11 @@ namespace quickfitgym.ViewModels
             {
                 return new Command(async() =>
                 {
-                    await Shell.Current.Navigation.PushAsync(new UpdatePersonalProfilePage());
+                    var customer = new Customer()
+                    {
+
+                    };
+                    await Shell.Current.Navigation.PushAsync(new UpdatePersonalProfilePage(customer));
                 });
             }
         }

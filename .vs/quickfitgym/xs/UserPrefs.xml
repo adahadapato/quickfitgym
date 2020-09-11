@@ -1,9 +1,11 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{C8939C5D-D44F-46B3-9155-9FDD360CB1B3}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="quickfitgym/Views/UpdatePersonalProfilePage.xaml" Line="23" Column="43" />
-      <File FileName="quickfitgym/Views/UpdateAboutUsPage.xaml" Line="43" Column="52" />
-      <File FileName="quickfitgym/ViewModels/PersonalProfileViewModel.cs" Line="33" Column="34" />
+      <File FileName="quickfitgym/Views/UpdatePersonalProfilePage.xaml" Line="53" Column="23" />
+      <File FileName="quickfitgym/ViewModels/PersonalProfileViewModel.cs" />
+      <File FileName="quickfitgym/ViewModels/UpdatePersonalProfileViewModel.cs" Line="31" Column="47" />
+      <File FileName="quickfitgym/Services/ApiService.cs" Line="255" Column="1" />
+      <File FileName="quickfitgym/Models/CustomerModels.cs" Line="64" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,7 +31,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.quickfitgym.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.zaraph" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/Services/ApiService.cs" relfile="quickfitgym/Services/ApiService.cs" line="255" column="1" />
+      <Breakpoint file="/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/Services/ApiService.cs" relfile="quickfitgym/Services/ApiService.cs" line="254" column="1" />
+      <Breakpoint file="/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/Services/ApiService.cs" relfile="quickfitgym/Services/ApiService.cs" line="253" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

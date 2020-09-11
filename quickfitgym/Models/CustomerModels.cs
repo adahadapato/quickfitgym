@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace quickfitgym.Models
 {
@@ -10,7 +11,7 @@ namespace quickfitgym.Models
         public string CoverPictureUrl{ get; set; }
         public byte[] CoverPictureArray { get; set; }
     }
-
+    
     /*public class MyArray
     {
         public string Name { get; set; }
@@ -55,9 +56,12 @@ namespace quickfitgym.Models
         public string Country { get; set; }
         public string ProfilePictUrl { get; set; }
         public string CoverPictUrl { get; set; }
-        public string RegistrationDate { get; set; }
 
+        [JsonIgnore]
+        public string RegistrationDate { get; set; }
+        [JsonIgnore]
         public string FullProfilePictUrl => string.Format($"{AppSettings.ImageUrl}{ProfilePictUrl}");
+        [JsonIgnore]
         public string FullCoverPictUrl => string.Format($"{AppSettings.ImageUrl}{CoverPictUrl}");
     }
 

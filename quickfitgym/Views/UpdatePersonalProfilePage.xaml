@@ -6,20 +6,36 @@
              Title="{Binding Title}"
              x:Class="quickfitgym.Views.UpdatePersonalProfilePage">
     <ContentPage.BindingContext>
-        <vm:PersonalProfileViewModel/>
+        <vm:UpdatePersonalProfileViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Spacing="8"
+       <ScrollView>
+            <StackLayout Spacing="8"
                      Margin="25,1">
             <Frame HasShadow="True"
                    Padding="25"
                    Margin="0,50,0,10">
-                <StackLayout>
+                
+                    <StackLayout>
                     <Entry Placeholder="Program"
                            PlaceholderColor="#80574D"
                            Text="{Binding About, Mode=TwoWay}"
                            TextColor="#80574D"
                            Keyboard="Text" />
+                    <Label Text="Date of Birth"
+                           TextColor="#80574D"/>
+                    <DatePicker Date="{Binding Birth}"
+                                TextColor="#80574D"/>
+                    <Picker Title="Occupation"
+                             ItemsSource="{Binding OccupationCollection}"
+                             SelectedItem="{Binding Occupation}"
+                             TitleColor="#80574D"/>
+                    <Editor Placeholder="Address"
+                            PlaceholderColor="#80574D"
+                            HeightRequest="50"
+                            TextColor="#80574D"
+                            Text="{Binding Address,Mode=TwoWay}"
+                            Keyboard="Text" />
                     <Editor Placeholder="About you"
                             PlaceholderColor="#80574D"
                             HeightRequest="150"
@@ -27,6 +43,7 @@
                             Text="{Binding About,Mode=TwoWay}"
                             Keyboard="Text" />
                 </StackLayout>
+                
             </Frame>
             <Button Text="SUBMIT"
                     TextColor="White"
@@ -34,5 +51,6 @@
                     Command="{Binding SubmitCommand}"
                     CornerRadius="30"/>
         </StackLayout>
+       </ScrollView>
     </ContentPage.Content>
 </ContentPage>
