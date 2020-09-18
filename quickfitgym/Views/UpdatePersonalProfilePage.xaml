@@ -17,11 +17,11 @@
                    Margin="0,50,0,10">
                 
                     <StackLayout>
-                    <Entry Placeholder="Program"
+                    <!--<Entry Placeholder="Program"
                            PlaceholderColor="#80574D"
                            Text="{Binding About, Mode=TwoWay}"
                            TextColor="#80574D"
-                           Keyboard="Text" />
+                           Keyboard="Text" />-->
                     <Label Text="Date of Birth"
                            TextColor="#80574D"/>
                     <DatePicker Date="{Binding Birth}"

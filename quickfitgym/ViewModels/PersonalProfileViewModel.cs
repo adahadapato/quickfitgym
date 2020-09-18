@@ -44,6 +44,8 @@ namespace quickfitgym.ViewModels
                 About = customer.AboutMe;
                 ProfilePicture = customer.FullProfilePictUrl;
                 CoverPicture = customer.FullCoverPictUrl;
+                About = customer.AboutMe;
+                Address = customer.ContactAddress;
                 /*ProfilePicture = new UriImageSource()
                 {
                     Uri = new Uri(customer.FullProfilePictUrl)
@@ -53,7 +55,7 @@ namespace quickfitgym.ViewModels
                 {
                     Uri = new Uri(customer.FullCoverPictUrl)
                 };*/
-                About = "With an amacing cinematic career of more than five decades, Dennis Hopper was a multi-talent and unconventional actor/director, regarded by many as one of the...";
+                //About = "With an amacing cinematic career of more than five decades, Dennis Hopper was a multi-talent and unconventional actor/director, regarded by many as one of the...";
             }
             //Isloaded = false;
         }
@@ -114,6 +116,16 @@ namespace quickfitgym.ViewModels
             }
         }
 
+        private string _address;
+        public string Address
+        {
+            get { return _address; }
+            set
+            {
+                SetProperty(ref _address, value);
+                OnPropertyChanged(nameof(Address));
+            }
+        }
         private string _profilePicture;
         public string ProfilePicture
         {
@@ -192,7 +204,10 @@ namespace quickfitgym.ViewModels
                 {
                     var customer = new Customer()
                     {
-
+                        AboutMe = About,
+                        ContactAddress = Address,
+                        Name = CustomerName,
+                        Occupation = Occupation
                     };
                     await Shell.Current.Navigation.PushAsync(new UpdatePersonalProfilePage(customer));
                 });

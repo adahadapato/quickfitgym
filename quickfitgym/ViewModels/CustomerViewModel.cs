@@ -6,6 +6,7 @@ using System.Windows.Input;
 using quickfitgym.Models;
 using quickfitgym.Services;
 using quickfitgym.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace quickfitgym.ViewModels
@@ -93,11 +94,22 @@ namespace quickfitgym.ViewModels
                     if (IsRefreshing)
                         return;
 
-                    IsRefreshing = true;
-
+                    IsRefreshing = true;       
                     MembersCollection.Clear();
                     GetAllCustomers();
                     IsRefreshing = false;
+                });
+            }
+        }
+
+        public ICommand PhoneTappedCommand
+        {
+            get
+            {
+                return new Command((e) =>
+                {
+                    var item = e as Customer;
+                    PhoneDialer.Open(item.Mobile);
                 });
             }
         }

@@ -128,8 +128,15 @@
                                         <StackLayout Style="{StaticResource detailsStackLayout}">
                                             <Label Text="{Binding Name}" Style="{StaticResource NameLabel}" />
                                             <StackLayout Style="{StaticResource imageLableStackLayout}">
-                                                <Image Source="Gphone.png" Style="{StaticResource imageStyle}"></Image>
+                                                <Image Source="Gphone.png" Style="{StaticResource imageStyle}">
+                                                    <Image.GestureRecognizers>
+                                                         <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                                          Command="{Binding PhoneTappedCommand}"
+                                                                          CommandParameter="{Binding .}"/>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
                                                 <Label Text="{Binding Mobile}" Style="{StaticResource LabelStyle}" />
+                                                
                                             </StackLayout>
                                             <StackLayout Style="{StaticResource imageLableStackLayout}">
                                                 <Image Source="Gmail.png" Style="{StaticResource imageStyle}"></Image>

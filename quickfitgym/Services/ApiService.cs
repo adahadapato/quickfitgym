@@ -91,6 +91,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(aboutUs);
@@ -121,6 +122,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new
                     System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
@@ -141,6 +143,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new
                     System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
@@ -161,6 +164,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new
                     System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
@@ -181,6 +185,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new
                     System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
@@ -201,6 +206,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new
                     System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
@@ -220,6 +226,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(profile);
@@ -246,6 +253,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(customer);
@@ -272,6 +280,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(cover);
@@ -298,6 +307,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new
                     System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
@@ -317,6 +327,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new
                     System.Net.Http.Headers.AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
@@ -336,6 +347,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(program);
@@ -363,6 +375,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(program);
@@ -390,6 +403,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(program);
@@ -420,6 +434,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(program);
@@ -450,6 +465,7 @@ namespace quickfitgym.Services
         {
             try
             {
+                await TokeValidator.CheckTokenValidity();
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", Preferences.Get("token", string.Empty));
                 var json = JsonConvert.SerializeObject(schedule);
@@ -485,9 +501,9 @@ namespace quickfitgym.Services
             var currentTime = Preferences.Get("currentTime", 0);
             if (expirationTime < currentTime)
             {
-                var email = Preferences.Get("email", string.Empty);
-                var password = Preferences.Get("password", string.Empty);
-                var response = await ApiService.Login(email, password);
+                var email = Preferences.Get("Email", string.Empty);
+                var password = Preferences.Get("Password", string.Empty);
+                 await ApiService.Login(email, password);
             }
         }
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nLqTypEvFkuL/X7aPX1VgpBt00cSHpO3Ecbc1WLWD2UWwmhUYaAC/g7g7QbOPpLG96ZVl7Oq4g1ZYDArjH3vQg==",
+  "dgSpecHash": "JU/cQsd6rMTDQEpdpmV87vGFXSdKmTH/vX2rfNTmZtf/NK5Ajg4S+GXB/iDvKgc2sy9TlYAXanwOCD/IqUgEVg==",
   "success": true,
   "projectFilePath": "/Users/adahadaenobong/Projects/quickfitgym/quickfitgym/quickfitgym.csproj",
   "expectedPackageFiles": [
@@ -14,11 +14,11 @@
     "/Users/adahadaenobong/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xam.plugin.imagearray/1.0.0/xam.plugin.imagearray.1.0.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xam.plugin.media/5.0.1/xam.plugin.media.5.0.1.nupkg.sha512",
-    "/Users/adahadaenobong/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/xamarin.essentials/1.6.0-pre1/xamarin.essentials.1.6.0-pre1.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading/2.4.11.982/xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.forms/2.4.11.982/xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.transformations/2.4.11.982/xamarin.ffimageloading.transformations.2.4.11.982.nupkg.sha512",
-    "/Users/adahadaenobong/.nuget/packages/xamarin.forms/4.8.0.1364/xamarin.forms.4.8.0.1364.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/xamarin.forms/4.8.0.1451/xamarin.forms.4.8.0.1451.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.forms.pancakeview/2.2.0.740/xamarin.forms.pancakeview.2.2.0.740.nupkg.sha512"
   ],
   "logs": []

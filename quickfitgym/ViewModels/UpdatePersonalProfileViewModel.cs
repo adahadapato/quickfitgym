@@ -123,6 +123,10 @@ namespace quickfitgym.ViewModels
                         ContactAddress = Address,
                         Country = Country,
                         DateOfBirth = DateOfBirth,
+                        Weight=0,
+                        Height=0,
+                        Region ="Minna",
+                        State ="Niger"
                     };
                     var result = await ApiService.UpdateCustomer(customer);
                 });

@@ -652,3 +652,4 @@
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_GenerateJavaStubs.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
+/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/obj/Debug/android/src/crc64a0e0a82d0db9a07d/IntermediateActivity.java

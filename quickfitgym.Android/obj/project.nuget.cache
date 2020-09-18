@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "TinX5wdieuDJngg4VPHnlAjyzSoxVOAFz59ZbWRmm76hi0lBdUi1+dilNVrhYBnFxFtxIfx2q59h74s5hdE8gg==",
+  "dgSpecHash": "/QdtMr3FLWyOjw1Y5zXt3TFAUyrd0535qaun5sUlwaXcgEz1Jo/g8VuOxMEA17zJBmhfNB7aR0T3xWZVDxCIAg==",
   "success": true,
   "projectFilePath": "/Users/adahadaenobong/Projects/quickfitgym/quickfitgym.Android/quickfitgym.Android.csproj",
   "expectedPackageFiles": [
     "/Users/adahadaenobong/.nuget/packages/epoch.unix.timestamp/2.0.0/epoch.unix.timestamp.2.0.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xam.plugin.imagearray/1.0.0/xam.plugin.imagearray.1.0.0.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xam.plugin.media/5.0.1/xam.plugin.media.5.0.1.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.android.arch.core.common/1.1.1.3/xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
@@ -46,11 +47,11 @@
     "/Users/adahadaenobong/.nuget/packages/xamarin.android.support.vector.drawable/28.0.0.3/xamarin.android.support.vector.drawable.28.0.0.3.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.android.support.versionedparcelable/28.0.0.3/xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.android.support.viewpager/28.0.0.3/xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
-    "/Users/adahadaenobong/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/xamarin.essentials/1.6.0-pre1/xamarin.essentials.1.6.0-pre1.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading/2.4.11.982/xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.forms/2.4.11.982/xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.ffimageloading.transformations/2.4.11.982/xamarin.ffimageloading.transformations.2.4.11.982.nupkg.sha512",
-    "/Users/adahadaenobong/.nuget/packages/xamarin.forms/4.8.0.1364/xamarin.forms.4.8.0.1364.nupkg.sha512",
+    "/Users/adahadaenobong/.nuget/packages/xamarin.forms/4.8.0.1451/xamarin.forms.4.8.0.1451.nupkg.sha512",
     "/Users/adahadaenobong/.nuget/packages/xamarin.forms.pancakeview/2.2.0.740/xamarin.forms.pancakeview.2.2.0.740.nupkg.sha512"
   ],
   "logs": []
